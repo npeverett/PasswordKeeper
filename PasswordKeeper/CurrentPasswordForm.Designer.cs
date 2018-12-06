@@ -161,6 +161,7 @@
             this.addPassButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.addPassButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.addPassButton.UseVisualStyleBackColor = false;
+            this.addPassButton.Click += new System.EventHandler(this.addPassButton_Click);
             this.addPassButton.MouseHover += new System.EventHandler(this.addPassButton_MouseHover);
             // 
             // checkStrengthButton

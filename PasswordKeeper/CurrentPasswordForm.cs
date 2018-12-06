@@ -58,6 +58,13 @@ namespace PasswordKeeper
             RadForm1 rf = new RadForm1();
             rf.Show();
         }
+
+        private void addPassButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddPasswordForm apf = new AddPasswordForm();
+            apf.ShowDialog();
+        }
     }
 }
 

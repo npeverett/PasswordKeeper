@@ -1,6 +1,6 @@
 ﻿namespace PasswordKeeper
 {
-    partial class RadForm1
+    partial class AddPasswordForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RadForm1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddPasswordForm));
             this.fluentDarkTheme1 = new Telerik.WinControls.Themes.FluentDarkTheme();
             this.logoLabel = new System.Windows.Forms.Label();
             this.panelLEFT = new System.Windows.Forms.Panel();
@@ -41,14 +41,16 @@
             this.currentPasswords = new System.Windows.Forms.Button();
             this.logoPanel = new System.Windows.Forms.Panel();
             this.panelCurrPass = new System.Windows.Forms.Panel();
-            this.welcomeLabel = new System.Windows.Forms.Label();
-            this.numpswLabel = new System.Windows.Forms.Label();
-            this.securityLabel = new System.Windows.Forms.Label();
-            this.numPSW = new System.Windows.Forms.Label();
-            this.riskLabel = new System.Windows.Forms.Label();
+            this.headerLabel = new System.Windows.Forms.Label();
+            this.randomGenLabel = new System.Windows.Forms.Label();
+            this.randomizeButton = new System.Windows.Forms.Button();
+            this.savePassword = new System.Windows.Forms.Button();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.passwordLabel = new System.Windows.Forms.Label();
             this.descriptionLabel = new System.Windows.Forms.Label();
-            this.descBorder1 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.descriptionTextBox = new System.Windows.Forms.RichTextBox();
             this.panelLEFT.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -83,15 +85,16 @@
             // 
             // homepageButton
             // 
-            this.homepageButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homepageButton.BackgroundImage")));
             this.homepageButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.homepageButton.FlatAppearance.BorderSize = 0;
             this.homepageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homepageButton.Image = ((System.Drawing.Image)(resources.GetObject("homepageButton.Image")));
             this.homepageButton.Location = new System.Drawing.Point(49, 592);
             this.homepageButton.Name = "homepageButton";
             this.homepageButton.Size = new System.Drawing.Size(93, 91);
             this.homepageButton.TabIndex = 7;
             this.homepageButton.UseVisualStyleBackColor = true;
+            this.homepageButton.Click += new System.EventHandler(this.homepageButton_Click);
             // 
             // cpyrtLabel
             // 
@@ -131,7 +134,6 @@
             this.removePassButton.Text = " Remove Password";
             this.removePassButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.removePassButton.UseVisualStyleBackColor = false;
-            this.removePassButton.MouseHover += new System.EventHandler(this.removePassButton_MouseHover);
             // 
             // addPassButton
             // 
@@ -151,8 +153,6 @@
             this.addPassButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.addPassButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.addPassButton.UseVisualStyleBackColor = false;
-            this.addPassButton.Click += new System.EventHandler(this.addPassButton_Click);
-            this.addPassButton.MouseHover += new System.EventHandler(this.addPassButton_MouseHover);
             // 
             // checkStrengthButton
             // 
@@ -173,12 +173,11 @@
             this.checkStrengthButton.Text = "Check Password Strength";
             this.checkStrengthButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkStrengthButton.UseVisualStyleBackColor = false;
-            this.checkStrengthButton.Click += new System.EventHandler(this.genNewPassButton_Click);
-            this.checkStrengthButton.MouseHover += new System.EventHandler(this.genNewPassButton_MouseHover);
             // 
             // currentPasswords
             // 
             this.currentPasswords.BackColor = System.Drawing.Color.Transparent;
+            this.currentPasswords.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.currentPasswords.FlatAppearance.BorderSize = 0;
             this.currentPasswords.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.currentPasswords.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -186,7 +185,7 @@
             this.currentPasswords.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currentPasswords.ForeColor = System.Drawing.Color.White;
             this.currentPasswords.Image = ((System.Drawing.Image)(resources.GetObject("currentPasswords.Image")));
-            this.currentPasswords.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.currentPasswords.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.currentPasswords.Location = new System.Drawing.Point(0, 125);
             this.currentPasswords.Name = "currentPasswords";
             this.currentPasswords.Size = new System.Drawing.Size(200, 106);
@@ -196,7 +195,6 @@
             this.currentPasswords.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.currentPasswords.UseVisualStyleBackColor = false;
             this.currentPasswords.Click += new System.EventHandler(this.currentPasswords_Click);
-            this.currentPasswords.MouseHover += new System.EventHandler(this.currentPasswords_MouseHover);
             // 
             // logoPanel
             // 
@@ -216,99 +214,122 @@
             this.panelCurrPass.Size = new System.Drawing.Size(7, 106);
             this.panelCurrPass.TabIndex = 2;
             // 
-            // welcomeLabel
+            // headerLabel
             // 
-            this.welcomeLabel.AutoSize = true;
-            this.welcomeLabel.Font = new System.Drawing.Font("Sitka Heading", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeLabel.Location = new System.Drawing.Point(415, 26);
-            this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(640, 69);
-            this.welcomeLabel.TabIndex = 3;
-            this.welcomeLabel.Text = "Welcome to Smarter Password";
+            this.headerLabel.AutoSize = true;
+            this.headerLabel.Font = new System.Drawing.Font("Impact", 24.75F);
+            this.headerLabel.Location = new System.Drawing.Point(585, 59);
+            this.headerLabel.Name = "headerLabel";
+            this.headerLabel.Size = new System.Drawing.Size(215, 41);
+            this.headerLabel.TabIndex = 3;
+            this.headerLabel.Text = "New Password";
             // 
-            // numpswLabel
+            // randomGenLabel
             // 
-            this.numpswLabel.AutoSize = true;
-            this.numpswLabel.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.numpswLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.numpswLabel.Location = new System.Drawing.Point(314, 199);
-            this.numpswLabel.Name = "numpswLabel";
-            this.numpswLabel.Size = new System.Drawing.Size(330, 32);
-            this.numpswLabel.TabIndex = 5;
-            this.numpswLabel.Text = "Current Passwords Kept Safe: \r\n";
-            this.numpswLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.randomGenLabel.AutoSize = true;
+            this.randomGenLabel.Location = new System.Drawing.Point(747, 285);
+            this.randomGenLabel.Name = "randomGenLabel";
+            this.randomGenLabel.Size = new System.Drawing.Size(294, 15);
+            this.randomGenLabel.TabIndex = 4;
+            this.randomGenLabel.Text = "Want a randomly generated safe password? Click here.\r\n";
             // 
-            // securityLabel
+            // randomizeButton
             // 
-            this.securityLabel.AutoSize = true;
-            this.securityLabel.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.securityLabel.Location = new System.Drawing.Point(483, 237);
-            this.securityLabel.Name = "securityLabel";
-            this.securityLabel.Size = new System.Drawing.Size(161, 32);
-            this.securityLabel.TabIndex = 6;
-            this.securityLabel.Text = "Security Risk: ";
+            this.randomizeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.randomizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.randomizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.randomizeButton.Location = new System.Drawing.Point(856, 312);
+            this.randomizeButton.Name = "randomizeButton";
+            this.randomizeButton.Size = new System.Drawing.Size(97, 31);
+            this.randomizeButton.TabIndex = 5;
+            this.randomizeButton.Text = "Randomize";
+            this.randomizeButton.UseVisualStyleBackColor = false;
             // 
-            // numPSW
+            // savePassword
             // 
-            this.numPSW.AutoSize = true;
-            this.numPSW.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.numPSW.Location = new System.Drawing.Point(650, 199);
-            this.numPSW.Name = "numPSW";
-            this.numPSW.Size = new System.Drawing.Size(28, 32);
-            this.numPSW.TabIndex = 7;
-            this.numPSW.Text = "5";
+            this.savePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.savePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.savePassword.Location = new System.Drawing.Point(550, 601);
+            this.savePassword.Name = "savePassword";
+            this.savePassword.Size = new System.Drawing.Size(211, 59);
+            this.savePassword.TabIndex = 6;
+            this.savePassword.Text = "Save Password";
+            this.savePassword.UseVisualStyleBackColor = false;
+            this.savePassword.Click += new System.EventHandler(this.savePassword_Click);
             // 
-            // riskLabel
+            // nameLabel
             // 
-            this.riskLabel.AutoSize = true;
-            this.riskLabel.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.riskLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.riskLabel.Location = new System.Drawing.Point(650, 237);
-            this.riskLabel.Name = "riskLabel";
-            this.riskLabel.Size = new System.Drawing.Size(71, 32);
-            this.riskLabel.TabIndex = 8;
-            this.riskLabel.Text = "HIGH";
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(335, 197);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(39, 15);
+            this.nameLabel.TabIndex = 7;
+            this.nameLabel.Text = "Name";
+            // 
+            // passwordLabel
+            // 
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Location = new System.Drawing.Point(335, 285);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(57, 15);
+            this.passwordLabel.TabIndex = 8;
+            this.passwordLabel.Text = "Password";
             // 
             // descriptionLabel
             // 
             this.descriptionLabel.AutoSize = true;
-            this.descriptionLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.descriptionLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.descriptionLabel.Location = new System.Drawing.Point(284, 618);
+            this.descriptionLabel.Location = new System.Drawing.Point(338, 373);
             this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(868, 90);
-            this.descriptionLabel.TabIndex = 0;
-            this.descriptionLabel.Text = resources.GetString("descriptionLabel.Text");
+            this.descriptionLabel.Size = new System.Drawing.Size(67, 15);
+            this.descriptionLabel.TabIndex = 9;
+            this.descriptionLabel.Text = "Description";
             // 
-            // descBorder1
+            // nameTextBox
             // 
-            this.descBorder1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.descBorder1.Location = new System.Drawing.Point(199, 603);
-            this.descBorder1.Name = "descBorder1";
-            this.descBorder1.Size = new System.Drawing.Size(982, 12);
-            this.descBorder1.TabIndex = 9;
+            this.nameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.nameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nameTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.nameTextBox.Location = new System.Drawing.Point(341, 225);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(274, 29);
+            this.nameTextBox.TabIndex = 10;
             // 
-            // panel1
+            // passwordTextBox
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.panel1.Location = new System.Drawing.Point(199, 607);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(12, 112);
-            this.panel1.TabIndex = 10;
+            this.passwordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.passwordTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.passwordTextBox.Location = new System.Drawing.Point(341, 312);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(274, 29);
+            this.passwordTextBox.TabIndex = 11;
             // 
-            // RadForm1
+            // descriptionTextBox
+            // 
+            this.descriptionTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.descriptionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.descriptionTextBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.descriptionTextBox.Location = new System.Drawing.Point(341, 404);
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.Size = new System.Drawing.Size(274, 124);
+            this.descriptionTextBox.TabIndex = 12;
+            this.descriptionTextBox.Text = "";
+            // 
+            // AddPasswordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1180, 719);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.descBorder1);
+            this.Controls.Add(this.descriptionTextBox);
+            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.descriptionLabel);
-            this.Controls.Add(this.riskLabel);
-            this.Controls.Add(this.numPSW);
-            this.Controls.Add(this.securityLabel);
-            this.Controls.Add(this.numpswLabel);
-            this.Controls.Add(this.welcomeLabel);
+            this.Controls.Add(this.passwordLabel);
+            this.Controls.Add(this.nameLabel);
+            this.Controls.Add(this.savePassword);
+            this.Controls.Add(this.randomizeButton);
+            this.Controls.Add(this.randomGenLabel);
+            this.Controls.Add(this.headerLabel);
             this.Controls.Add(this.panelCurrPass);
             this.Controls.Add(this.panelLEFT);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -316,7 +337,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1188, 752);
             this.MinimumSize = new System.Drawing.Size(1188, 752);
-            this.Name = "RadForm1";
+            this.Name = "AddPasswordForm";
             // 
             // 
             // 
@@ -346,14 +367,16 @@
         private System.Windows.Forms.Label companyLabel;
         private System.Windows.Forms.Label cpyrtLabel;
         private System.Windows.Forms.Panel panelCurrPass;
-        private System.Windows.Forms.Label welcomeLabel;
-        private System.Windows.Forms.Label numpswLabel;
-        private System.Windows.Forms.Label securityLabel;
-        private System.Windows.Forms.Label numPSW;
-        private System.Windows.Forms.Label descriptionLabel;
-        private System.Windows.Forms.Label riskLabel;
-        private System.Windows.Forms.Panel descBorder1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button homepageButton;
+        private System.Windows.Forms.Label headerLabel;
+        private System.Windows.Forms.Label randomGenLabel;
+        private System.Windows.Forms.Button randomizeButton;
+        private System.Windows.Forms.Button savePassword;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.Label passwordLabel;
+        private System.Windows.Forms.Label descriptionLabel;
+        private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.RichTextBox descriptionTextBox;
     }
 }
