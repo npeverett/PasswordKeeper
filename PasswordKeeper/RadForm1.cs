@@ -43,8 +43,9 @@ namespace PasswordKeeper
             panelCurrPass.Top = removePassButton.Top;
         }
 
-        private void genNewPassButton_Click(object sender, EventArgs e)
+        public string genNewPassword()
         {
+
             Random rand = new Random();
             string newPassword = "";
             int numSymbols = 0;
@@ -57,7 +58,7 @@ namespace PasswordKeeper
             char[] safeLowerLetters = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
             char[] safeUpperLetters = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
 
-            while (newPassword.Length < 8)
+            while (newPassword.Length < 12)
             {
                 int r = rand.Next(4);
                 if (r == 1 && numSymbols <= 2)
@@ -65,7 +66,7 @@ namespace PasswordKeeper
                     int idx = rand.Next(safeSymbols.Length);
                     while (newPassword.Contains(safeSymbols[idx]) == true)
                     {
-                       idx = rand.Next(safeSymbols.Length);
+                        idx = rand.Next(safeSymbols.Length);
                     }
                     newPassword += safeSymbols[idx];
                 }
@@ -97,12 +98,27 @@ namespace PasswordKeeper
                     newPassword += safeUpperLetters[idx];
                 }
             }
-            newPasswordLabel.Text = newPassword;
+
+            return newPassword;
+        }
+
+        private void genNewPassButton_Click(object sender, EventArgs e)
+        {
+            // Application.Run(new RadForm3());
+
+            string newPassword = genNewPassword();
+
+             newPasswordLabel.Text = newPassword;
         }
 
         private void RadForm1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void currentPasswords_Click(object sender, EventArgs e)
+        {
+            // Application.Run(new RadForm2());
         }
     }
 }
