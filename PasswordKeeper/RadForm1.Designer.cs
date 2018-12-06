@@ -254,9 +254,8 @@
             this.numPSW.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.numPSW.Location = new System.Drawing.Point(650, 199);
             this.numPSW.Name = "numPSW";
-            this.numPSW.Size = new System.Drawing.Size(28, 32);
+            this.numPSW.Size = new System.Drawing.Size(0, 32);
             this.numPSW.TabIndex = 7;
-            this.numPSW.Text = "5";
             // 
             // riskLabel
             // 

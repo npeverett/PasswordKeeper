@@ -11,11 +11,13 @@ namespace PasswordKeeper
 {
     public partial class RadForm1 : Telerik.WinControls.UI.RadForm
     {
-        private BindingList<Password> passwordList = new BindingList<Password>();
+        Methods variables = new Methods();
+        private BindingList<Password> passwordList;
 
         public RadForm1()
         {
             InitializeComponent();
+            passwordList = variables.getPasswordList();
 
             numPSW.Text = passwordList.Count.ToString(); 
         }
