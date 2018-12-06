@@ -322,6 +322,7 @@
             this.RootElement.MaxSize = new System.Drawing.Size(1188, 752);
             this.Text = "Smarter Password";
             this.ThemeName = "FluentDark";
+            this.Load += new System.EventHandler(this.RadForm1_Load);
             this.panelLEFT.ResumeLayout(false);
             this.panelLEFT.PerformLayout();
             this.logoPanel.ResumeLayout(false);
