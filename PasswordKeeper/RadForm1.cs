@@ -11,6 +11,8 @@ namespace PasswordKeeper
 {
     public partial class RadForm1 : Telerik.WinControls.UI.RadForm
     {
+        private BindingList<Password> passwordList = new BindingList<Password>();
+
         public RadForm1()
         {
             InitializeComponent();
