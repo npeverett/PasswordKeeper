@@ -43,70 +43,13 @@ namespace PasswordKeeper
             panelCurrPass.Top = removePassButton.Top;
         }
 
-        public string genNewPassword()
-        {
-
-            Random rand = new Random();
-            string newPassword = "";
-            int numSymbols = 0;
-            int numNumbers = 0;
-            int numLower = 0;
-            int numUpper = 0;
-
-            char[] safeSymbols = { '!', '@', '#', '$', '"', '-', '`', '~' };
-            char[] safeNumbers = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
-            char[] safeLowerLetters = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
-            char[] safeUpperLetters = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
-
-            while (newPassword.Length < 12)
-            {
-                int r = rand.Next(4);
-                if (r == 1 && numSymbols <= 2)
-                {
-                    int idx = rand.Next(safeSymbols.Length);
-                    while (newPassword.Contains(safeSymbols[idx]) == true)
-                    {
-                        idx = rand.Next(safeSymbols.Length);
-                    }
-                    newPassword += safeSymbols[idx];
-                }
-                if (r == 2 && numNumbers <= 2)
-                {
-                    int idx = rand.Next(safeNumbers.Length);
-                    while (newPassword.Contains(safeNumbers[idx]) == true)
-                    {
-                        idx = rand.Next(safeNumbers.Length);
-                    }
-                    newPassword += safeNumbers[idx];
-                }
-                if (r == 3 && numLower <= 2)
-                {
-                    int idx = rand.Next(safeLowerLetters.Length);
-                    while (newPassword.Contains(safeLowerLetters[idx]) == true)
-                    {
-                        idx = rand.Next(safeLowerLetters.Length);
-                    }
-                    newPassword += safeLowerLetters[idx];
-                }
-                if (r == 4 && numUpper <= 2)
-                {
-                    int idx = rand.Next(safeUpperLetters.Length);
-                    while (newPassword.Contains(safeUpperLetters[idx]) == true)
-                    {
-                        idx = rand.Next(safeUpperLetters.Length);
-                    }
-                    newPassword += safeUpperLetters[idx];
-                }
-            }
-
-            return newPassword;
-        }
 
         private void genNewPassButton_Click(object sender, EventArgs e)
         {
             // Application.Run(new RadForm3());
+            Methods method = new Methods();
 
-            string newPassword = genNewPassword();
+            string newPassword = method.genNewPassword();
 
              newPasswordLabel.Text = newPassword;
         }
