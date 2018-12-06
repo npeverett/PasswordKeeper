@@ -1,6 +1,6 @@
 ﻿namespace PasswordKeeper
 {
-    partial class RadForm1
+    partial class CurrentPasswordForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RadForm1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CurrentPasswordForm));
             this.fluentDarkTheme1 = new Telerik.WinControls.Themes.FluentDarkTheme();
             this.logoLabel = new System.Windows.Forms.Label();
             this.panelLEFT = new System.Windows.Forms.Panel();
@@ -40,15 +40,12 @@
             this.currentPasswords = new System.Windows.Forms.Button();
             this.logoPanel = new System.Windows.Forms.Panel();
             this.panelCurrPass = new System.Windows.Forms.Panel();
-            this.welcomeLabel = new System.Windows.Forms.Label();
-            this.numpswLabel = new System.Windows.Forms.Label();
-            this.securityLabel = new System.Windows.Forms.Label();
-            this.numPSW = new System.Windows.Forms.Label();
-            this.riskLabel = new System.Windows.Forms.Label();
             this.descriptionLabel = new System.Windows.Forms.Label();
-            this.descBorder1 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.newPasswordLabel = new System.Windows.Forms.Label();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.typeTextBox = new System.Windows.Forms.TextBox();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.notesTextBox = new System.Windows.Forms.RichTextBox();
             this.panelLEFT.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -159,7 +156,6 @@
             this.genNewPassButton.Text = "Generate New Random Password";
             this.genNewPassButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.genNewPassButton.UseVisualStyleBackColor = false;
-            this.genNewPassButton.Click += new System.EventHandler(this.genNewPassButton_Click);
             this.genNewPassButton.MouseHover += new System.EventHandler(this.genNewPassButton_MouseHover);
             // 
             // currentPasswords
@@ -201,59 +197,6 @@
             this.panelCurrPass.Size = new System.Drawing.Size(7, 106);
             this.panelCurrPass.TabIndex = 2;
             // 
-            // welcomeLabel
-            // 
-            this.welcomeLabel.AutoSize = true;
-            this.welcomeLabel.Font = new System.Drawing.Font("Sitka Heading", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeLabel.Location = new System.Drawing.Point(415, 26);
-            this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(640, 69);
-            this.welcomeLabel.TabIndex = 3;
-            this.welcomeLabel.Text = "Welcome to Smarter Password";
-            // 
-            // numpswLabel
-            // 
-            this.numpswLabel.AutoSize = true;
-            this.numpswLabel.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.numpswLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.numpswLabel.Location = new System.Drawing.Point(314, 199);
-            this.numpswLabel.Name = "numpswLabel";
-            this.numpswLabel.Size = new System.Drawing.Size(330, 32);
-            this.numpswLabel.TabIndex = 5;
-            this.numpswLabel.Text = "Current Passwords Kept Safe: \r\n";
-            this.numpswLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // securityLabel
-            // 
-            this.securityLabel.AutoSize = true;
-            this.securityLabel.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.securityLabel.Location = new System.Drawing.Point(483, 237);
-            this.securityLabel.Name = "securityLabel";
-            this.securityLabel.Size = new System.Drawing.Size(161, 32);
-            this.securityLabel.TabIndex = 6;
-            this.securityLabel.Text = "Security Risk: ";
-            // 
-            // numPSW
-            // 
-            this.numPSW.AutoSize = true;
-            this.numPSW.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.numPSW.Location = new System.Drawing.Point(650, 199);
-            this.numPSW.Name = "numPSW";
-            this.numPSW.Size = new System.Drawing.Size(28, 32);
-            this.numPSW.TabIndex = 7;
-            this.numPSW.Text = "5";
-            // 
-            // riskLabel
-            // 
-            this.riskLabel.AutoSize = true;
-            this.riskLabel.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.riskLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.riskLabel.Location = new System.Drawing.Point(650, 237);
-            this.riskLabel.Name = "riskLabel";
-            this.riskLabel.Size = new System.Drawing.Size(71, 32);
-            this.riskLabel.TabIndex = 8;
-            this.riskLabel.Text = "HIGH";
-            // 
             // descriptionLabel
             // 
             this.descriptionLabel.AutoSize = true;
@@ -261,25 +204,8 @@
             this.descriptionLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.descriptionLabel.Location = new System.Drawing.Point(284, 618);
             this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(868, 90);
+            this.descriptionLabel.Size = new System.Drawing.Size(0, 30);
             this.descriptionLabel.TabIndex = 0;
-            this.descriptionLabel.Text = resources.GetString("descriptionLabel.Text");
-            // 
-            // descBorder1
-            // 
-            this.descBorder1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.descBorder1.Location = new System.Drawing.Point(199, 603);
-            this.descBorder1.Name = "descBorder1";
-            this.descBorder1.Size = new System.Drawing.Size(982, 12);
-            this.descBorder1.TabIndex = 9;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.panel1.Location = new System.Drawing.Point(199, 607);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(12, 112);
-            this.panel1.TabIndex = 10;
             // 
             // newPasswordLabel
             // 
@@ -289,20 +215,47 @@
             this.newPasswordLabel.Size = new System.Drawing.Size(0, 15);
             this.newPasswordLabel.TabIndex = 11;
             // 
-            // RadForm1
+            // passwordTextBox
+            // 
+            this.passwordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.passwordTextBox.Location = new System.Drawing.Point(400, 298);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(261, 20);
+            this.passwordTextBox.TabIndex = 12;
+            // 
+            // typeTextBox
+            // 
+            this.typeTextBox.Location = new System.Drawing.Point(400, 251);
+            this.typeTextBox.Name = "typeTextBox";
+            this.typeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.typeTextBox.TabIndex = 13;
+            // 
+            // usernameTextBox
+            // 
+            this.usernameTextBox.Location = new System.Drawing.Point(400, 211);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.usernameTextBox.TabIndex = 14;
+            // 
+            // notesTextBox
+            // 
+            this.notesTextBox.Location = new System.Drawing.Point(400, 360);
+            this.notesTextBox.Name = "notesTextBox";
+            this.notesTextBox.Size = new System.Drawing.Size(100, 96);
+            this.notesTextBox.TabIndex = 15;
+            this.notesTextBox.Text = "";
+            // 
+            // CurrentPasswordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1180, 719);
+            this.Controls.Add(this.notesTextBox);
+            this.Controls.Add(this.usernameTextBox);
+            this.Controls.Add(this.typeTextBox);
+            this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.newPasswordLabel);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.descBorder1);
             this.Controls.Add(this.descriptionLabel);
-            this.Controls.Add(this.riskLabel);
-            this.Controls.Add(this.numPSW);
-            this.Controls.Add(this.securityLabel);
-            this.Controls.Add(this.numpswLabel);
-            this.Controls.Add(this.welcomeLabel);
             this.Controls.Add(this.panelCurrPass);
             this.Controls.Add(this.panelLEFT);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -310,7 +263,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1188, 752);
             this.MinimumSize = new System.Drawing.Size(1188, 752);
-            this.Name = "RadForm1";
+            this.Name = "CurrentPasswordForm";
             // 
             // 
             // 
@@ -340,14 +293,11 @@
         private System.Windows.Forms.Label companyLabel;
         private System.Windows.Forms.Label cpyrtLabel;
         private System.Windows.Forms.Panel panelCurrPass;
-        private System.Windows.Forms.Label welcomeLabel;
-        private System.Windows.Forms.Label numpswLabel;
-        private System.Windows.Forms.Label securityLabel;
-        private System.Windows.Forms.Label numPSW;
         private System.Windows.Forms.Label descriptionLabel;
-        private System.Windows.Forms.Label riskLabel;
-        private System.Windows.Forms.Panel descBorder1;
-        private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Label newPasswordLabel;
+        private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.TextBox typeTextBox;
+        private System.Windows.Forms.TextBox usernameTextBox;
+        private System.Windows.Forms.RichTextBox notesTextBox;
     }
 }

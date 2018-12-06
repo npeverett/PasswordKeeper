@@ -97,10 +97,5 @@ namespace PasswordKeeper
             }
             newPasswordLabel.Text = newPassword;
         }
-
-        private void RadForm1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
