@@ -32,11 +32,12 @@
             this.fluentDarkTheme1 = new Telerik.WinControls.Themes.FluentDarkTheme();
             this.logoLabel = new System.Windows.Forms.Label();
             this.panelLEFT = new System.Windows.Forms.Panel();
+            this.homepageButton = new System.Windows.Forms.Button();
             this.cpyrtLabel = new System.Windows.Forms.Label();
             this.companyLabel = new System.Windows.Forms.Label();
             this.removePassButton = new System.Windows.Forms.Button();
             this.addPassButton = new System.Windows.Forms.Button();
-            this.genNewPassButton = new System.Windows.Forms.Button();
+            this.checkStrengthButton = new System.Windows.Forms.Button();
             this.currentPasswords = new System.Windows.Forms.Button();
             this.logoPanel = new System.Windows.Forms.Panel();
             this.panelCurrPass = new System.Windows.Forms.Panel();
@@ -66,11 +67,12 @@
             // 
             // panelLEFT
             // 
+            this.panelLEFT.Controls.Add(this.homepageButton);
             this.panelLEFT.Controls.Add(this.cpyrtLabel);
             this.panelLEFT.Controls.Add(this.companyLabel);
             this.panelLEFT.Controls.Add(this.removePassButton);
             this.panelLEFT.Controls.Add(this.addPassButton);
-            this.panelLEFT.Controls.Add(this.genNewPassButton);
+            this.panelLEFT.Controls.Add(this.checkStrengthButton);
             this.panelLEFT.Controls.Add(this.currentPasswords);
             this.panelLEFT.Controls.Add(this.logoPanel);
             this.panelLEFT.Dock = System.Windows.Forms.DockStyle.Left;
@@ -78,6 +80,18 @@
             this.panelLEFT.Name = "panelLEFT";
             this.panelLEFT.Size = new System.Drawing.Size(200, 719);
             this.panelLEFT.TabIndex = 1;
+            // 
+            // homepageButton
+            // 
+            this.homepageButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homepageButton.BackgroundImage")));
+            this.homepageButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.homepageButton.FlatAppearance.BorderSize = 0;
+            this.homepageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homepageButton.Location = new System.Drawing.Point(49, 592);
+            this.homepageButton.Name = "homepageButton";
+            this.homepageButton.Size = new System.Drawing.Size(93, 91);
+            this.homepageButton.TabIndex = 7;
+            this.homepageButton.UseVisualStyleBackColor = true;
             // 
             // cpyrtLabel
             // 
@@ -139,27 +153,27 @@
             this.addPassButton.UseVisualStyleBackColor = false;
             this.addPassButton.MouseHover += new System.EventHandler(this.addPassButton_MouseHover);
             // 
-            // genNewPassButton
+            // checkStrengthButton
             // 
-            this.genNewPassButton.BackColor = System.Drawing.Color.Transparent;
-            this.genNewPassButton.Cursor = System.Windows.Forms.Cursors.Default;
-            this.genNewPassButton.FlatAppearance.BorderSize = 0;
-            this.genNewPassButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.genNewPassButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.genNewPassButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.genNewPassButton.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.genNewPassButton.ForeColor = System.Drawing.Color.Transparent;
-            this.genNewPassButton.Image = ((System.Drawing.Image)(resources.GetObject("genNewPassButton.Image")));
-            this.genNewPassButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.genNewPassButton.Location = new System.Drawing.Point(0, 237);
-            this.genNewPassButton.Name = "genNewPassButton";
-            this.genNewPassButton.Size = new System.Drawing.Size(200, 106);
-            this.genNewPassButton.TabIndex = 2;
-            this.genNewPassButton.Text = "Generate New Random Password";
-            this.genNewPassButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.genNewPassButton.UseVisualStyleBackColor = false;
-            this.genNewPassButton.Click += new System.EventHandler(this.genNewPassButton_Click);
-            this.genNewPassButton.MouseHover += new System.EventHandler(this.genNewPassButton_MouseHover);
+            this.checkStrengthButton.BackColor = System.Drawing.Color.Transparent;
+            this.checkStrengthButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.checkStrengthButton.FlatAppearance.BorderSize = 0;
+            this.checkStrengthButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.checkStrengthButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.checkStrengthButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkStrengthButton.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.checkStrengthButton.ForeColor = System.Drawing.Color.Transparent;
+            this.checkStrengthButton.Image = ((System.Drawing.Image)(resources.GetObject("checkStrengthButton.Image")));
+            this.checkStrengthButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.checkStrengthButton.Location = new System.Drawing.Point(0, 237);
+            this.checkStrengthButton.Name = "checkStrengthButton";
+            this.checkStrengthButton.Size = new System.Drawing.Size(200, 106);
+            this.checkStrengthButton.TabIndex = 2;
+            this.checkStrengthButton.Text = "Check Password Strength";
+            this.checkStrengthButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.checkStrengthButton.UseVisualStyleBackColor = false;
+            this.checkStrengthButton.Click += new System.EventHandler(this.genNewPassButton_Click);
+            this.checkStrengthButton.MouseHover += new System.EventHandler(this.genNewPassButton_MouseHover);
             // 
             // currentPasswords
             // 
@@ -327,7 +341,7 @@
         private System.Windows.Forms.Panel logoPanel;
         private System.Windows.Forms.Button removePassButton;
         private System.Windows.Forms.Button addPassButton;
-        private System.Windows.Forms.Button genNewPassButton;
+        private System.Windows.Forms.Button checkStrengthButton;
         private System.Windows.Forms.Label companyLabel;
         private System.Windows.Forms.Label cpyrtLabel;
         private System.Windows.Forms.Panel panelCurrPass;
@@ -339,5 +353,6 @@
         private System.Windows.Forms.Label riskLabel;
         private System.Windows.Forms.Panel descBorder1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button homepageButton;
     }
 }

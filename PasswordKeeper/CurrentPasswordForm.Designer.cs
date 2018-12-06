@@ -36,9 +36,10 @@
             this.companyLabel = new System.Windows.Forms.Label();
             this.removePassButton = new System.Windows.Forms.Button();
             this.addPassButton = new System.Windows.Forms.Button();
-            this.genNewPassButton = new System.Windows.Forms.Button();
+            this.checkStrengthButton = new System.Windows.Forms.Button();
             this.currentPasswords = new System.Windows.Forms.Button();
             this.logoPanel = new System.Windows.Forms.Panel();
+            this.homeButton = new System.Windows.Forms.Button();
             this.panelCurrPass = new System.Windows.Forms.Panel();
             this.descriptionLabel = new System.Windows.Forms.Label();
             this.newPasswordLabel = new System.Windows.Forms.Label();
@@ -67,6 +68,7 @@
             this.currPSWBackgroundPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.passwordListBox = new System.Windows.Forms.ListBox();
+            this.homepageButton = new System.Windows.Forms.Button();
             this.panelLEFT.SuspendLayout();
             this.logoPanel.SuspendLayout();
             this.currPSWBackgroundPanel.SuspendLayout();
@@ -87,11 +89,12 @@
             // 
             // panelLEFT
             // 
+            this.panelLEFT.Controls.Add(this.homepageButton);
             this.panelLEFT.Controls.Add(this.cpyrtLabel);
             this.panelLEFT.Controls.Add(this.companyLabel);
             this.panelLEFT.Controls.Add(this.removePassButton);
             this.panelLEFT.Controls.Add(this.addPassButton);
-            this.panelLEFT.Controls.Add(this.genNewPassButton);
+            this.panelLEFT.Controls.Add(this.checkStrengthButton);
             this.panelLEFT.Controls.Add(this.currentPasswords);
             this.panelLEFT.Controls.Add(this.logoPanel);
             this.panelLEFT.Dock = System.Windows.Forms.DockStyle.Left;
@@ -160,26 +163,26 @@
             this.addPassButton.UseVisualStyleBackColor = false;
             this.addPassButton.MouseHover += new System.EventHandler(this.addPassButton_MouseHover);
             // 
-            // genNewPassButton
+            // checkStrengthButton
             // 
-            this.genNewPassButton.BackColor = System.Drawing.Color.Transparent;
-            this.genNewPassButton.Cursor = System.Windows.Forms.Cursors.Default;
-            this.genNewPassButton.FlatAppearance.BorderSize = 0;
-            this.genNewPassButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.genNewPassButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.genNewPassButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.genNewPassButton.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.genNewPassButton.ForeColor = System.Drawing.Color.Transparent;
-            this.genNewPassButton.Image = ((System.Drawing.Image)(resources.GetObject("genNewPassButton.Image")));
-            this.genNewPassButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.genNewPassButton.Location = new System.Drawing.Point(0, 237);
-            this.genNewPassButton.Name = "genNewPassButton";
-            this.genNewPassButton.Size = new System.Drawing.Size(200, 106);
-            this.genNewPassButton.TabIndex = 2;
-            this.genNewPassButton.Text = "Generate New Random Password";
-            this.genNewPassButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.genNewPassButton.UseVisualStyleBackColor = false;
-            this.genNewPassButton.MouseHover += new System.EventHandler(this.genNewPassButton_MouseHover);
+            this.checkStrengthButton.BackColor = System.Drawing.Color.Transparent;
+            this.checkStrengthButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.checkStrengthButton.FlatAppearance.BorderSize = 0;
+            this.checkStrengthButton.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.checkStrengthButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.checkStrengthButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkStrengthButton.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.checkStrengthButton.ForeColor = System.Drawing.Color.Transparent;
+            this.checkStrengthButton.Image = ((System.Drawing.Image)(resources.GetObject("checkStrengthButton.Image")));
+            this.checkStrengthButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.checkStrengthButton.Location = new System.Drawing.Point(0, 237);
+            this.checkStrengthButton.Name = "checkStrengthButton";
+            this.checkStrengthButton.Size = new System.Drawing.Size(200, 106);
+            this.checkStrengthButton.TabIndex = 2;
+            this.checkStrengthButton.Text = "Check Password Strength";
+            this.checkStrengthButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.checkStrengthButton.UseVisualStyleBackColor = false;
+            this.checkStrengthButton.MouseHover += new System.EventHandler(this.genNewPassButton_MouseHover);
             // 
             // currentPasswords
             // 
@@ -206,11 +209,25 @@
             // 
             this.logoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.logoPanel.Controls.Add(this.logoLabel);
+            this.logoPanel.Controls.Add(this.homeButton);
             this.logoPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.logoPanel.Location = new System.Drawing.Point(0, 0);
             this.logoPanel.Name = "logoPanel";
             this.logoPanel.Size = new System.Drawing.Size(200, 100);
             this.logoPanel.TabIndex = 0;
+            // 
+            // homeButton
+            // 
+            this.homeButton.FlatAppearance.BorderSize = 0;
+            this.homeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.homeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.homeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homeButton.Location = new System.Drawing.Point(0, 0);
+            this.homeButton.Name = "homeButton";
+            this.homeButton.Size = new System.Drawing.Size(200, 100);
+            this.homeButton.TabIndex = 1;
+            this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
             // panelCurrPass
             // 
@@ -372,10 +389,9 @@
             // 
             // chromeButton
             // 
-            this.chromeButton.BackColor = System.Drawing.Color.Transparent;
+            this.chromeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.chromeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chromeButton.BackgroundImage")));
             this.chromeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.chromeButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.chromeButton.FlatAppearance.BorderSize = 0;
             this.chromeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chromeButton.ForeColor = System.Drawing.Color.Transparent;
@@ -542,8 +558,21 @@
             this.passwordListBox.FormattingEnabled = true;
             this.passwordListBox.Location = new System.Drawing.Point(0, 0);
             this.passwordListBox.Name = "passwordListBox";
-            this.passwordListBox.Size = new System.Drawing.Size(525, 719);
+            this.passwordListBox.Size = new System.Drawing.Size(536, 719);
             this.passwordListBox.TabIndex = 0;
+            // 
+            // homepageButton
+            // 
+            this.homepageButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homepageButton.BackgroundImage")));
+            this.homepageButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.homepageButton.FlatAppearance.BorderSize = 0;
+            this.homepageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homepageButton.Location = new System.Drawing.Point(49, 592);
+            this.homepageButton.Name = "homepageButton";
+            this.homepageButton.Size = new System.Drawing.Size(93, 91);
+            this.homepageButton.TabIndex = 7;
+            this.homepageButton.UseVisualStyleBackColor = true;
+            this.homepageButton.Click += new System.EventHandler(this.homepageButton_Click);
             // 
             // CurrentPasswordForm
             // 
@@ -589,7 +618,7 @@
         private System.Windows.Forms.Panel logoPanel;
         private System.Windows.Forms.Button removePassButton;
         private System.Windows.Forms.Button addPassButton;
-        private System.Windows.Forms.Button genNewPassButton;
+        private System.Windows.Forms.Button checkStrengthButton;
         private System.Windows.Forms.Label companyLabel;
         private System.Windows.Forms.Label cpyrtLabel;
         private System.Windows.Forms.Panel panelCurrPass;
@@ -620,5 +649,7 @@
         private System.Windows.Forms.Panel currPSWBackgroundPanel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ListBox passwordListBox;
+        private System.Windows.Forms.Button homeButton;
+        private System.Windows.Forms.Button homepageButton;
     }
 }

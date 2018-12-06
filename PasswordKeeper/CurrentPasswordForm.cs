@@ -24,8 +24,8 @@ namespace PasswordKeeper
 
         private void genNewPassButton_MouseHover(object sender, EventArgs e)
         {
-            panelCurrPass.Height = genNewPassButton.Height;
-            panelCurrPass.Top = genNewPassButton.Top;
+            panelCurrPass.Height = checkStrengthButton.Height;
+            panelCurrPass.Top = checkStrengthButton.Top;
         }
 
         private void addPassButton_MouseHover(object sender, EventArgs e)
@@ -43,6 +43,20 @@ namespace PasswordKeeper
         private void currentPasswords_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RadForm1 rf = new RadForm1();
+            rf.Show();
+        }
+
+        private void homepageButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RadForm1 rf = new RadForm1();
+            rf.Show();
         }
     }
 }
