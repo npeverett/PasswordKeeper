@@ -181,6 +181,7 @@
             this.currentPasswords.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.currentPasswords.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.currentPasswords.UseVisualStyleBackColor = false;
+            this.currentPasswords.Click += new System.EventHandler(this.currentPasswords_Click);
             this.currentPasswords.MouseHover += new System.EventHandler(this.currentPasswords_MouseHover);
             // 
             // logoPanel
