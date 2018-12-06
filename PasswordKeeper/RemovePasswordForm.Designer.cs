@@ -1,6 +1,6 @@
 ﻿namespace PasswordKeeper
 {
-    partial class RadForm1
+    partial class RemovePasswordForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RadForm1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RemovePasswordForm));
             this.fluentDarkTheme1 = new Telerik.WinControls.Themes.FluentDarkTheme();
             this.logoLabel = new System.Windows.Forms.Label();
             this.panelLEFT = new System.Windows.Forms.Panel();
@@ -41,14 +41,20 @@
             this.currentPasswords = new System.Windows.Forms.Button();
             this.logoPanel = new System.Windows.Forms.Panel();
             this.panelCurrPass = new System.Windows.Forms.Panel();
-            this.welcomeLabel = new System.Windows.Forms.Label();
-            this.numpswLabel = new System.Windows.Forms.Label();
-            this.securityLabel = new System.Windows.Forms.Label();
             this.numPSW = new System.Windows.Forms.Label();
-            this.riskLabel = new System.Windows.Forms.Label();
-            this.descriptionLabel = new System.Windows.Forms.Label();
-            this.descBorder1 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.chromeButtonD = new System.Windows.Forms.Button();
+            this.gmailButtonD = new System.Windows.Forms.Button();
+            this.yahooButtonD = new System.Windows.Forms.Button();
+            this.googleDriveButtonD = new System.Windows.Forms.Button();
+            this.outlookButtonD = new System.Windows.Forms.Button();
+            this.facebookButtonD = new System.Windows.Forms.Button();
+            this.instagramButtonD = new System.Windows.Forms.Button();
+            this.snapchatButtonD = new System.Windows.Forms.Button();
+            this.twitchButtonD = new System.Windows.Forms.Button();
+            this.otherButtonD = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.passwordListBox = new System.Windows.Forms.ListBox();
+            this.warningLabel = new System.Windows.Forms.Label();
             this.panelLEFT.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -83,15 +89,16 @@
             // 
             // homepageButton
             // 
-            this.homepageButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homepageButton.BackgroundImage")));
             this.homepageButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.homepageButton.FlatAppearance.BorderSize = 0;
             this.homepageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homepageButton.Image = ((System.Drawing.Image)(resources.GetObject("homepageButton.Image")));
             this.homepageButton.Location = new System.Drawing.Point(49, 592);
             this.homepageButton.Name = "homepageButton";
             this.homepageButton.Size = new System.Drawing.Size(93, 91);
             this.homepageButton.TabIndex = 7;
             this.homepageButton.UseVisualStyleBackColor = true;
+            this.homepageButton.Click += new System.EventHandler(this.homepageButton_Click);
             // 
             // cpyrtLabel
             // 
@@ -131,8 +138,6 @@
             this.removePassButton.Text = " Remove Password";
             this.removePassButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.removePassButton.UseVisualStyleBackColor = false;
-            this.removePassButton.Click += new System.EventHandler(this.removePassButton_Click);
-            this.removePassButton.MouseHover += new System.EventHandler(this.removePassButton_MouseHover);
             // 
             // addPassButton
             // 
@@ -153,7 +158,6 @@
             this.addPassButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.addPassButton.UseVisualStyleBackColor = false;
             this.addPassButton.Click += new System.EventHandler(this.addPassButton_Click);
-            this.addPassButton.MouseHover += new System.EventHandler(this.addPassButton_MouseHover);
             // 
             // checkStrengthButton
             // 
@@ -174,8 +178,6 @@
             this.checkStrengthButton.Text = "Check Password Strength";
             this.checkStrengthButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkStrengthButton.UseVisualStyleBackColor = false;
-            this.checkStrengthButton.Click += new System.EventHandler(this.genNewPassButton_Click);
-            this.checkStrengthButton.MouseHover += new System.EventHandler(this.genNewPassButton_MouseHover);
             // 
             // currentPasswords
             // 
@@ -197,7 +199,6 @@
             this.currentPasswords.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.currentPasswords.UseVisualStyleBackColor = false;
             this.currentPasswords.Click += new System.EventHandler(this.currentPasswords_Click);
-            this.currentPasswords.MouseHover += new System.EventHandler(this.currentPasswords_MouseHover);
             // 
             // logoPanel
             // 
@@ -217,38 +218,6 @@
             this.panelCurrPass.Size = new System.Drawing.Size(7, 106);
             this.panelCurrPass.TabIndex = 2;
             // 
-            // welcomeLabel
-            // 
-            this.welcomeLabel.AutoSize = true;
-            this.welcomeLabel.Font = new System.Drawing.Font("Sitka Heading", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeLabel.Location = new System.Drawing.Point(415, 26);
-            this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(640, 69);
-            this.welcomeLabel.TabIndex = 3;
-            this.welcomeLabel.Text = "Welcome to Smarter Password";
-            // 
-            // numpswLabel
-            // 
-            this.numpswLabel.AutoSize = true;
-            this.numpswLabel.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.numpswLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.numpswLabel.Location = new System.Drawing.Point(314, 199);
-            this.numpswLabel.Name = "numpswLabel";
-            this.numpswLabel.Size = new System.Drawing.Size(330, 32);
-            this.numpswLabel.TabIndex = 5;
-            this.numpswLabel.Text = "Current Passwords Kept Safe: \r\n";
-            this.numpswLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // securityLabel
-            // 
-            this.securityLabel.AutoSize = true;
-            this.securityLabel.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.securityLabel.Location = new System.Drawing.Point(483, 237);
-            this.securityLabel.Name = "securityLabel";
-            this.securityLabel.Size = new System.Drawing.Size(161, 32);
-            this.securityLabel.TabIndex = 6;
-            this.securityLabel.Text = "Security Risk: ";
-            // 
             // numPSW
             // 
             this.numPSW.AutoSize = true;
@@ -258,57 +227,164 @@
             this.numPSW.Size = new System.Drawing.Size(0, 32);
             this.numPSW.TabIndex = 7;
             // 
-            // riskLabel
+            // chromeButtonD
             // 
-            this.riskLabel.AutoSize = true;
-            this.riskLabel.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.riskLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.riskLabel.Location = new System.Drawing.Point(650, 237);
-            this.riskLabel.Name = "riskLabel";
-            this.riskLabel.Size = new System.Drawing.Size(71, 32);
-            this.riskLabel.TabIndex = 8;
-            this.riskLabel.Text = "HIGH";
+            this.chromeButtonD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.chromeButtonD.FlatAppearance.BorderSize = 0;
+            this.chromeButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chromeButtonD.Image = ((System.Drawing.Image)(resources.GetObject("chromeButtonD.Image")));
+            this.chromeButtonD.Location = new System.Drawing.Point(284, 100);
+            this.chromeButtonD.Name = "chromeButtonD";
+            this.chromeButtonD.Size = new System.Drawing.Size(54, 51);
+            this.chromeButtonD.TabIndex = 8;
+            this.chromeButtonD.UseVisualStyleBackColor = true;
             // 
-            // descriptionLabel
+            // gmailButtonD
             // 
-            this.descriptionLabel.AutoSize = true;
-            this.descriptionLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.descriptionLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.descriptionLabel.Location = new System.Drawing.Point(284, 618);
-            this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(868, 90);
-            this.descriptionLabel.TabIndex = 0;
-            this.descriptionLabel.Text = resources.GetString("descriptionLabel.Text");
+            this.gmailButtonD.FlatAppearance.BorderSize = 0;
+            this.gmailButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gmailButtonD.Image = ((System.Drawing.Image)(resources.GetObject("gmailButtonD.Image")));
+            this.gmailButtonD.Location = new System.Drawing.Point(344, 100);
+            this.gmailButtonD.Name = "gmailButtonD";
+            this.gmailButtonD.Size = new System.Drawing.Size(62, 51);
+            this.gmailButtonD.TabIndex = 9;
+            this.gmailButtonD.UseVisualStyleBackColor = true;
             // 
-            // descBorder1
+            // yahooButtonD
             // 
-            this.descBorder1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.descBorder1.Location = new System.Drawing.Point(199, 603);
-            this.descBorder1.Name = "descBorder1";
-            this.descBorder1.Size = new System.Drawing.Size(982, 12);
-            this.descBorder1.TabIndex = 9;
+            this.yahooButtonD.FlatAppearance.BorderSize = 0;
+            this.yahooButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.yahooButtonD.Image = ((System.Drawing.Image)(resources.GetObject("yahooButtonD.Image")));
+            this.yahooButtonD.Location = new System.Drawing.Point(412, 100);
+            this.yahooButtonD.Name = "yahooButtonD";
+            this.yahooButtonD.Size = new System.Drawing.Size(52, 51);
+            this.yahooButtonD.TabIndex = 10;
+            this.yahooButtonD.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // googleDriveButtonD
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.panel1.Location = new System.Drawing.Point(199, 607);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(12, 112);
-            this.panel1.TabIndex = 10;
+            this.googleDriveButtonD.FlatAppearance.BorderSize = 0;
+            this.googleDriveButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.googleDriveButtonD.Image = ((System.Drawing.Image)(resources.GetObject("googleDriveButtonD.Image")));
+            this.googleDriveButtonD.Location = new System.Drawing.Point(470, 100);
+            this.googleDriveButtonD.Name = "googleDriveButtonD";
+            this.googleDriveButtonD.Size = new System.Drawing.Size(64, 51);
+            this.googleDriveButtonD.TabIndex = 11;
+            this.googleDriveButtonD.UseVisualStyleBackColor = true;
             // 
-            // RadForm1
+            // outlookButtonD
+            // 
+            this.outlookButtonD.FlatAppearance.BorderSize = 0;
+            this.outlookButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.outlookButtonD.Image = ((System.Drawing.Image)(resources.GetObject("outlookButtonD.Image")));
+            this.outlookButtonD.Location = new System.Drawing.Point(540, 100);
+            this.outlookButtonD.Name = "outlookButtonD";
+            this.outlookButtonD.Size = new System.Drawing.Size(57, 51);
+            this.outlookButtonD.TabIndex = 12;
+            this.outlookButtonD.UseVisualStyleBackColor = true;
+            // 
+            // facebookButtonD
+            // 
+            this.facebookButtonD.FlatAppearance.BorderSize = 0;
+            this.facebookButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.facebookButtonD.Image = ((System.Drawing.Image)(resources.GetObject("facebookButtonD.Image")));
+            this.facebookButtonD.Location = new System.Drawing.Point(603, 100);
+            this.facebookButtonD.Name = "facebookButtonD";
+            this.facebookButtonD.Size = new System.Drawing.Size(61, 51);
+            this.facebookButtonD.TabIndex = 13;
+            this.facebookButtonD.UseVisualStyleBackColor = true;
+            // 
+            // instagramButtonD
+            // 
+            this.instagramButtonD.FlatAppearance.BorderSize = 0;
+            this.instagramButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.instagramButtonD.Image = ((System.Drawing.Image)(resources.GetObject("instagramButtonD.Image")));
+            this.instagramButtonD.Location = new System.Drawing.Point(670, 100);
+            this.instagramButtonD.Name = "instagramButtonD";
+            this.instagramButtonD.Size = new System.Drawing.Size(55, 51);
+            this.instagramButtonD.TabIndex = 14;
+            this.instagramButtonD.UseVisualStyleBackColor = true;
+            // 
+            // snapchatButtonD
+            // 
+            this.snapchatButtonD.FlatAppearance.BorderSize = 0;
+            this.snapchatButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.snapchatButtonD.Image = ((System.Drawing.Image)(resources.GetObject("snapchatButtonD.Image")));
+            this.snapchatButtonD.Location = new System.Drawing.Point(731, 100);
+            this.snapchatButtonD.Name = "snapchatButtonD";
+            this.snapchatButtonD.Size = new System.Drawing.Size(57, 51);
+            this.snapchatButtonD.TabIndex = 15;
+            this.snapchatButtonD.UseVisualStyleBackColor = true;
+            // 
+            // twitchButtonD
+            // 
+            this.twitchButtonD.FlatAppearance.BorderSize = 0;
+            this.twitchButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.twitchButtonD.Image = ((System.Drawing.Image)(resources.GetObject("twitchButtonD.Image")));
+            this.twitchButtonD.Location = new System.Drawing.Point(806, 100);
+            this.twitchButtonD.Name = "twitchButtonD";
+            this.twitchButtonD.Size = new System.Drawing.Size(58, 51);
+            this.twitchButtonD.TabIndex = 16;
+            this.twitchButtonD.UseVisualStyleBackColor = true;
+            // 
+            // otherButtonD
+            // 
+            this.otherButtonD.FlatAppearance.BorderSize = 0;
+            this.otherButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.otherButtonD.Image = ((System.Drawing.Image)(resources.GetObject("otherButtonD.Image")));
+            this.otherButtonD.Location = new System.Drawing.Point(1005, 100);
+            this.otherButtonD.Name = "otherButtonD";
+            this.otherButtonD.Size = new System.Drawing.Size(58, 51);
+            this.otherButtonD.TabIndex = 17;
+            this.otherButtonD.UseVisualStyleBackColor = true;
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.deleteButton.Location = new System.Drawing.Point(577, 608);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(211, 59);
+            this.deleteButton.TabIndex = 18;
+            this.deleteButton.Text = "Delete Password";
+            this.deleteButton.UseVisualStyleBackColor = false;
+            // 
+            // passwordListBox
+            // 
+            this.passwordListBox.FormattingEnabled = true;
+            this.passwordListBox.Location = new System.Drawing.Point(284, 199);
+            this.passwordListBox.Name = "passwordListBox";
+            this.passwordListBox.Size = new System.Drawing.Size(779, 394);
+            this.passwordListBox.TabIndex = 19;
+            // 
+            // warningLabel
+            // 
+            this.warningLabel.AutoSize = true;
+            this.warningLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.warningLabel.Location = new System.Drawing.Point(580, 681);
+            this.warningLabel.Name = "warningLabel";
+            this.warningLabel.Size = new System.Drawing.Size(208, 15);
+            this.warningLabel.TabIndex = 20;
+            this.warningLabel.Text = "Warning! This action can\'t be undone.\r\n";
+            // 
+            // RemovePasswordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1180, 719);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.descBorder1);
-            this.Controls.Add(this.descriptionLabel);
-            this.Controls.Add(this.riskLabel);
+            this.Controls.Add(this.warningLabel);
+            this.Controls.Add(this.passwordListBox);
+            this.Controls.Add(this.deleteButton);
+            this.Controls.Add(this.otherButtonD);
+            this.Controls.Add(this.twitchButtonD);
+            this.Controls.Add(this.snapchatButtonD);
+            this.Controls.Add(this.instagramButtonD);
+            this.Controls.Add(this.facebookButtonD);
+            this.Controls.Add(this.outlookButtonD);
+            this.Controls.Add(this.googleDriveButtonD);
+            this.Controls.Add(this.yahooButtonD);
+            this.Controls.Add(this.gmailButtonD);
+            this.Controls.Add(this.chromeButtonD);
             this.Controls.Add(this.numPSW);
-            this.Controls.Add(this.securityLabel);
-            this.Controls.Add(this.numpswLabel);
-            this.Controls.Add(this.welcomeLabel);
             this.Controls.Add(this.panelCurrPass);
             this.Controls.Add(this.panelLEFT);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -316,7 +392,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1188, 752);
             this.MinimumSize = new System.Drawing.Size(1188, 752);
-            this.Name = "RadForm1";
+            this.Name = "RemovePasswordForm";
             // 
             // 
             // 
@@ -346,14 +422,20 @@
         private System.Windows.Forms.Label companyLabel;
         private System.Windows.Forms.Label cpyrtLabel;
         private System.Windows.Forms.Panel panelCurrPass;
-        private System.Windows.Forms.Label welcomeLabel;
-        private System.Windows.Forms.Label numpswLabel;
-        private System.Windows.Forms.Label securityLabel;
         private System.Windows.Forms.Label numPSW;
-        private System.Windows.Forms.Label descriptionLabel;
-        private System.Windows.Forms.Label riskLabel;
-        private System.Windows.Forms.Panel descBorder1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button homepageButton;
+        private System.Windows.Forms.Button chromeButtonD;
+        private System.Windows.Forms.Button gmailButtonD;
+        private System.Windows.Forms.Button yahooButtonD;
+        private System.Windows.Forms.Button googleDriveButtonD;
+        private System.Windows.Forms.Button outlookButtonD;
+        private System.Windows.Forms.Button facebookButtonD;
+        private System.Windows.Forms.Button instagramButtonD;
+        private System.Windows.Forms.Button snapchatButtonD;
+        private System.Windows.Forms.Button twitchButtonD;
+        private System.Windows.Forms.Button otherButtonD;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.ListBox passwordListBox;
+        private System.Windows.Forms.Label warningLabel;
     }
 }

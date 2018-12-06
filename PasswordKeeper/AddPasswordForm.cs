@@ -78,5 +78,12 @@ namespace PasswordKeeper
 
             passwordTextBox.Text = random;
         }
+
+        private void removePassButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RemovePasswordForm rpf = new RemovePasswordForm();
+            rpf.ShowDialog();
+        }
     }
 }

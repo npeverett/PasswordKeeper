@@ -138,6 +138,7 @@
             this.removePassButton.Text = " Remove Password";
             this.removePassButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.removePassButton.UseVisualStyleBackColor = false;
+            this.removePassButton.Click += new System.EventHandler(this.removePassButton_Click);
             // 
             // addPassButton
             // 

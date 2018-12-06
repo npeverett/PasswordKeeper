@@ -32,6 +32,7 @@
             this.fluentDarkTheme1 = new Telerik.WinControls.Themes.FluentDarkTheme();
             this.logoLabel = new System.Windows.Forms.Label();
             this.panelLEFT = new System.Windows.Forms.Panel();
+            this.homepageButton = new System.Windows.Forms.Button();
             this.cpyrtLabel = new System.Windows.Forms.Label();
             this.companyLabel = new System.Windows.Forms.Label();
             this.removePassButton = new System.Windows.Forms.Button();
@@ -68,7 +69,6 @@
             this.currPSWBackgroundPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.passwordListBox = new System.Windows.Forms.ListBox();
-            this.homepageButton = new System.Windows.Forms.Button();
             this.panelLEFT.SuspendLayout();
             this.logoPanel.SuspendLayout();
             this.currPSWBackgroundPanel.SuspendLayout();
@@ -102,6 +102,19 @@
             this.panelLEFT.Name = "panelLEFT";
             this.panelLEFT.Size = new System.Drawing.Size(200, 719);
             this.panelLEFT.TabIndex = 1;
+            // 
+            // homepageButton
+            // 
+            this.homepageButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homepageButton.BackgroundImage")));
+            this.homepageButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.homepageButton.FlatAppearance.BorderSize = 0;
+            this.homepageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homepageButton.Location = new System.Drawing.Point(49, 592);
+            this.homepageButton.Name = "homepageButton";
+            this.homepageButton.Size = new System.Drawing.Size(93, 91);
+            this.homepageButton.TabIndex = 7;
+            this.homepageButton.UseVisualStyleBackColor = true;
+            this.homepageButton.Click += new System.EventHandler(this.homepageButton_Click);
             // 
             // cpyrtLabel
             // 
@@ -141,6 +154,7 @@
             this.removePassButton.Text = " Remove Password";
             this.removePassButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.removePassButton.UseVisualStyleBackColor = false;
+            this.removePassButton.Click += new System.EventHandler(this.removePassButton_Click);
             this.removePassButton.MouseHover += new System.EventHandler(this.removePassButton_MouseHover);
             // 
             // addPassButton
@@ -561,19 +575,6 @@
             this.passwordListBox.Name = "passwordListBox";
             this.passwordListBox.Size = new System.Drawing.Size(536, 719);
             this.passwordListBox.TabIndex = 0;
-            // 
-            // homepageButton
-            // 
-            this.homepageButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homepageButton.BackgroundImage")));
-            this.homepageButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.homepageButton.FlatAppearance.BorderSize = 0;
-            this.homepageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.homepageButton.Location = new System.Drawing.Point(49, 592);
-            this.homepageButton.Name = "homepageButton";
-            this.homepageButton.Size = new System.Drawing.Size(93, 91);
-            this.homepageButton.TabIndex = 7;
-            this.homepageButton.UseVisualStyleBackColor = true;
-            this.homepageButton.Click += new System.EventHandler(this.homepageButton_Click);
             // 
             // CurrentPasswordForm
             // 

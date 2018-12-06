@@ -65,6 +65,13 @@ namespace PasswordKeeper
             AddPasswordForm apf = new AddPasswordForm();
             apf.ShowDialog();
         }
+
+        private void removePassButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RemovePasswordForm rpf = new RemovePasswordForm();
+            rpf.ShowDialog();
+        }
     }
 }
 
