@@ -39,6 +39,11 @@ namespace PasswordKeeper
             panelCurrPass.Height = removePassButton.Height;
             panelCurrPass.Top = removePassButton.Top;
         }
+
+        private void currentPasswords_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
 

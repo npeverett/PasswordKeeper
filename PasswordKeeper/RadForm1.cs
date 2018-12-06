@@ -95,7 +95,13 @@ namespace PasswordKeeper
                     newPassword += safeUpperLetters[idx];
                 }
             }
-            newPasswordLabel.Text = newPassword;
+        }
+
+        private void currentPasswords_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            CurrentPasswordForm cpf = new CurrentPasswordForm();
+            cpf.ShowDialog();
         }
     }
 }

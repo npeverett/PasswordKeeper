@@ -48,7 +48,6 @@
             this.descriptionLabel = new System.Windows.Forms.Label();
             this.descBorder1 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.newPasswordLabel = new System.Windows.Forms.Label();
             this.panelLEFT.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -282,20 +281,11 @@
             this.panel1.Size = new System.Drawing.Size(12, 112);
             this.panel1.TabIndex = 10;
             // 
-            // newPasswordLabel
-            // 
-            this.newPasswordLabel.AutoSize = true;
-            this.newPasswordLabel.Location = new System.Drawing.Point(206, 397);
-            this.newPasswordLabel.Name = "newPasswordLabel";
-            this.newPasswordLabel.Size = new System.Drawing.Size(0, 15);
-            this.newPasswordLabel.TabIndex = 11;
-            // 
             // RadForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1180, 719);
-            this.Controls.Add(this.newPasswordLabel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.descBorder1);
             this.Controls.Add(this.descriptionLabel);
@@ -349,6 +339,5 @@
         private System.Windows.Forms.Label riskLabel;
         private System.Windows.Forms.Panel descBorder1;
         private System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.Label newPasswordLabel;
     }
 }
