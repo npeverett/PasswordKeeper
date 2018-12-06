@@ -29,5 +29,14 @@ namespace PasswordKeeper
             URL = url;
             notes = note;
         }
+
+        public Password(string name, string user, string pass, string note)
+        {
+            passwordName = name;
+            userName = user;
+            password = pass;
+            notes = note;
+        }
     }
 }
+

@@ -51,6 +51,10 @@
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.descriptionTextBox = new System.Windows.Forms.RichTextBox();
+            this.analyzeLabel = new System.Windows.Forms.Label();
+            this.passwordStrengthLabel = new System.Windows.Forms.Label();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelLEFT.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -227,7 +231,7 @@
             // randomGenLabel
             // 
             this.randomGenLabel.AutoSize = true;
-            this.randomGenLabel.Location = new System.Drawing.Point(747, 285);
+            this.randomGenLabel.Location = new System.Drawing.Point(787, 285);
             this.randomGenLabel.Name = "randomGenLabel";
             this.randomGenLabel.Size = new System.Drawing.Size(294, 15);
             this.randomGenLabel.TabIndex = 4;
@@ -238,12 +242,13 @@
             this.randomizeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.randomizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.randomizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.randomizeButton.Location = new System.Drawing.Point(856, 312);
+            this.randomizeButton.Location = new System.Drawing.Point(896, 312);
             this.randomizeButton.Name = "randomizeButton";
             this.randomizeButton.Size = new System.Drawing.Size(97, 31);
             this.randomizeButton.TabIndex = 5;
             this.randomizeButton.Text = "Randomize";
             this.randomizeButton.UseVisualStyleBackColor = false;
+            this.randomizeButton.Click += new System.EventHandler(this.randomizeButton_Click);
             // 
             // savePassword
             // 
@@ -260,11 +265,11 @@
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(335, 197);
+            this.nameLabel.Location = new System.Drawing.Point(335, 124);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(39, 15);
+            this.nameLabel.Size = new System.Drawing.Size(84, 15);
             this.nameLabel.TabIndex = 7;
-            this.nameLabel.Text = "Name";
+            this.nameLabel.Text = "Website Name";
             // 
             // passwordLabel
             // 
@@ -289,7 +294,7 @@
             this.nameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.nameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nameTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.nameTextBox.Location = new System.Drawing.Point(341, 225);
+            this.nameTextBox.Location = new System.Drawing.Point(341, 152);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(274, 29);
             this.nameTextBox.TabIndex = 10;
@@ -315,11 +320,52 @@
             this.descriptionTextBox.TabIndex = 12;
             this.descriptionTextBox.Text = "";
             // 
+            // analyzeLabel
+            // 
+            this.analyzeLabel.AutoSize = true;
+            this.analyzeLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.analyzeLabel.Location = new System.Drawing.Point(632, 315);
+            this.analyzeLabel.Name = "analyzeLabel";
+            this.analyzeLabel.Size = new System.Drawing.Size(0, 21);
+            this.analyzeLabel.TabIndex = 13;
+            // 
+            // passwordStrengthLabel
+            // 
+            this.passwordStrengthLabel.AutoSize = true;
+            this.passwordStrengthLabel.Location = new System.Drawing.Point(622, 285);
+            this.passwordStrengthLabel.Name = "passwordStrengthLabel";
+            this.passwordStrengthLabel.Size = new System.Drawing.Size(105, 15);
+            this.passwordStrengthLabel.TabIndex = 14;
+            this.passwordStrengthLabel.Text = "Password Strength";
+            // 
+            // usernameTextBox
+            // 
+            this.usernameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.usernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.usernameTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.usernameTextBox.Location = new System.Drawing.Point(341, 227);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(274, 29);
+            this.usernameTextBox.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(335, 199);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 15);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Username";
+            // 
             // AddPasswordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1180, 719);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.usernameTextBox);
+            this.Controls.Add(this.passwordStrengthLabel);
+            this.Controls.Add(this.analyzeLabel);
             this.Controls.Add(this.descriptionTextBox);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.nameTextBox);
@@ -378,5 +424,9 @@
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.RichTextBox descriptionTextBox;
+        private System.Windows.Forms.Label analyzeLabel;
+        private System.Windows.Forms.Label passwordStrengthLabel;
+        private System.Windows.Forms.TextBox usernameTextBox;
+        private System.Windows.Forms.Label label1;
     }
 }
