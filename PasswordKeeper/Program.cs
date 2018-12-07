@@ -18,6 +18,7 @@ namespace PasswordKeeper
             Application.Run(new CurrentPasswordForm());
             Application.Run(new AddPasswordForm());
             Application.Run(new RemovePasswordForm());
+            Application.Run(new CheckStrengthForm());
         }
     }
 }

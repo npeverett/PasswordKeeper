@@ -36,5 +36,36 @@ namespace PasswordKeeper
             AddPasswordForm apf = new AddPasswordForm();
             apf.ShowDialog();
         }
+
+        private void checkStrengthButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CheckStrengthForm csf = new CheckStrengthForm();
+            csf.ShowDialog();
+        }
+
+        private void currentPasswords_MouseHover(object sender, EventArgs e)
+        {
+            panelCurrPass.Height = currentPasswords.Height;
+            panelCurrPass.Top = currentPasswords.Top;
+        }
+
+        private void checkStrengthButton_MouseHover(object sender, EventArgs e)
+        {
+            panelCurrPass.Height = checkStrengthButton.Height;
+            panelCurrPass.Top = checkStrengthButton.Top;
+        }
+
+        private void addPassButton_MouseHover(object sender, EventArgs e)
+        {
+            panelCurrPass.Height = addPassButton.Height;
+            panelCurrPass.Top = addPassButton.Top;
+        }
+
+        private void removePassButton_MouseHover(object sender, EventArgs e)
+        {
+            panelCurrPass.Height = removePassButton.Height;
+            panelCurrPass.Top = removePassButton.Top;
+        }
     }
 }

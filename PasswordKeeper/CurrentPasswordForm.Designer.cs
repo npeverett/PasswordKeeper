@@ -67,6 +67,8 @@
             this.twitchButton = new System.Windows.Forms.Button();
             this.otherButton = new System.Windows.Forms.Button();
             this.currPSWBackgroundPanel = new System.Windows.Forms.Panel();
+            this.amazonButton = new System.Windows.Forms.Button();
+            this.amazonLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.passwordListBox = new System.Windows.Forms.ListBox();
             this.panelLEFT.SuspendLayout();
@@ -197,6 +199,7 @@
             this.checkStrengthButton.Text = "Check Password Strength";
             this.checkStrengthButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkStrengthButton.UseVisualStyleBackColor = false;
+            this.checkStrengthButton.Click += new System.EventHandler(this.checkStrengthButton_Click);
             this.checkStrengthButton.MouseHover += new System.EventHandler(this.genNewPassButton_MouseHover);
             // 
             // currentPasswords
@@ -297,7 +300,7 @@
             this.yahooLabel.AutoSize = true;
             this.yahooLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.yahooLabel.ForeColor = System.Drawing.Color.White;
-            this.yahooLabel.Location = new System.Drawing.Point(319, 68);
+            this.yahooLabel.Location = new System.Drawing.Point(328, 68);
             this.yahooLabel.Name = "yahooLabel";
             this.yahooLabel.Size = new System.Drawing.Size(67, 25);
             this.yahooLabel.TabIndex = 10;
@@ -436,7 +439,7 @@
             this.yahooButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.yahooButton.FlatAppearance.BorderSize = 0;
             this.yahooButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.yahooButton.Location = new System.Drawing.Point(324, 96);
+            this.yahooButton.Location = new System.Drawing.Point(335, 96);
             this.yahooButton.Name = "yahooButton";
             this.yahooButton.Size = new System.Drawing.Size(51, 46);
             this.yahooButton.TabIndex = 25;
@@ -530,6 +533,8 @@
             // 
             this.currPSWBackgroundPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.currPSWBackgroundPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.currPSWBackgroundPanel.Controls.Add(this.amazonButton);
+            this.currPSWBackgroundPanel.Controls.Add(this.amazonLabel);
             this.currPSWBackgroundPanel.Controls.Add(this.panel1);
             this.currPSWBackgroundPanel.Controls.Add(this.otherButton);
             this.currPSWBackgroundPanel.Controls.Add(this.twitchButton);
@@ -557,6 +562,29 @@
             this.currPSWBackgroundPanel.Name = "currPSWBackgroundPanel";
             this.currPSWBackgroundPanel.Size = new System.Drawing.Size(960, 719);
             this.currPSWBackgroundPanel.TabIndex = 12;
+            // 
+            // amazonButton
+            // 
+            this.amazonButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("amazonButton.BackgroundImage")));
+            this.amazonButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.amazonButton.FlatAppearance.BorderSize = 0;
+            this.amazonButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.amazonButton.Location = new System.Drawing.Point(332, 204);
+            this.amazonButton.Name = "amazonButton";
+            this.amazonButton.Size = new System.Drawing.Size(54, 52);
+            this.amazonButton.TabIndex = 35;
+            this.amazonButton.UseVisualStyleBackColor = true;
+            // 
+            // amazonLabel
+            // 
+            this.amazonLabel.AutoSize = true;
+            this.amazonLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.amazonLabel.ForeColor = System.Drawing.Color.White;
+            this.amazonLabel.Location = new System.Drawing.Point(319, 175);
+            this.amazonLabel.Name = "amazonLabel";
+            this.amazonLabel.Size = new System.Drawing.Size(84, 25);
+            this.amazonLabel.TabIndex = 34;
+            this.amazonLabel.Text = "Amazon";
             // 
             // panel1
             // 
@@ -653,5 +681,7 @@
         private System.Windows.Forms.ListBox passwordListBox;
         private System.Windows.Forms.Button homeButton;
         private System.Windows.Forms.Button homepageButton;
+        private System.Windows.Forms.Button amazonButton;
+        private System.Windows.Forms.Label amazonLabel;
     }
 }

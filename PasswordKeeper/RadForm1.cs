@@ -49,7 +49,9 @@ namespace PasswordKeeper
 
         private void genNewPassButton_Click(object sender, EventArgs e)
         {
-            // Are we going to get rid of this method or do you just want to keep it anyway?
+            this.Hide();
+            CheckStrengthForm csf = new CheckStrengthForm();
+            csf.ShowDialog();
         }
 
         private void currentPasswords_Click(object sender, EventArgs e)

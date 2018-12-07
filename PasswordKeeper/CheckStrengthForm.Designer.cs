@@ -1,6 +1,6 @@
 ﻿namespace PasswordKeeper
 {
-    partial class RemovePasswordForm
+    partial class CheckStrengthForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RemovePasswordForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckStrengthForm));
             this.fluentDarkTheme1 = new Telerik.WinControls.Themes.FluentDarkTheme();
             this.logoLabel = new System.Windows.Forms.Label();
             this.panelLEFT = new System.Windows.Forms.Panel();
@@ -41,21 +41,14 @@
             this.currentPasswords = new System.Windows.Forms.Button();
             this.logoPanel = new System.Windows.Forms.Panel();
             this.panelCurrPass = new System.Windows.Forms.Panel();
-            this.numPSW = new System.Windows.Forms.Label();
-            this.chromeButtonD = new System.Windows.Forms.Button();
-            this.gmailButtonD = new System.Windows.Forms.Button();
-            this.yahooButtonD = new System.Windows.Forms.Button();
-            this.googleDriveButtonD = new System.Windows.Forms.Button();
-            this.outlookButtonD = new System.Windows.Forms.Button();
-            this.facebookButtonD = new System.Windows.Forms.Button();
-            this.instagramButtonD = new System.Windows.Forms.Button();
-            this.snapchatButtonD = new System.Windows.Forms.Button();
-            this.twitchButtonD = new System.Windows.Forms.Button();
-            this.otherButtonD = new System.Windows.Forms.Button();
-            this.deleteButton = new System.Windows.Forms.Button();
-            this.passwordListBox = new System.Windows.Forms.ListBox();
-            this.warningLabel = new System.Windows.Forms.Label();
-            this.amazonButton = new System.Windows.Forms.Button();
+            this.titleLabel = new System.Windows.Forms.Label();
+            this.pswLabel = new System.Windows.Forms.Label();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.strengthTitle = new System.Windows.Forms.Label();
+            this.tipsLabel = new System.Windows.Forms.Label();
+            this.tipsTitle = new System.Windows.Forms.Label();
+            this.testButton = new System.Windows.Forms.Button();
+            this.strengthLabel = new System.Windows.Forms.Label();
             this.panelLEFT.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -139,6 +132,7 @@
             this.removePassButton.Text = " Remove Password";
             this.removePassButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.removePassButton.UseVisualStyleBackColor = false;
+            this.removePassButton.Click += new System.EventHandler(this.removePassButton_Click);
             this.removePassButton.MouseHover += new System.EventHandler(this.removePassButton_MouseHover);
             // 
             // addPassButton
@@ -181,7 +175,6 @@
             this.checkStrengthButton.Text = "Check Password Strength";
             this.checkStrengthButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkStrengthButton.UseVisualStyleBackColor = false;
-            this.checkStrengthButton.Click += new System.EventHandler(this.checkStrengthButton_Click);
             this.checkStrengthButton.MouseHover += new System.EventHandler(this.checkStrengthButton_MouseHover);
             // 
             // currentPasswords
@@ -224,185 +217,102 @@
             this.panelCurrPass.Size = new System.Drawing.Size(7, 106);
             this.panelCurrPass.TabIndex = 2;
             // 
-            // numPSW
+            // titleLabel
             // 
-            this.numPSW.AutoSize = true;
-            this.numPSW.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.numPSW.Location = new System.Drawing.Point(650, 199);
-            this.numPSW.Name = "numPSW";
-            this.numPSW.Size = new System.Drawing.Size(0, 32);
-            this.numPSW.TabIndex = 7;
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.Location = new System.Drawing.Point(294, 45);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(824, 45);
+            this.titleLabel.TabIndex = 3;
+            this.titleLabel.Text = "Think you have a good password? Test and find out!";
             // 
-            // chromeButtonD
+            // pswLabel
             // 
-            this.chromeButtonD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.chromeButtonD.FlatAppearance.BorderSize = 0;
-            this.chromeButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chromeButtonD.Image = ((System.Drawing.Image)(resources.GetObject("chromeButtonD.Image")));
-            this.chromeButtonD.Location = new System.Drawing.Point(284, 100);
-            this.chromeButtonD.Name = "chromeButtonD";
-            this.chromeButtonD.Size = new System.Drawing.Size(54, 51);
-            this.chromeButtonD.TabIndex = 8;
-            this.chromeButtonD.UseVisualStyleBackColor = true;
+            this.pswLabel.AutoSize = true;
+            this.pswLabel.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.pswLabel.Location = new System.Drawing.Point(479, 215);
+            this.pswLabel.Name = "pswLabel";
+            this.pswLabel.Size = new System.Drawing.Size(166, 32);
+            this.pswLabel.TabIndex = 4;
+            this.pswLabel.Text = "Your Password";
             // 
-            // gmailButtonD
+            // passwordTextBox
             // 
-            this.gmailButtonD.FlatAppearance.BorderSize = 0;
-            this.gmailButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gmailButtonD.Image = ((System.Drawing.Image)(resources.GetObject("gmailButtonD.Image")));
-            this.gmailButtonD.Location = new System.Drawing.Point(351, 100);
-            this.gmailButtonD.Name = "gmailButtonD";
-            this.gmailButtonD.Size = new System.Drawing.Size(62, 51);
-            this.gmailButtonD.TabIndex = 9;
-            this.gmailButtonD.UseVisualStyleBackColor = true;
+            this.passwordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.passwordTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.passwordTextBox.Location = new System.Drawing.Point(442, 264);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(235, 29);
+            this.passwordTextBox.TabIndex = 5;
             // 
-            // yahooButtonD
+            // strengthTitle
             // 
-            this.yahooButtonD.FlatAppearance.BorderSize = 0;
-            this.yahooButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.yahooButtonD.Image = ((System.Drawing.Image)(resources.GetObject("yahooButtonD.Image")));
-            this.yahooButtonD.Location = new System.Drawing.Point(419, 100);
-            this.yahooButtonD.Name = "yahooButtonD";
-            this.yahooButtonD.Size = new System.Drawing.Size(52, 51);
-            this.yahooButtonD.TabIndex = 10;
-            this.yahooButtonD.UseVisualStyleBackColor = true;
+            this.strengthTitle.AutoSize = true;
+            this.strengthTitle.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.strengthTitle.Location = new System.Drawing.Point(500, 461);
+            this.strengthTitle.Name = "strengthTitle";
+            this.strengthTitle.Size = new System.Drawing.Size(106, 32);
+            this.strengthTitle.TabIndex = 6;
+            this.strengthTitle.Text = "Strength";
             // 
-            // googleDriveButtonD
+            // tipsLabel
             // 
-            this.googleDriveButtonD.FlatAppearance.BorderSize = 0;
-            this.googleDriveButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.googleDriveButtonD.Image = ((System.Drawing.Image)(resources.GetObject("googleDriveButtonD.Image")));
-            this.googleDriveButtonD.Location = new System.Drawing.Point(477, 100);
-            this.googleDriveButtonD.Name = "googleDriveButtonD";
-            this.googleDriveButtonD.Size = new System.Drawing.Size(64, 51);
-            this.googleDriveButtonD.TabIndex = 11;
-            this.googleDriveButtonD.UseVisualStyleBackColor = true;
+            this.tipsLabel.AutoSize = true;
+            this.tipsLabel.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.tipsLabel.Location = new System.Drawing.Point(837, 274);
+            this.tipsLabel.Name = "tipsLabel";
+            this.tipsLabel.Size = new System.Drawing.Size(281, 196);
+            this.tipsLabel.TabIndex = 9;
+            this.tipsLabel.Text = "-Minimum size of 8\r\n-At least two special characters\r\n-At least two numbers\r\n-At " +
+    "least two upper case letters\r\n-At least two lower case letters\r\n-No complete wor" +
+    "ds\r\n\r\n";
             // 
-            // outlookButtonD
+            // tipsTitle
             // 
-            this.outlookButtonD.FlatAppearance.BorderSize = 0;
-            this.outlookButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.outlookButtonD.Image = ((System.Drawing.Image)(resources.GetObject("outlookButtonD.Image")));
-            this.outlookButtonD.Location = new System.Drawing.Point(547, 100);
-            this.outlookButtonD.Name = "outlookButtonD";
-            this.outlookButtonD.Size = new System.Drawing.Size(57, 51);
-            this.outlookButtonD.TabIndex = 12;
-            this.outlookButtonD.UseVisualStyleBackColor = true;
+            this.tipsTitle.AutoSize = true;
+            this.tipsTitle.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.tipsTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.tipsTitle.Location = new System.Drawing.Point(836, 228);
+            this.tipsTitle.Name = "tipsTitle";
+            this.tipsTitle.Size = new System.Drawing.Size(278, 32);
+            this.tipsTitle.TabIndex = 10;
+            this.tipsTitle.Text = "Tips For Good Passwords";
             // 
-            // facebookButtonD
+            // testButton
             // 
-            this.facebookButtonD.FlatAppearance.BorderSize = 0;
-            this.facebookButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.facebookButtonD.Image = ((System.Drawing.Image)(resources.GetObject("facebookButtonD.Image")));
-            this.facebookButtonD.Location = new System.Drawing.Point(673, 100);
-            this.facebookButtonD.Name = "facebookButtonD";
-            this.facebookButtonD.Size = new System.Drawing.Size(61, 51);
-            this.facebookButtonD.TabIndex = 13;
-            this.facebookButtonD.UseVisualStyleBackColor = true;
+            this.testButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.testButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.testButton.ForeColor = System.Drawing.Color.White;
+            this.testButton.Location = new System.Drawing.Point(506, 320);
+            this.testButton.Name = "testButton";
+            this.testButton.Size = new System.Drawing.Size(108, 47);
+            this.testButton.TabIndex = 11;
+            this.testButton.Text = "Test!";
+            this.testButton.UseVisualStyleBackColor = false;
             // 
-            // instagramButtonD
+            // strengthLabel
             // 
-            this.instagramButtonD.FlatAppearance.BorderSize = 0;
-            this.instagramButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.instagramButtonD.Image = ((System.Drawing.Image)(resources.GetObject("instagramButtonD.Image")));
-            this.instagramButtonD.Location = new System.Drawing.Point(740, 100);
-            this.instagramButtonD.Name = "instagramButtonD";
-            this.instagramButtonD.Size = new System.Drawing.Size(55, 51);
-            this.instagramButtonD.TabIndex = 14;
-            this.instagramButtonD.UseVisualStyleBackColor = true;
+            this.strengthLabel.AutoSize = true;
+            this.strengthLabel.Location = new System.Drawing.Point(539, 519);
+            this.strengthLabel.Name = "strengthLabel";
+            this.strengthLabel.Size = new System.Drawing.Size(0, 15);
+            this.strengthLabel.TabIndex = 12;
             // 
-            // snapchatButtonD
-            // 
-            this.snapchatButtonD.FlatAppearance.BorderSize = 0;
-            this.snapchatButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.snapchatButtonD.Image = ((System.Drawing.Image)(resources.GetObject("snapchatButtonD.Image")));
-            this.snapchatButtonD.Location = new System.Drawing.Point(801, 100);
-            this.snapchatButtonD.Name = "snapchatButtonD";
-            this.snapchatButtonD.Size = new System.Drawing.Size(57, 51);
-            this.snapchatButtonD.TabIndex = 15;
-            this.snapchatButtonD.UseVisualStyleBackColor = true;
-            // 
-            // twitchButtonD
-            // 
-            this.twitchButtonD.FlatAppearance.BorderSize = 0;
-            this.twitchButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.twitchButtonD.Image = ((System.Drawing.Image)(resources.GetObject("twitchButtonD.Image")));
-            this.twitchButtonD.Location = new System.Drawing.Point(864, 100);
-            this.twitchButtonD.Name = "twitchButtonD";
-            this.twitchButtonD.Size = new System.Drawing.Size(58, 51);
-            this.twitchButtonD.TabIndex = 16;
-            this.twitchButtonD.UseVisualStyleBackColor = true;
-            // 
-            // otherButtonD
-            // 
-            this.otherButtonD.FlatAppearance.BorderSize = 0;
-            this.otherButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.otherButtonD.Image = ((System.Drawing.Image)(resources.GetObject("otherButtonD.Image")));
-            this.otherButtonD.Location = new System.Drawing.Point(1005, 100);
-            this.otherButtonD.Name = "otherButtonD";
-            this.otherButtonD.Size = new System.Drawing.Size(58, 51);
-            this.otherButtonD.TabIndex = 17;
-            this.otherButtonD.UseVisualStyleBackColor = true;
-            // 
-            // deleteButton
-            // 
-            this.deleteButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.deleteButton.Location = new System.Drawing.Point(577, 608);
-            this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(211, 59);
-            this.deleteButton.TabIndex = 18;
-            this.deleteButton.Text = "Delete Password";
-            this.deleteButton.UseVisualStyleBackColor = false;
-            // 
-            // passwordListBox
-            // 
-            this.passwordListBox.FormattingEnabled = true;
-            this.passwordListBox.Location = new System.Drawing.Point(284, 199);
-            this.passwordListBox.Name = "passwordListBox";
-            this.passwordListBox.Size = new System.Drawing.Size(779, 394);
-            this.passwordListBox.TabIndex = 19;
-            // 
-            // warningLabel
-            // 
-            this.warningLabel.AutoSize = true;
-            this.warningLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.warningLabel.Location = new System.Drawing.Point(580, 681);
-            this.warningLabel.Name = "warningLabel";
-            this.warningLabel.Size = new System.Drawing.Size(208, 15);
-            this.warningLabel.TabIndex = 20;
-            this.warningLabel.Text = "Warning! This action can\'t be undone.\r\n";
-            // 
-            // amazonButton
-            // 
-            this.amazonButton.FlatAppearance.BorderSize = 0;
-            this.amazonButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.amazonButton.Image = ((System.Drawing.Image)(resources.GetObject("amazonButton.Image")));
-            this.amazonButton.Location = new System.Drawing.Point(610, 100);
-            this.amazonButton.Name = "amazonButton";
-            this.amazonButton.Size = new System.Drawing.Size(57, 51);
-            this.amazonButton.TabIndex = 21;
-            this.amazonButton.UseVisualStyleBackColor = true;
-            // 
-            // RemovePasswordForm
+            // CheckStrengthForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1180, 719);
-            this.Controls.Add(this.amazonButton);
-            this.Controls.Add(this.warningLabel);
-            this.Controls.Add(this.passwordListBox);
-            this.Controls.Add(this.deleteButton);
-            this.Controls.Add(this.otherButtonD);
-            this.Controls.Add(this.twitchButtonD);
-            this.Controls.Add(this.snapchatButtonD);
-            this.Controls.Add(this.instagramButtonD);
-            this.Controls.Add(this.facebookButtonD);
-            this.Controls.Add(this.outlookButtonD);
-            this.Controls.Add(this.googleDriveButtonD);
-            this.Controls.Add(this.yahooButtonD);
-            this.Controls.Add(this.gmailButtonD);
-            this.Controls.Add(this.chromeButtonD);
-            this.Controls.Add(this.numPSW);
+            this.Controls.Add(this.strengthLabel);
+            this.Controls.Add(this.testButton);
+            this.Controls.Add(this.tipsTitle);
+            this.Controls.Add(this.tipsLabel);
+            this.Controls.Add(this.strengthTitle);
+            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.pswLabel);
+            this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.panelCurrPass);
             this.Controls.Add(this.panelLEFT);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -410,7 +320,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1188, 752);
             this.MinimumSize = new System.Drawing.Size(1188, 752);
-            this.Name = "RemovePasswordForm";
+            this.Name = "CheckStrengthForm";
             // 
             // 
             // 
@@ -440,21 +350,14 @@
         private System.Windows.Forms.Label companyLabel;
         private System.Windows.Forms.Label cpyrtLabel;
         private System.Windows.Forms.Panel panelCurrPass;
-        private System.Windows.Forms.Label numPSW;
         private System.Windows.Forms.Button homepageButton;
-        private System.Windows.Forms.Button chromeButtonD;
-        private System.Windows.Forms.Button gmailButtonD;
-        private System.Windows.Forms.Button yahooButtonD;
-        private System.Windows.Forms.Button googleDriveButtonD;
-        private System.Windows.Forms.Button outlookButtonD;
-        private System.Windows.Forms.Button facebookButtonD;
-        private System.Windows.Forms.Button instagramButtonD;
-        private System.Windows.Forms.Button snapchatButtonD;
-        private System.Windows.Forms.Button twitchButtonD;
-        private System.Windows.Forms.Button otherButtonD;
-        private System.Windows.Forms.Button deleteButton;
-        private System.Windows.Forms.ListBox passwordListBox;
-        private System.Windows.Forms.Label warningLabel;
-        private System.Windows.Forms.Button amazonButton;
+        private System.Windows.Forms.Label titleLabel;
+        private System.Windows.Forms.Label pswLabel;
+        private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.Label strengthTitle;
+        private System.Windows.Forms.Label tipsLabel;
+        private System.Windows.Forms.Label tipsTitle;
+        private System.Windows.Forms.Button testButton;
+        private System.Windows.Forms.Label strengthLabel;
     }
 }

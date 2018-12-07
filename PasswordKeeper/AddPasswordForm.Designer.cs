@@ -139,6 +139,7 @@
             this.removePassButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.removePassButton.UseVisualStyleBackColor = false;
             this.removePassButton.Click += new System.EventHandler(this.removePassButton_Click);
+            this.removePassButton.MouseHover += new System.EventHandler(this.removePassButton_MouseHover);
             // 
             // addPassButton
             // 
@@ -158,6 +159,7 @@
             this.addPassButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.addPassButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.addPassButton.UseVisualStyleBackColor = false;
+            this.addPassButton.MouseHover += new System.EventHandler(this.addPassButton_MouseHover);
             // 
             // checkStrengthButton
             // 
@@ -178,6 +180,8 @@
             this.checkStrengthButton.Text = "Check Password Strength";
             this.checkStrengthButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkStrengthButton.UseVisualStyleBackColor = false;
+            this.checkStrengthButton.Click += new System.EventHandler(this.checkStrengthButton_Click);
+            this.checkStrengthButton.MouseHover += new System.EventHandler(this.checkStrengthButton_MouseHover);
             // 
             // currentPasswords
             // 
@@ -200,6 +204,7 @@
             this.currentPasswords.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.currentPasswords.UseVisualStyleBackColor = false;
             this.currentPasswords.Click += new System.EventHandler(this.currentPasswords_Click);
+            this.currentPasswords.MouseHover += new System.EventHandler(this.currentPasswords_MouseHover);
             // 
             // logoPanel
             // 

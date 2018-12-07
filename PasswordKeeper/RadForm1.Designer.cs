@@ -42,13 +42,18 @@
             this.logoPanel = new System.Windows.Forms.Panel();
             this.panelCurrPass = new System.Windows.Forms.Panel();
             this.welcomeLabel = new System.Windows.Forms.Label();
-            this.numpswLabel = new System.Windows.Forms.Label();
-            this.securityLabel = new System.Windows.Forms.Label();
-            this.numPSW = new System.Windows.Forms.Label();
-            this.riskLabel = new System.Windows.Forms.Label();
+            this.allBackground = new System.Windows.Forms.Label();
             this.descriptionLabel = new System.Windows.Forms.Label();
             this.descBorder1 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.numPSWDESC = new System.Windows.Forms.Label();
+            this.numPSW = new System.Windows.Forms.Label();
+            this.weakBackground = new System.Windows.Forms.Label();
+            this.unsafeLabel = new System.Windows.Forms.Label();
+            this.numUnsafePSW = new System.Windows.Forms.Label();
+            this.reusedBackground = new System.Windows.Forms.Label();
+            this.reuseLabel = new System.Windows.Forms.Label();
+            this.numReusedPSW = new System.Windows.Forms.Label();
             this.panelLEFT.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -221,53 +226,21 @@
             // 
             this.welcomeLabel.AutoSize = true;
             this.welcomeLabel.Font = new System.Drawing.Font("Sitka Heading", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeLabel.Location = new System.Drawing.Point(415, 26);
+            this.welcomeLabel.Location = new System.Drawing.Point(355, 26);
             this.welcomeLabel.Name = "welcomeLabel";
             this.welcomeLabel.Size = new System.Drawing.Size(640, 69);
             this.welcomeLabel.TabIndex = 3;
             this.welcomeLabel.Text = "Welcome to Smarter Password";
             // 
-            // numpswLabel
+            // allBackground
             // 
-            this.numpswLabel.AutoSize = true;
-            this.numpswLabel.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.numpswLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.numpswLabel.Location = new System.Drawing.Point(314, 199);
-            this.numpswLabel.Name = "numpswLabel";
-            this.numpswLabel.Size = new System.Drawing.Size(330, 32);
-            this.numpswLabel.TabIndex = 5;
-            this.numpswLabel.Text = "Current Passwords Kept Safe: \r\n";
-            this.numpswLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // securityLabel
-            // 
-            this.securityLabel.AutoSize = true;
-            this.securityLabel.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.securityLabel.Location = new System.Drawing.Point(483, 237);
-            this.securityLabel.Name = "securityLabel";
-            this.securityLabel.Size = new System.Drawing.Size(161, 32);
-            this.securityLabel.TabIndex = 6;
-            this.securityLabel.Text = "Security Risk: ";
-            // 
-            // numPSW
-            // 
-            this.numPSW.AutoSize = true;
-            this.numPSW.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.numPSW.Location = new System.Drawing.Point(650, 199);
-            this.numPSW.Name = "numPSW";
-            this.numPSW.Size = new System.Drawing.Size(0, 32);
-            this.numPSW.TabIndex = 7;
-            // 
-            // riskLabel
-            // 
-            this.riskLabel.AutoSize = true;
-            this.riskLabel.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.riskLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.riskLabel.Location = new System.Drawing.Point(650, 237);
-            this.riskLabel.Name = "riskLabel";
-            this.riskLabel.Size = new System.Drawing.Size(71, 32);
-            this.riskLabel.TabIndex = 8;
-            this.riskLabel.Text = "HIGH";
+            this.allBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.allBackground.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.allBackground.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.allBackground.Location = new System.Drawing.Point(524, 195);
+            this.allBackground.Name = "allBackground";
+            this.allBackground.Size = new System.Drawing.Size(257, 75);
+            this.allBackground.TabIndex = 7;
             // 
             // descriptionLabel
             // 
@@ -296,18 +269,118 @@
             this.panel1.Size = new System.Drawing.Size(12, 112);
             this.panel1.TabIndex = 10;
             // 
+            // numPSWDESC
+            // 
+            this.numPSWDESC.AutoSize = true;
+            this.numPSWDESC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.numPSWDESC.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numPSWDESC.ForeColor = System.Drawing.Color.Black;
+            this.numPSWDESC.Location = new System.Drawing.Point(597, 205);
+            this.numPSWDESC.Name = "numPSWDESC";
+            this.numPSWDESC.Size = new System.Drawing.Size(116, 22);
+            this.numPSWDESC.TabIndex = 11;
+            this.numPSWDESC.Text = "All Passwords";
+            this.numPSWDESC.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // numPSW
+            // 
+            this.numPSW.AutoSize = true;
+            this.numPSW.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.numPSW.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numPSW.ForeColor = System.Drawing.Color.Black;
+            this.numPSW.Location = new System.Drawing.Point(635, 227);
+            this.numPSW.Name = "numPSW";
+            this.numPSW.Size = new System.Drawing.Size(25, 30);
+            this.numPSW.TabIndex = 12;
+            this.numPSW.Text = "0";
+            // 
+            // weakBackground
+            // 
+            this.weakBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.weakBackground.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.weakBackground.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.weakBackground.Location = new System.Drawing.Point(524, 461);
+            this.weakBackground.Name = "weakBackground";
+            this.weakBackground.Size = new System.Drawing.Size(257, 77);
+            this.weakBackground.TabIndex = 13;
+            // 
+            // unsafeLabel
+            // 
+            this.unsafeLabel.AutoSize = true;
+            this.unsafeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.unsafeLabel.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unsafeLabel.ForeColor = System.Drawing.Color.Black;
+            this.unsafeLabel.Location = new System.Drawing.Point(588, 471);
+            this.unsafeLabel.Name = "unsafeLabel";
+            this.unsafeLabel.Size = new System.Drawing.Size(143, 22);
+            this.unsafeLabel.TabIndex = 14;
+            this.unsafeLabel.Text = "Unsafe Passwords";
+            this.unsafeLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // numUnsafePSW
+            // 
+            this.numUnsafePSW.AutoSize = true;
+            this.numUnsafePSW.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.numUnsafePSW.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numUnsafePSW.ForeColor = System.Drawing.Color.Black;
+            this.numUnsafePSW.Location = new System.Drawing.Point(635, 497);
+            this.numUnsafePSW.Name = "numUnsafePSW";
+            this.numUnsafePSW.Size = new System.Drawing.Size(25, 30);
+            this.numUnsafePSW.TabIndex = 15;
+            this.numUnsafePSW.Text = "0";
+            // 
+            // reusedBackground
+            // 
+            this.reusedBackground.BackColor = System.Drawing.Color.SeaGreen;
+            this.reusedBackground.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.reusedBackground.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.reusedBackground.Location = new System.Drawing.Point(524, 336);
+            this.reusedBackground.Name = "reusedBackground";
+            this.reusedBackground.Size = new System.Drawing.Size(257, 75);
+            this.reusedBackground.TabIndex = 16;
+            // 
+            // reuseLabel
+            // 
+            this.reuseLabel.AutoSize = true;
+            this.reuseLabel.BackColor = System.Drawing.Color.SeaGreen;
+            this.reuseLabel.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reuseLabel.ForeColor = System.Drawing.Color.Black;
+            this.reuseLabel.Location = new System.Drawing.Point(587, 346);
+            this.reuseLabel.Name = "reuseLabel";
+            this.reuseLabel.Size = new System.Drawing.Size(144, 22);
+            this.reuseLabel.TabIndex = 17;
+            this.reuseLabel.Text = "Reused Passwords";
+            this.reuseLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // numReusedPSW
+            // 
+            this.numReusedPSW.AutoSize = true;
+            this.numReusedPSW.BackColor = System.Drawing.Color.SeaGreen;
+            this.numReusedPSW.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numReusedPSW.ForeColor = System.Drawing.Color.Black;
+            this.numReusedPSW.Location = new System.Drawing.Point(635, 368);
+            this.numReusedPSW.Name = "numReusedPSW";
+            this.numReusedPSW.Size = new System.Drawing.Size(25, 30);
+            this.numReusedPSW.TabIndex = 18;
+            this.numReusedPSW.Text = "0";
+            // 
             // RadForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1180, 719);
+            this.Controls.Add(this.numReusedPSW);
+            this.Controls.Add(this.reuseLabel);
+            this.Controls.Add(this.reusedBackground);
+            this.Controls.Add(this.numUnsafePSW);
+            this.Controls.Add(this.unsafeLabel);
+            this.Controls.Add(this.weakBackground);
+            this.Controls.Add(this.numPSW);
+            this.Controls.Add(this.numPSWDESC);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.descBorder1);
             this.Controls.Add(this.descriptionLabel);
-            this.Controls.Add(this.riskLabel);
-            this.Controls.Add(this.numPSW);
-            this.Controls.Add(this.securityLabel);
-            this.Controls.Add(this.numpswLabel);
+            this.Controls.Add(this.allBackground);
             this.Controls.Add(this.welcomeLabel);
             this.Controls.Add(this.panelCurrPass);
             this.Controls.Add(this.panelLEFT);
@@ -347,13 +420,18 @@
         private System.Windows.Forms.Label cpyrtLabel;
         private System.Windows.Forms.Panel panelCurrPass;
         private System.Windows.Forms.Label welcomeLabel;
-        private System.Windows.Forms.Label numpswLabel;
-        private System.Windows.Forms.Label securityLabel;
-        private System.Windows.Forms.Label numPSW;
+        private System.Windows.Forms.Label allBackground;
         private System.Windows.Forms.Label descriptionLabel;
-        private System.Windows.Forms.Label riskLabel;
         private System.Windows.Forms.Panel descBorder1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button homepageButton;
+        private System.Windows.Forms.Label numPSWDESC;
+        private System.Windows.Forms.Label numPSW;
+        private System.Windows.Forms.Label weakBackground;
+        private System.Windows.Forms.Label unsafeLabel;
+        private System.Windows.Forms.Label numUnsafePSW;
+        private System.Windows.Forms.Label reusedBackground;
+        private System.Windows.Forms.Label reuseLabel;
+        private System.Windows.Forms.Label numReusedPSW;
     }
 }

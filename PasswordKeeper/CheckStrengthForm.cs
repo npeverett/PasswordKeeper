@@ -9,20 +9,20 @@ using Telerik.WinControls;
 
 namespace PasswordKeeper
 {
-    public partial class CurrentPasswordForm : Telerik.WinControls.UI.RadForm
+    public partial class CheckStrengthForm : Telerik.WinControls.UI.RadForm
     {
-        public CurrentPasswordForm()
+        public CheckStrengthForm()
         {
             InitializeComponent();
         }
+
         private void currentPasswords_MouseHover(object sender, EventArgs e)
         {
-            //Sets yellow bar to left of current button
             panelCurrPass.Height = currentPasswords.Height;
             panelCurrPass.Top = currentPasswords.Top;
         }
 
-        private void genNewPassButton_MouseHover(object sender, EventArgs e)
+        private void checkStrengthButton_MouseHover(object sender, EventArgs e)
         {
             panelCurrPass.Height = checkStrengthButton.Height;
             panelCurrPass.Top = checkStrengthButton.Top;
@@ -40,23 +40,18 @@ namespace PasswordKeeper
             panelCurrPass.Top = removePassButton.Top;
         }
 
-        private void currentPasswords_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void homeButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            RadForm1 rf = new RadForm1();
-            rf.Show();
-        }
-
         private void homepageButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             RadForm1 rf = new RadForm1();
-            rf.Show();
+            rf.ShowDialog();
+        }
+
+        private void currentPasswords_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CurrentPasswordForm cpf = new CurrentPasswordForm();
+            cpf.ShowDialog();
         }
 
         private void addPassButton_Click(object sender, EventArgs e)
@@ -72,13 +67,5 @@ namespace PasswordKeeper
             RemovePasswordForm rpf = new RemovePasswordForm();
             rpf.ShowDialog();
         }
-
-        private void checkStrengthButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            CheckStrengthForm csf = new CheckStrengthForm();
-            csf.ShowDialog();
-        }
     }
 }
-
