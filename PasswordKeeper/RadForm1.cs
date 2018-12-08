@@ -13,6 +13,8 @@ namespace PasswordKeeper
     {
         Methods variables = new Methods();
         private BindingList<Password> passwordList;
+        private int reusedPassword;
+        private int unsafePassword;
 
         public RadForm1()
         {
@@ -20,6 +22,33 @@ namespace PasswordKeeper
             passwordList = variables.getPasswordList();
 
             numPSW.Text = passwordList.Count.ToString(); 
+
+            for(int i = 0; i < passwordList.Count; i++)
+            {
+                for(int j = 0; j < passwordList.Count; j++)
+                {
+                    string tempPassword = passwordList[i].getPassword();
+                    string checkPassword = passwordList[j].getPassword();
+                    if(tempPassword.Equals(checkPassword))
+                    {
+                        reusedPassword++;
+                    }
+                }
+            }
+
+            for(int i = 0; i < passwordList.Count; i++)
+            {
+                Methods method = new Methods();
+                if(method.analyzePassword(passwordList[i].getPassword()) == false)
+                {
+                    unsafePassword++;
+                }
+            }
+
+
+            numReusedPSW.Text = reusedPassword.ToString();
+            numUnsafePSW.Text = unsafePassword.ToString();
+
         }
 
         private void currentPasswords_MouseHover(object sender, EventArgs e)
@@ -79,5 +108,6 @@ namespace PasswordKeeper
             RemovePasswordForm rpf = new RemovePasswordForm();
             rpf.ShowDialog();
         }
+
     }
 }

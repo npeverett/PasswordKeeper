@@ -20,6 +20,11 @@ namespace PasswordKeeper
         private const string passPhrase = "pussyMonsta"; // Probably change later but not important right now;
         // This constant determines the number of iterations for the password bytes generation function.
         private const int DerivationIterations = 1000;
+
+        public Methods()
+        {
+            fillList(passwordList);
+        }
         
         public BindingList<Password> getPasswordList()
         {
@@ -86,7 +91,7 @@ namespace PasswordKeeper
 
         public bool checkSymbols(string password)
         {
-            char[] safeSymbols = { '!', '@', '#', '$', '"', '-', '`', '~' };
+            char[] safeSymbols = { '!', '@', '#', '$', '-'};
 
             for (int i = 0; i < password.Length; i++)
             {
@@ -165,22 +170,26 @@ namespace PasswordKeeper
         {
             string fileName = ""; // Fill in whatever we are storing the data in here
 
-            StreamReader reader = new StreamReader(fileName);
-            string line;
-
-            while((line = reader.ReadLine()) != null)
+            if(File.Exists(fileName))
             {
-                string[] tempArr = line.Split('|');
+                StreamReader reader = new StreamReader(fileName);
+                string line;
 
-                string webName = tempArr[0];
-                string userName = tempArr[1];
-                string password = decrypt(tempArr[2], passPhrase);
-                string notes = tempArr[3];
+                while ((line = reader.ReadLine()) != null)
+                {
+                    string[] tempArr = line.Split('|');
 
-                Password tempPassword = new Password(webName, userName, password, notes);
+                    string webName = tempArr[0];
+                    string userName = tempArr[1];
+                    string password = decrypt(tempArr[2], passPhrase);
+                    string notes = tempArr[3];
 
-                passwordList.Add(tempPassword);
+                    Password tempPassword = new Password(webName, userName, password, notes);
+
+                    passwordList.Add(tempPassword);
+                }
             }
+
         }
 
         public string encrypt(string plainText, string passPhrase)

@@ -21,6 +21,11 @@ namespace PasswordKeeper
             password = "";
         }
 
+        public string getPassword()
+        {
+            return password;
+        }
+
         public Password(string name, string user, string pass, string url, string note)
         {
             passwordName = name;
