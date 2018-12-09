@@ -47,7 +47,7 @@ namespace PasswordKeeper
 
             while (newPassword.Length < 12)
             {
-                int r = rand.Next(4);
+                int r = rand.Next(5);
                 if (r == 1 && numSymbols <= 2)
                 {
                     int idx = rand.Next(safeSymbols.Length);
@@ -56,6 +56,7 @@ namespace PasswordKeeper
                         idx = rand.Next(safeSymbols.Length);
                     }
                     newPassword += safeSymbols[idx];
+                    numSymbols++;
                 }
                 if (r == 2 && numNumbers <= 2)
                 {
@@ -65,6 +66,7 @@ namespace PasswordKeeper
                         idx = rand.Next(safeNumbers.Length);
                     }
                     newPassword += safeNumbers[idx];
+                    numNumbers++;
                 }
                 if (r == 3 && numLower <= 2)
                 {
@@ -74,6 +76,7 @@ namespace PasswordKeeper
                         idx = rand.Next(safeLowerLetters.Length);
                     }
                     newPassword += safeLowerLetters[idx];
+                    numLower++;
                 }
                 if (r == 4 && numUpper <= 2)
                 {
@@ -83,6 +86,7 @@ namespace PasswordKeeper
                         idx = rand.Next(safeUpperLetters.Length);
                     }
                     newPassword += safeUpperLetters[idx];
+                    numUpper++;
                 }
             }
 
