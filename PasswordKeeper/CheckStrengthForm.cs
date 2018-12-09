@@ -81,5 +81,22 @@ namespace PasswordKeeper
             RadForm1 rf = new RadForm1();
             rf.ShowDialog();
         }
+
+        private void testButton_Click(object sender, EventArgs e)
+        {
+            Methods methods = new Methods();
+            string testPassword = passwordTextBox.Text;
+
+            if(methods.analyzePassword(testPassword) == true)
+            {
+                strengthLabel.Text = "Strong";
+                strengthLabel.ForeColor = Color.ForestGreen;
+            }
+            else
+            {
+                strengthLabel.Text = "Weak";
+                strengthLabel.ForeColor = Color.Red;
+            }
+        }
     }
 }

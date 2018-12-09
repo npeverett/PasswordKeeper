@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
 
@@ -12,23 +13,23 @@ namespace PasswordKeeper
     public partial class RadForm1 : Telerik.WinControls.UI.RadForm
     {
         Methods variables = new Methods();
-        private BindingList<Password> passwordList;
+        //public BindingList<Password> passwordList;
         private int reusedPassword;
         private int unsafePassword;
 
         public RadForm1()
         {
             InitializeComponent();
-            passwordList = variables.getPasswordList();
+            //passwordList = variables.getPasswordList();
 
-            numPSW.Text = passwordList.Count.ToString(); 
+            numPSW.Text = variables.passwordList.Count.ToString(); 
 
-            for(int i = 0; i < passwordList.Count; i++)
+            for(int i = 0; i < variables.passwordList.Count; i++)
             {
-                for(int j = 0; j < passwordList.Count; j++)
+                for(int j = i + 1; j < variables.passwordList.Count; j++)
                 {
-                    string tempPassword = passwordList[i].getPassword();
-                    string checkPassword = passwordList[j].getPassword();
+                    string tempPassword = variables.passwordList[i].getPassword();
+                    string checkPassword = variables.passwordList[j].getPassword();
                     if(tempPassword.Equals(checkPassword))
                     {
                         reusedPassword++;
@@ -36,10 +37,10 @@ namespace PasswordKeeper
                 }
             }
 
-            for(int i = 0; i < passwordList.Count; i++)
+            for(int i = 0; i < variables.passwordList.Count; i++)
             {
                 Methods method = new Methods();
-                if(method.analyzePassword(passwordList[i].getPassword()) == false)
+                if(method.analyzePassword(variables.passwordList[i].getPassword()) == false)
                 {
                     unsafePassword++;
                 }

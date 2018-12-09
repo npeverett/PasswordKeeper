@@ -258,7 +258,7 @@
             // 
             this.strengthTitle.AutoSize = true;
             this.strengthTitle.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.strengthTitle.Location = new System.Drawing.Point(500, 461);
+            this.strengthTitle.Location = new System.Drawing.Point(508, 461);
             this.strengthTitle.Name = "strengthTitle";
             this.strengthTitle.Size = new System.Drawing.Size(106, 32);
             this.strengthTitle.TabIndex = 6;
@@ -298,13 +298,15 @@
             this.testButton.TabIndex = 2;
             this.testButton.Text = "Test!";
             this.testButton.UseVisualStyleBackColor = false;
+            this.testButton.Click += new System.EventHandler(this.testButton_Click);
             // 
             // strengthLabel
             // 
             this.strengthLabel.AutoSize = true;
-            this.strengthLabel.Location = new System.Drawing.Point(539, 519);
+            this.strengthLabel.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.strengthLabel.Location = new System.Drawing.Point(539, 504);
             this.strengthLabel.Name = "strengthLabel";
-            this.strengthLabel.Size = new System.Drawing.Size(0, 15);
+            this.strengthLabel.Size = new System.Drawing.Size(0, 21);
             this.strengthLabel.TabIndex = 12;
             // 
             // CheckStrengthForm
