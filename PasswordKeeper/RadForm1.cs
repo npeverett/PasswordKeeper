@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Telerik.Data.Expressions;
 
 namespace PasswordKeeper
 {
@@ -16,8 +15,6 @@ namespace PasswordKeeper
         private BindingList<Password> passwordList;
         private int reusedPassword;
         private int unsafePassword;
-
-        
 
         public RadForm1()
         {

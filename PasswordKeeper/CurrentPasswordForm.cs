@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-using Telerik.Collections;
 
 namespace PasswordKeeper
 {
@@ -15,8 +14,6 @@ namespace PasswordKeeper
         public CurrentPasswordForm()
         {
             InitializeComponent();
-
-            
         }
         private void currentPasswords_MouseHover(object sender, EventArgs e)
         {

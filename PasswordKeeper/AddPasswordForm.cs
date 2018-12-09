@@ -60,7 +60,6 @@ namespace PasswordKeeper
             string notes = descriptionTextBox.Text;
 
             Password newPassword = new Password(name, user, password, notes);
-            passwordList.Add(newPassword);
 
             // Fill in List from stored file
             string fileName = "PasswordData.txt"; // The file of where we writing the data to
