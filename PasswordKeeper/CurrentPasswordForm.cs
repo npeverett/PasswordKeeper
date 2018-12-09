@@ -11,10 +11,19 @@ namespace PasswordKeeper
 {
     public partial class CurrentPasswordForm : Telerik.WinControls.UI.RadForm
     {
+        Methods methods = new Methods();
         public CurrentPasswordForm()
         {
             InitializeComponent();
+            BindListBox();
         }
+
+        private void BindListBox()
+        {
+            passwordBox.DataSource = methods.passwordList;
+            passwordBox.DisplayMember = "displayName";
+        }
+
         private void currentPasswords_MouseHover(object sender, EventArgs e)
         {
             //Sets yellow bar to left of current button
@@ -85,6 +94,17 @@ namespace PasswordKeeper
             this.Hide();
             RadForm1 rf = new RadForm1();
             rf.ShowDialog();
+        }
+
+        private void passwordBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (passwordBox.SelectedIndex > -1)
+            {
+                nameTextBox.Text = methods.passwordList[passwordBox.SelectedIndex].getWebName();
+                usernameTextBox.Text = methods.passwordList[passwordBox.SelectedIndex].getUserName();
+                passwordTextBox.Text = methods.passwordList[passwordBox.SelectedIndex].getPassword();
+                descriptionTextBox.Text = methods.passwordList[passwordBox.SelectedIndex].getNotes();
+            }
         }
     }
 }

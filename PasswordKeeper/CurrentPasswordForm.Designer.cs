@@ -54,16 +54,16 @@
             this.snapchatButton = new System.Windows.Forms.Button();
             this.twitchButton = new System.Windows.Forms.Button();
             this.currPSWBackgroundPanel = new System.Windows.Forms.Panel();
-            this.amazonButton = new System.Windows.Forms.Button();
+            this.passwordBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.passwordLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.descriptionTextBox = new System.Windows.Forms.RichTextBox();
-            this.nameLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
-            this.passwordListBox = new System.Windows.Forms.ListBox();
+            this.descriptionTextBox = new System.Windows.Forms.RichTextBox();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.passwordLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.amazonButton = new System.Windows.Forms.Button();
             this.panelLEFT.SuspendLayout();
             this.logoPanel.SuspendLayout();
             this.currPSWBackgroundPanel.SuspendLayout();
@@ -396,7 +396,7 @@
             // 
             this.currPSWBackgroundPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.currPSWBackgroundPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.currPSWBackgroundPanel.Controls.Add(this.passwordListBox);
+            this.currPSWBackgroundPanel.Controls.Add(this.passwordBox);
             this.currPSWBackgroundPanel.Controls.Add(this.label1);
             this.currPSWBackgroundPanel.Controls.Add(this.usernameTextBox);
             this.currPSWBackgroundPanel.Controls.Add(this.descriptionTextBox);
@@ -420,18 +420,14 @@
             this.currPSWBackgroundPanel.Size = new System.Drawing.Size(960, 719);
             this.currPSWBackgroundPanel.TabIndex = 12;
             // 
-            // amazonButton
+            // passwordBox
             // 
-            this.amazonButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("amazonButton.BackgroundImage")));
-            this.amazonButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.amazonButton.FlatAppearance.BorderSize = 0;
-            this.amazonButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.amazonButton.Location = new System.Drawing.Point(65, 349);
-            this.amazonButton.Name = "amazonButton";
-            this.amazonButton.Size = new System.Drawing.Size(54, 52);
-            this.amazonButton.TabIndex = 35;
-            this.amazonButton.TabStop = false;
-            this.amazonButton.UseVisualStyleBackColor = true;
+            this.passwordBox.FormattingEnabled = true;
+            this.passwordBox.Location = new System.Drawing.Point(183, 51);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.Size = new System.Drawing.Size(403, 576);
+            this.passwordBox.TabIndex = 0;
+            this.passwordBox.SelectedIndexChanged += new System.EventHandler(this.passwordBox_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -442,43 +438,15 @@
             this.label1.TabIndex = 45;
             this.label1.Text = "Username";
             // 
-            // passwordLabel
+            // usernameTextBox
             // 
-            this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(640, 286);
-            this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(57, 15);
-            this.passwordLabel.TabIndex = 38;
-            this.passwordLabel.Text = "Password";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(643, 374);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 15);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "Description";
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.nameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nameTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.nameTextBox.Location = new System.Drawing.Point(646, 153);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(274, 29);
-            this.nameTextBox.TabIndex = 1;
-            // 
-            // passwordTextBox
-            // 
-            this.passwordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.passwordTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.passwordTextBox.Location = new System.Drawing.Point(646, 313);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(274, 29);
-            this.passwordTextBox.TabIndex = 3;
+            this.usernameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.usernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.usernameTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.usernameTextBox.Location = new System.Drawing.Point(646, 228);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(274, 29);
+            this.usernameTextBox.TabIndex = 2;
             // 
             // descriptionTextBox
             // 
@@ -491,6 +459,44 @@
             this.descriptionTextBox.TabIndex = 4;
             this.descriptionTextBox.Text = "";
             // 
+            // passwordTextBox
+            // 
+            this.passwordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.passwordTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.passwordTextBox.Location = new System.Drawing.Point(646, 313);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(274, 29);
+            this.passwordTextBox.TabIndex = 3;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.nameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nameTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.nameTextBox.Location = new System.Drawing.Point(646, 153);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(274, 29);
+            this.nameTextBox.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(643, 374);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 15);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Description";
+            // 
+            // passwordLabel
+            // 
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Location = new System.Drawing.Point(640, 286);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(57, 15);
+            this.passwordLabel.TabIndex = 38;
+            this.passwordLabel.Text = "Password";
+            // 
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
@@ -500,23 +506,18 @@
             this.nameLabel.TabIndex = 37;
             this.nameLabel.Text = "Website Name";
             // 
-            // usernameTextBox
+            // amazonButton
             // 
-            this.usernameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.usernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.usernameTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.usernameTextBox.Location = new System.Drawing.Point(646, 228);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(274, 29);
-            this.usernameTextBox.TabIndex = 2;
-            // 
-            // passwordListBox
-            // 
-            this.passwordListBox.FormattingEnabled = true;
-            this.passwordListBox.Location = new System.Drawing.Point(183, 51);
-            this.passwordListBox.Name = "passwordListBox";
-            this.passwordListBox.Size = new System.Drawing.Size(403, 576);
-            this.passwordListBox.TabIndex = 0;
+            this.amazonButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("amazonButton.BackgroundImage")));
+            this.amazonButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.amazonButton.FlatAppearance.BorderSize = 0;
+            this.amazonButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.amazonButton.Location = new System.Drawing.Point(65, 349);
+            this.amazonButton.Name = "amazonButton";
+            this.amazonButton.Size = new System.Drawing.Size(54, 52);
+            this.amazonButton.TabIndex = 35;
+            this.amazonButton.TabStop = false;
+            this.amazonButton.UseVisualStyleBackColor = true;
             // 
             // CurrentPasswordForm
             // 
@@ -588,6 +589,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.Label nameLabel;
-        private System.Windows.Forms.ListBox passwordListBox;
+        private System.Windows.Forms.ListBox passwordBox;
     }
 }

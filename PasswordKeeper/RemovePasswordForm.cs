@@ -6,14 +6,23 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
+using System.IO;
 
 namespace PasswordKeeper
 {
     public partial class RemovePasswordForm : Telerik.WinControls.UI.RadForm
     {
+        Methods methods = new Methods();
         public RemovePasswordForm()
         {
             InitializeComponent();
+            BindListBox();
+        }
+
+        private void BindListBox()
+        {
+            passwordBox.DataSource = methods.passwordList;
+            passwordBox.DisplayMember = "displayName";
         }
 
         private void homepageButton_Click(object sender, EventArgs e)
@@ -80,6 +89,70 @@ namespace PasswordKeeper
             this.Hide();
             RadForm1 rf = new RadForm1();
             rf.ShowDialog();
+        }
+
+        private void passwordBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(passwordBox.SelectedIndex > -1)
+            {
+                nameTextBox.Text = methods.passwordList[passwordBox.SelectedIndex].getWebName();
+                usernameTextBox.Text = methods.passwordList[passwordBox.SelectedIndex].getUserName();
+                passwordTextBox.Text = methods.passwordList[passwordBox.SelectedIndex].getPassword();
+                descriptionTextBox.Text = methods.passwordList[passwordBox.SelectedIndex].getNotes();
+            }
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            if (methods.passwordList.Count == 1)
+            {
+                passwordBox.SelectedIndex = 0;
+                passwordBox_SelectedIndexChanged(sender, e);
+                passwordBox.Update();
+            }
+
+            Password tempPassword = methods.passwordList[passwordBox.SelectedIndex];
+
+            methods.passwordList.Remove(tempPassword);
+
+            string fileName = "PasswordData.txt"; // Fill in whatever we are storing the data in here
+
+            if (File.Exists(fileName))
+            {
+                string tempFile = Path.GetTempFileName();
+                StreamWriter tempWriter = new StreamWriter(tempFile);
+                StreamReader reader = new StreamReader(fileName);
+                string line;
+
+                while ((line = reader.ReadLine()) != null)
+                {
+                    string[] tempArr = line.Split('|');
+
+                    string webName = tempArr[0];
+                    string userName = tempArr[1];
+                    string password = methods.decrypt(tempArr[2], methods.getPassPhrase());
+                    string notes = tempArr[3];
+
+                    if(!tempPassword.getWebName().Equals(webName))
+                    {
+                        tempWriter.WriteLine(line);
+                    }
+
+                }
+
+                reader.Close();
+                tempWriter.Close();
+
+                File.Delete(fileName);
+                File.Move(tempFile, fileName);
+
+                
+            }
+
+            nameTextBox.Text = "";
+            usernameTextBox.Text = "";
+            passwordTextBox.Text = "";
+            descriptionTextBox.Text = "";
         }
     }
 }

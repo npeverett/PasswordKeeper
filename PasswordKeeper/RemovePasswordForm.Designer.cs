@@ -61,7 +61,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.passwordLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.passwordBox = new System.Windows.Forms.ListBox();
             this.panelLEFT.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -241,6 +241,7 @@
             this.deleteButton.TabIndex = 5;
             this.deleteButton.Text = "Delete Password";
             this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // warningLabel
             // 
@@ -463,20 +464,21 @@
             this.nameLabel.TabIndex = 47;
             this.nameLabel.Text = "Website Name";
             // 
-            // listBox1
+            // passwordBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(384, 54);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(403, 576);
-            this.listBox1.TabIndex = 0;
+            this.passwordBox.FormattingEnabled = true;
+            this.passwordBox.Location = new System.Drawing.Point(384, 54);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.Size = new System.Drawing.Size(403, 576);
+            this.passwordBox.TabIndex = 0;
+            this.passwordBox.SelectedIndexChanged += new System.EventHandler(this.passwordBox_SelectedIndexChanged);
             // 
             // RemovePasswordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1180, 719);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.descriptionTextBox);
@@ -555,6 +557,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.Label nameLabel;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox passwordBox;
     }
 }

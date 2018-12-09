@@ -14,11 +14,33 @@ namespace PasswordKeeper
         private string URL;
         private string notes;
 
+        public string displayName { get { return passwordName; } }
+
         public Password()
         {
             passwordName = "";
             userName = "";
             password = "";
+        }
+
+        public string getWebName()
+        {
+            return passwordName;
+        }
+
+        public string getUserName()
+        {
+            return userName;
+        }
+
+        public string getNotes()
+        {
+            return notes;
+        }
+
+        public string getURL()
+        {
+            return URL;
         }
 
         public string getPassword()
@@ -41,7 +63,7 @@ namespace PasswordKeeper
             userName = user;
             password = pass;
             notes = note;
-        }
+    }
     }
 }
 
