@@ -17,7 +17,7 @@ namespace PasswordKeeper
         private BindingList<Password> passwordList = new BindingList<Password>();
         private const int Keysize = 256;
 
-        private const string passPhrase = "pussyMonsta"; // Probably change later but not important right now;
+        private const string passPhrase = "pussyMonsta"; // Probably dont change later but not important right now;
         // This constant determines the number of iterations for the password bytes generation function.
         private const int DerivationIterations = 1000;
 

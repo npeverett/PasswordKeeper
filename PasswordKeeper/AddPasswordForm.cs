@@ -62,7 +62,7 @@ namespace PasswordKeeper
             Password newPassword = new Password(name, user, password, notes);
 
             // Fill in List from stored file
-            string fileName = ""; // The file of where we writing the data to
+            string fileName = "PasswordData.txt"; // The file of where we writing the data to
             StreamWriter writer = new StreamWriter(fileName, true);
 
             string tempLine = name + '|' + user + '|' + methods.encrypt(password, methods.getPassPhrase()) + '|' + notes;

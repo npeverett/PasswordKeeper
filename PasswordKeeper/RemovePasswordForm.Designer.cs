@@ -41,23 +41,30 @@
             this.currentPasswords = new System.Windows.Forms.Button();
             this.logoPanel = new System.Windows.Forms.Panel();
             this.panelCurrPass = new System.Windows.Forms.Panel();
-            this.numPSW = new System.Windows.Forms.Label();
-            this.chromeButtonD = new System.Windows.Forms.Button();
-            this.gmailButtonD = new System.Windows.Forms.Button();
-            this.yahooButtonD = new System.Windows.Forms.Button();
-            this.googleDriveButtonD = new System.Windows.Forms.Button();
-            this.outlookButtonD = new System.Windows.Forms.Button();
-            this.facebookButtonD = new System.Windows.Forms.Button();
-            this.instagramButtonD = new System.Windows.Forms.Button();
-            this.snapchatButtonD = new System.Windows.Forms.Button();
-            this.twitchButtonD = new System.Windows.Forms.Button();
-            this.otherButtonD = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
-            this.passwordListBox = new System.Windows.Forms.ListBox();
             this.warningLabel = new System.Windows.Forms.Label();
-            this.amazonButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.twitchButton = new System.Windows.Forms.Button();
+            this.snapchatButton = new System.Windows.Forms.Button();
+            this.instagramButton = new System.Windows.Forms.Button();
+            this.facebookButton = new System.Windows.Forms.Button();
+            this.outlookButton = new System.Windows.Forms.Button();
+            this.googleDriveButton = new System.Windows.Forms.Button();
+            this.yahooButton = new System.Windows.Forms.Button();
+            this.gmailButton = new System.Windows.Forms.Button();
+            this.chromeButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.descriptionTextBox = new System.Windows.Forms.RichTextBox();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.passwordLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.passwordBox = new Telerik.WinControls.UI.RadListControl();
             this.panelLEFT.SuspendLayout();
             this.logoPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.passwordBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -224,185 +231,260 @@
             this.panelCurrPass.Size = new System.Drawing.Size(7, 106);
             this.panelCurrPass.TabIndex = 2;
             // 
-            // numPSW
-            // 
-            this.numPSW.AutoSize = true;
-            this.numPSW.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.numPSW.Location = new System.Drawing.Point(650, 199);
-            this.numPSW.Name = "numPSW";
-            this.numPSW.Size = new System.Drawing.Size(0, 32);
-            this.numPSW.TabIndex = 7;
-            // 
-            // chromeButtonD
-            // 
-            this.chromeButtonD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.chromeButtonD.FlatAppearance.BorderSize = 0;
-            this.chromeButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chromeButtonD.Image = ((System.Drawing.Image)(resources.GetObject("chromeButtonD.Image")));
-            this.chromeButtonD.Location = new System.Drawing.Point(284, 100);
-            this.chromeButtonD.Name = "chromeButtonD";
-            this.chromeButtonD.Size = new System.Drawing.Size(54, 51);
-            this.chromeButtonD.TabIndex = 8;
-            this.chromeButtonD.UseVisualStyleBackColor = true;
-            // 
-            // gmailButtonD
-            // 
-            this.gmailButtonD.FlatAppearance.BorderSize = 0;
-            this.gmailButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gmailButtonD.Image = ((System.Drawing.Image)(resources.GetObject("gmailButtonD.Image")));
-            this.gmailButtonD.Location = new System.Drawing.Point(351, 100);
-            this.gmailButtonD.Name = "gmailButtonD";
-            this.gmailButtonD.Size = new System.Drawing.Size(62, 51);
-            this.gmailButtonD.TabIndex = 9;
-            this.gmailButtonD.UseVisualStyleBackColor = true;
-            // 
-            // yahooButtonD
-            // 
-            this.yahooButtonD.FlatAppearance.BorderSize = 0;
-            this.yahooButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.yahooButtonD.Image = ((System.Drawing.Image)(resources.GetObject("yahooButtonD.Image")));
-            this.yahooButtonD.Location = new System.Drawing.Point(419, 100);
-            this.yahooButtonD.Name = "yahooButtonD";
-            this.yahooButtonD.Size = new System.Drawing.Size(52, 51);
-            this.yahooButtonD.TabIndex = 10;
-            this.yahooButtonD.UseVisualStyleBackColor = true;
-            // 
-            // googleDriveButtonD
-            // 
-            this.googleDriveButtonD.FlatAppearance.BorderSize = 0;
-            this.googleDriveButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.googleDriveButtonD.Image = ((System.Drawing.Image)(resources.GetObject("googleDriveButtonD.Image")));
-            this.googleDriveButtonD.Location = new System.Drawing.Point(477, 100);
-            this.googleDriveButtonD.Name = "googleDriveButtonD";
-            this.googleDriveButtonD.Size = new System.Drawing.Size(64, 51);
-            this.googleDriveButtonD.TabIndex = 11;
-            this.googleDriveButtonD.UseVisualStyleBackColor = true;
-            // 
-            // outlookButtonD
-            // 
-            this.outlookButtonD.FlatAppearance.BorderSize = 0;
-            this.outlookButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.outlookButtonD.Image = ((System.Drawing.Image)(resources.GetObject("outlookButtonD.Image")));
-            this.outlookButtonD.Location = new System.Drawing.Point(547, 100);
-            this.outlookButtonD.Name = "outlookButtonD";
-            this.outlookButtonD.Size = new System.Drawing.Size(57, 51);
-            this.outlookButtonD.TabIndex = 12;
-            this.outlookButtonD.UseVisualStyleBackColor = true;
-            // 
-            // facebookButtonD
-            // 
-            this.facebookButtonD.FlatAppearance.BorderSize = 0;
-            this.facebookButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.facebookButtonD.Image = ((System.Drawing.Image)(resources.GetObject("facebookButtonD.Image")));
-            this.facebookButtonD.Location = new System.Drawing.Point(673, 100);
-            this.facebookButtonD.Name = "facebookButtonD";
-            this.facebookButtonD.Size = new System.Drawing.Size(61, 51);
-            this.facebookButtonD.TabIndex = 13;
-            this.facebookButtonD.UseVisualStyleBackColor = true;
-            // 
-            // instagramButtonD
-            // 
-            this.instagramButtonD.FlatAppearance.BorderSize = 0;
-            this.instagramButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.instagramButtonD.Image = ((System.Drawing.Image)(resources.GetObject("instagramButtonD.Image")));
-            this.instagramButtonD.Location = new System.Drawing.Point(740, 100);
-            this.instagramButtonD.Name = "instagramButtonD";
-            this.instagramButtonD.Size = new System.Drawing.Size(55, 51);
-            this.instagramButtonD.TabIndex = 14;
-            this.instagramButtonD.UseVisualStyleBackColor = true;
-            // 
-            // snapchatButtonD
-            // 
-            this.snapchatButtonD.FlatAppearance.BorderSize = 0;
-            this.snapchatButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.snapchatButtonD.Image = ((System.Drawing.Image)(resources.GetObject("snapchatButtonD.Image")));
-            this.snapchatButtonD.Location = new System.Drawing.Point(801, 100);
-            this.snapchatButtonD.Name = "snapchatButtonD";
-            this.snapchatButtonD.Size = new System.Drawing.Size(57, 51);
-            this.snapchatButtonD.TabIndex = 15;
-            this.snapchatButtonD.UseVisualStyleBackColor = true;
-            // 
-            // twitchButtonD
-            // 
-            this.twitchButtonD.FlatAppearance.BorderSize = 0;
-            this.twitchButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.twitchButtonD.Image = ((System.Drawing.Image)(resources.GetObject("twitchButtonD.Image")));
-            this.twitchButtonD.Location = new System.Drawing.Point(864, 100);
-            this.twitchButtonD.Name = "twitchButtonD";
-            this.twitchButtonD.Size = new System.Drawing.Size(58, 51);
-            this.twitchButtonD.TabIndex = 16;
-            this.twitchButtonD.UseVisualStyleBackColor = true;
-            // 
-            // otherButtonD
-            // 
-            this.otherButtonD.FlatAppearance.BorderSize = 0;
-            this.otherButtonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.otherButtonD.Image = ((System.Drawing.Image)(resources.GetObject("otherButtonD.Image")));
-            this.otherButtonD.Location = new System.Drawing.Point(1005, 100);
-            this.otherButtonD.Name = "otherButtonD";
-            this.otherButtonD.Size = new System.Drawing.Size(58, 51);
-            this.otherButtonD.TabIndex = 17;
-            this.otherButtonD.UseVisualStyleBackColor = true;
-            // 
             // deleteButton
             // 
             this.deleteButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.deleteButton.Location = new System.Drawing.Point(577, 608);
+            this.deleteButton.Location = new System.Drawing.Point(862, 550);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(211, 59);
             this.deleteButton.TabIndex = 18;
             this.deleteButton.Text = "Delete Password";
             this.deleteButton.UseVisualStyleBackColor = false;
             // 
-            // passwordListBox
-            // 
-            this.passwordListBox.FormattingEnabled = true;
-            this.passwordListBox.Location = new System.Drawing.Point(284, 199);
-            this.passwordListBox.Name = "passwordListBox";
-            this.passwordListBox.Size = new System.Drawing.Size(779, 394);
-            this.passwordListBox.TabIndex = 19;
-            // 
             // warningLabel
             // 
             this.warningLabel.AutoSize = true;
             this.warningLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.warningLabel.Location = new System.Drawing.Point(580, 681);
+            this.warningLabel.Location = new System.Drawing.Point(865, 612);
             this.warningLabel.Name = "warningLabel";
             this.warningLabel.Size = new System.Drawing.Size(208, 15);
             this.warningLabel.TabIndex = 20;
             this.warningLabel.Text = "Warning! This action can\'t be undone.\r\n";
             // 
-            // amazonButton
+            // button1
             // 
-            this.amazonButton.FlatAppearance.BorderSize = 0;
-            this.amazonButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.amazonButton.Image = ((System.Drawing.Image)(resources.GetObject("amazonButton.Image")));
-            this.amazonButton.Location = new System.Drawing.Point(610, 100);
-            this.amazonButton.Name = "amazonButton";
-            this.amazonButton.Size = new System.Drawing.Size(57, 51);
-            this.amazonButton.TabIndex = 21;
-            this.amazonButton.UseVisualStyleBackColor = true;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(269, 348);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(54, 52);
+            this.button1.TabIndex = 45;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // twitchButton
+            // 
+            this.twitchButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("twitchButton.BackgroundImage")));
+            this.twitchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.twitchButton.FlatAppearance.BorderSize = 0;
+            this.twitchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.twitchButton.Location = new System.Drawing.Point(270, 577);
+            this.twitchButton.Name = "twitchButton";
+            this.twitchButton.Size = new System.Drawing.Size(56, 53);
+            this.twitchButton.TabIndex = 44;
+            this.twitchButton.UseVisualStyleBackColor = true;
+            // 
+            // snapchatButton
+            // 
+            this.snapchatButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("snapchatButton.BackgroundImage")));
+            this.snapchatButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.snapchatButton.FlatAppearance.BorderSize = 0;
+            this.snapchatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.snapchatButton.Location = new System.Drawing.Point(269, 520);
+            this.snapchatButton.Name = "snapchatButton";
+            this.snapchatButton.Size = new System.Drawing.Size(52, 51);
+            this.snapchatButton.TabIndex = 43;
+            this.snapchatButton.UseVisualStyleBackColor = true;
+            // 
+            // instagramButton
+            // 
+            this.instagramButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("instagramButton.BackgroundImage")));
+            this.instagramButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.instagramButton.FlatAppearance.BorderSize = 0;
+            this.instagramButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.instagramButton.Location = new System.Drawing.Point(272, 463);
+            this.instagramButton.Name = "instagramButton";
+            this.instagramButton.Size = new System.Drawing.Size(51, 51);
+            this.instagramButton.TabIndex = 42;
+            this.instagramButton.UseVisualStyleBackColor = true;
+            // 
+            // facebookButton
+            // 
+            this.facebookButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("facebookButton.BackgroundImage")));
+            this.facebookButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.facebookButton.FlatAppearance.BorderSize = 0;
+            this.facebookButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.facebookButton.Location = new System.Drawing.Point(270, 406);
+            this.facebookButton.Name = "facebookButton";
+            this.facebookButton.Size = new System.Drawing.Size(53, 51);
+            this.facebookButton.TabIndex = 41;
+            this.facebookButton.UseVisualStyleBackColor = true;
+            // 
+            // outlookButton
+            // 
+            this.outlookButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("outlookButton.BackgroundImage")));
+            this.outlookButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.outlookButton.FlatAppearance.BorderSize = 0;
+            this.outlookButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.outlookButton.Location = new System.Drawing.Point(267, 282);
+            this.outlookButton.Name = "outlookButton";
+            this.outlookButton.Size = new System.Drawing.Size(54, 52);
+            this.outlookButton.TabIndex = 40;
+            this.outlookButton.UseVisualStyleBackColor = true;
+            // 
+            // googleDriveButton
+            // 
+            this.googleDriveButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("googleDriveButton.BackgroundImage")));
+            this.googleDriveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.googleDriveButton.FlatAppearance.BorderSize = 0;
+            this.googleDriveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.googleDriveButton.Location = new System.Drawing.Point(269, 171);
+            this.googleDriveButton.Name = "googleDriveButton";
+            this.googleDriveButton.Size = new System.Drawing.Size(52, 53);
+            this.googleDriveButton.TabIndex = 39;
+            this.googleDriveButton.UseVisualStyleBackColor = true;
+            // 
+            // yahooButton
+            // 
+            this.yahooButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("yahooButton.BackgroundImage")));
+            this.yahooButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.yahooButton.FlatAppearance.BorderSize = 0;
+            this.yahooButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.yahooButton.Location = new System.Drawing.Point(270, 230);
+            this.yahooButton.Name = "yahooButton";
+            this.yahooButton.Size = new System.Drawing.Size(51, 46);
+            this.yahooButton.TabIndex = 38;
+            this.yahooButton.UseVisualStyleBackColor = true;
+            // 
+            // gmailButton
+            // 
+            this.gmailButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gmailButton.BackgroundImage")));
+            this.gmailButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.gmailButton.FlatAppearance.BorderSize = 0;
+            this.gmailButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gmailButton.ForeColor = System.Drawing.Color.Transparent;
+            this.gmailButton.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.gmailButton.Location = new System.Drawing.Point(269, 115);
+            this.gmailButton.Name = "gmailButton";
+            this.gmailButton.Size = new System.Drawing.Size(50, 50);
+            this.gmailButton.TabIndex = 37;
+            this.gmailButton.UseVisualStyleBackColor = true;
+            // 
+            // chromeButton
+            // 
+            this.chromeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.chromeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chromeButton.BackgroundImage")));
+            this.chromeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.chromeButton.FlatAppearance.BorderSize = 0;
+            this.chromeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chromeButton.ForeColor = System.Drawing.Color.Transparent;
+            this.chromeButton.Location = new System.Drawing.Point(269, 50);
+            this.chromeButton.Name = "chromeButton";
+            this.chromeButton.Size = new System.Drawing.Size(48, 50);
+            this.chromeButton.TabIndex = 36;
+            this.chromeButton.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(823, 161);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 15);
+            this.label1.TabIndex = 54;
+            this.label1.Text = "Username";
+            // 
+            // usernameTextBox
+            // 
+            this.usernameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.usernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.usernameTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.usernameTextBox.Location = new System.Drawing.Point(829, 189);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(274, 29);
+            this.usernameTextBox.TabIndex = 53;
+            // 
+            // descriptionTextBox
+            // 
+            this.descriptionTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.descriptionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.descriptionTextBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.descriptionTextBox.Location = new System.Drawing.Point(829, 366);
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.Size = new System.Drawing.Size(274, 124);
+            this.descriptionTextBox.TabIndex = 52;
+            this.descriptionTextBox.Text = "";
+            // 
+            // passwordTextBox
+            // 
+            this.passwordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.passwordTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.passwordTextBox.Location = new System.Drawing.Point(829, 274);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(274, 29);
+            this.passwordTextBox.TabIndex = 51;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.nameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nameTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.nameTextBox.Location = new System.Drawing.Point(829, 114);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(274, 29);
+            this.nameTextBox.TabIndex = 50;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(826, 335);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 15);
+            this.label2.TabIndex = 49;
+            this.label2.Text = "Description";
+            // 
+            // passwordLabel
+            // 
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Location = new System.Drawing.Point(823, 247);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(57, 15);
+            this.passwordLabel.TabIndex = 48;
+            this.passwordLabel.Text = "Password";
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(823, 86);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(84, 15);
+            this.nameLabel.TabIndex = 47;
+            this.nameLabel.Text = "Website Name";
+            // 
+            // passwordBox
+            // 
+            this.passwordBox.Location = new System.Drawing.Point(399, 45);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.Size = new System.Drawing.Size(349, 597);
+            this.passwordBox.TabIndex = 46;
             // 
             // RemovePasswordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1180, 719);
-            this.Controls.Add(this.amazonButton);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.usernameTextBox);
+            this.Controls.Add(this.descriptionTextBox);
+            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.nameTextBox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.passwordLabel);
+            this.Controls.Add(this.nameLabel);
+            this.Controls.Add(this.passwordBox);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.twitchButton);
+            this.Controls.Add(this.snapchatButton);
+            this.Controls.Add(this.instagramButton);
+            this.Controls.Add(this.facebookButton);
+            this.Controls.Add(this.outlookButton);
+            this.Controls.Add(this.googleDriveButton);
+            this.Controls.Add(this.yahooButton);
+            this.Controls.Add(this.gmailButton);
+            this.Controls.Add(this.chromeButton);
             this.Controls.Add(this.warningLabel);
-            this.Controls.Add(this.passwordListBox);
             this.Controls.Add(this.deleteButton);
-            this.Controls.Add(this.otherButtonD);
-            this.Controls.Add(this.twitchButtonD);
-            this.Controls.Add(this.snapchatButtonD);
-            this.Controls.Add(this.instagramButtonD);
-            this.Controls.Add(this.facebookButtonD);
-            this.Controls.Add(this.outlookButtonD);
-            this.Controls.Add(this.googleDriveButtonD);
-            this.Controls.Add(this.yahooButtonD);
-            this.Controls.Add(this.gmailButtonD);
-            this.Controls.Add(this.chromeButtonD);
-            this.Controls.Add(this.numPSW);
             this.Controls.Add(this.panelCurrPass);
             this.Controls.Add(this.panelLEFT);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -422,6 +504,7 @@
             this.panelLEFT.PerformLayout();
             this.logoPanel.ResumeLayout(false);
             this.logoPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.passwordBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -440,21 +523,27 @@
         private System.Windows.Forms.Label companyLabel;
         private System.Windows.Forms.Label cpyrtLabel;
         private System.Windows.Forms.Panel panelCurrPass;
-        private System.Windows.Forms.Label numPSW;
         private System.Windows.Forms.Button homepageButton;
-        private System.Windows.Forms.Button chromeButtonD;
-        private System.Windows.Forms.Button gmailButtonD;
-        private System.Windows.Forms.Button yahooButtonD;
-        private System.Windows.Forms.Button googleDriveButtonD;
-        private System.Windows.Forms.Button outlookButtonD;
-        private System.Windows.Forms.Button facebookButtonD;
-        private System.Windows.Forms.Button instagramButtonD;
-        private System.Windows.Forms.Button snapchatButtonD;
-        private System.Windows.Forms.Button twitchButtonD;
-        private System.Windows.Forms.Button otherButtonD;
         private System.Windows.Forms.Button deleteButton;
-        private System.Windows.Forms.ListBox passwordListBox;
         private System.Windows.Forms.Label warningLabel;
-        private System.Windows.Forms.Button amazonButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button twitchButton;
+        private System.Windows.Forms.Button snapchatButton;
+        private System.Windows.Forms.Button instagramButton;
+        private System.Windows.Forms.Button facebookButton;
+        private System.Windows.Forms.Button outlookButton;
+        private System.Windows.Forms.Button googleDriveButton;
+        private System.Windows.Forms.Button yahooButton;
+        private System.Windows.Forms.Button gmailButton;
+        private System.Windows.Forms.Button chromeButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox usernameTextBox;
+        private System.Windows.Forms.RichTextBox descriptionTextBox;
+        private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label passwordLabel;
+        private System.Windows.Forms.Label nameLabel;
+        private Telerik.WinControls.UI.RadListControl passwordBox;
     }
 }
