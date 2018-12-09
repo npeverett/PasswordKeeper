@@ -13,12 +13,12 @@ namespace PasswordKeeper
     public partial class AddPasswordForm : Telerik.WinControls.UI.RadForm
     {
         Methods variable = new Methods();
-        BindingList<Password> passwordList;
+       // BindingList<Password> passwordList;
         
         public AddPasswordForm()
         {
             InitializeComponent();
-            passwordList = variable.getPasswordList();
+            //passwordList = variable.getPasswordList();
 
             if(passwordTextBox.Text != "")
             {
@@ -53,28 +53,30 @@ namespace PasswordKeeper
 
         private void savePassword_Click(object sender, EventArgs e)
         {
-            Methods methods = new Methods();
+           // Methods methods = new Methods();
             string name = nameTextBox.Text;
             string user = usernameTextBox.Text;
             string password = passwordTextBox.Text;
             string notes = descriptionTextBox.Text;
 
             Password newPassword = new Password(name, user, password, notes);
+            variable.passwordList.Add(newPassword);
 
             // Fill in List from stored file
             string fileName = "PasswordData.txt"; // The file of where we writing the data to
             StreamWriter writer = new StreamWriter(fileName, true);
 
-            string tempLine = name + '|' + user + '|' + methods.encrypt(password, methods.getPassPhrase()) + '|' + notes;
+            string tempLine = name + '|' + user + '|' + variable.encrypt(password, variable.getPassPhrase()) + '|' + notes;
 
             writer.WriteLine(tempLine);
-            
+
+            writer.Close();
         }
 
         private void randomizeButton_Click(object sender, EventArgs e)
         {
-            Methods methods = new Methods();
-            string random = methods.genNewPassword();
+            //Methods methods = new Methods();
+            string random = variable.genNewPassword();
 
             passwordTextBox.Text = random;
         }

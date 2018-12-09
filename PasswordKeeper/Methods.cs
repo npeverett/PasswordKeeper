@@ -14,7 +14,7 @@ namespace PasswordKeeper
 {
     class Methods
     {
-        private BindingList<Password> passwordList = new BindingList<Password>();
+        public BindingList<Password> passwordList = new BindingList<Password>();
         private const int Keysize = 256;
 
         private const string passPhrase = "pussyMonsta"; // Probably dont change later but not important right now;
@@ -25,7 +25,7 @@ namespace PasswordKeeper
         {
             fillList(passwordList);
         }
-        
+
         public BindingList<Password> getPasswordList()
         {
             return passwordList;
@@ -93,9 +93,17 @@ namespace PasswordKeeper
         {
             char[] safeSymbols = { '!', '@', '#', '$', '-'};
 
-            for (int i = 0; i < password.Length; i++)
+            //for (int i = 0; i < password.Length + 1; i++)
+            //{
+            //    if (safeSymbols.Contains(password[i]))
+            //    {
+            //        return true;
+            //    }
+            //}
+
+            foreach(char c in password)
             {
-                if (password.Contains(safeSymbols[i]))
+                if (safeSymbols.Contains(c))
                 {
                     return true;
                 }
@@ -108,9 +116,17 @@ namespace PasswordKeeper
         {
             char[] safeNumbers = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
 
-            for (int i = 0; i < password.Length; i++)
+            //for (int i = 0; i < password.Length + 1; i++)
+            //{
+            //    if (safeNumbers.Contains(password[i]))
+            //    {
+            //        return true;
+            //    }
+            //}
+
+            foreach(char c in password)
             {
-                if (password.Contains(safeNumbers[i]))
+                if(safeNumbers.Contains(c))
                 {
                     return true;
                 }
@@ -123,9 +139,17 @@ namespace PasswordKeeper
         {
             char[] safeLowerLetters = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
 
-            for (int i = 0; i < password.Length; i++)
+            //for (int i = 0; i < password.Length + 1; i++)
+            //{
+            //    if (safeLowerLetters.Contains(password[i]))
+            //    {
+            //        return true;
+            //    }
+            //}
+
+            foreach (char c in password)
             {
-                if (password.Contains(safeLowerLetters[i]))
+                if (safeLowerLetters.Contains(c))
                 {
                     return true;
                 }
@@ -138,9 +162,17 @@ namespace PasswordKeeper
         {
             char[] safeUpperLetters = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
 
-            for (int i = 0; i < password.Length; i++)
+            //for (int i = 0; i < password.Length + 1; i++)
+            //{
+            //    if (safeUpperLetters.Contains(password[i]))
+            //    {
+            //        return true;
+            //    }
+            //}
+
+            foreach (char c in password)
             {
-                if (password.Contains(safeUpperLetters[i]))
+                if (safeUpperLetters.Contains(c))
                 {
                     return true;
                 }
@@ -151,7 +183,7 @@ namespace PasswordKeeper
 
         public bool analyzePassword(string password)
         {
-            if (password.Length < 12 || checkSymbols(password) == false || checkNumbers(password) == false || checkLowerCase(password) == false || checkUpperCase(password) == false)
+            if (password.Length < 8 || checkSymbols(password) == false || checkNumbers(password) == false || checkLowerCase(password) == false || checkUpperCase(password) == false)
             {
                 return false;
             }
@@ -168,7 +200,7 @@ namespace PasswordKeeper
 
         public void fillList(BindingList<Password> passwordList)
         {
-            string fileName = ""; // Fill in whatever we are storing the data in here
+            string fileName = "PasswordData.txt"; // Fill in whatever we are storing the data in here
 
             if(File.Exists(fileName))
             {
