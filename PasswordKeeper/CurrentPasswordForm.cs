@@ -79,6 +79,13 @@ namespace PasswordKeeper
             CheckStrengthForm csf = new CheckStrengthForm();
             csf.ShowDialog();
         }
+
+        private void logoLabel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RadForm1 rf = new RadForm1();
+            rf.ShowDialog();
+        }
     }
 }
 

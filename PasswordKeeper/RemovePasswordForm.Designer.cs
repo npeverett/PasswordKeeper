@@ -78,6 +78,7 @@
             this.logoLabel.Size = new System.Drawing.Size(136, 96);
             this.logoLabel.TabIndex = 0;
             this.logoLabel.Text = "SP";
+            this.logoLabel.Click += new System.EventHandler(this.logoLabel_Click);
             // 
             // panelLEFT
             // 
@@ -222,6 +223,7 @@
             this.logoPanel.Name = "logoPanel";
             this.logoPanel.Size = new System.Drawing.Size(200, 100);
             this.logoPanel.TabIndex = 0;
+            this.logoPanel.Click += new System.EventHandler(this.logoPanel_Click);
             // 
             // panelCurrPass
             // 
