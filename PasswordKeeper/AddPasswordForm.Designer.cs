@@ -51,8 +51,6 @@
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.descriptionTextBox = new System.Windows.Forms.RichTextBox();
-            this.analyzeLabel = new System.Windows.Forms.Label();
-            this.passwordStrengthLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelLEFT.SuspendLayout();
@@ -333,24 +331,6 @@
             this.descriptionTextBox.TabIndex = 4;
             this.descriptionTextBox.Text = "";
             // 
-            // analyzeLabel
-            // 
-            this.analyzeLabel.AutoSize = true;
-            this.analyzeLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.analyzeLabel.Location = new System.Drawing.Point(632, 315);
-            this.analyzeLabel.Name = "analyzeLabel";
-            this.analyzeLabel.Size = new System.Drawing.Size(0, 21);
-            this.analyzeLabel.TabIndex = 13;
-            // 
-            // passwordStrengthLabel
-            // 
-            this.passwordStrengthLabel.AutoSize = true;
-            this.passwordStrengthLabel.Location = new System.Drawing.Point(622, 285);
-            this.passwordStrengthLabel.Name = "passwordStrengthLabel";
-            this.passwordStrengthLabel.Size = new System.Drawing.Size(105, 15);
-            this.passwordStrengthLabel.TabIndex = 14;
-            this.passwordStrengthLabel.Text = "Password Strength";
-            // 
             // usernameTextBox
             // 
             this.usernameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -377,8 +357,6 @@
             this.ClientSize = new System.Drawing.Size(1180, 719);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.usernameTextBox);
-            this.Controls.Add(this.passwordStrengthLabel);
-            this.Controls.Add(this.analyzeLabel);
             this.Controls.Add(this.descriptionTextBox);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.nameTextBox);
@@ -437,8 +415,6 @@
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.RichTextBox descriptionTextBox;
-        private System.Windows.Forms.Label analyzeLabel;
-        private System.Windows.Forms.Label passwordStrengthLabel;
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.Label label1;
     }
