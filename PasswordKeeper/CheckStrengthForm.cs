@@ -67,5 +67,19 @@ namespace PasswordKeeper
             RemovePasswordForm rpf = new RemovePasswordForm();
             rpf.ShowDialog();
         }
+
+        private void logoLabel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RadForm1 rf = new RadForm1();
+            rf.ShowDialog();
+        }
+
+        private void logoPanel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RadForm1 rf = new RadForm1();
+            rf.ShowDialog();
+        }
     }
 }
