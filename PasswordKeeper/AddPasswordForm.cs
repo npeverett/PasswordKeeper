@@ -71,6 +71,11 @@ namespace PasswordKeeper
             writer.WriteLine(tempLine);
 
             writer.Close();
+
+            nameTextBox.Text = "";
+            usernameTextBox.Text = "";
+            passwordTextBox.Text = "";
+            descriptionTextBox.Text = "";
         }
 
         private void randomizeButton_Click(object sender, EventArgs e)
