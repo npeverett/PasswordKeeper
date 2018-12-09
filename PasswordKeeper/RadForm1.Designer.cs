@@ -96,6 +96,7 @@
             this.homepageButton.Name = "homepageButton";
             this.homepageButton.Size = new System.Drawing.Size(93, 91);
             this.homepageButton.TabIndex = 7;
+            this.homepageButton.TabStop = false;
             this.homepageButton.UseVisualStyleBackColor = true;
             // 
             // cpyrtLabel
@@ -133,6 +134,7 @@
             this.removePassButton.Name = "removePassButton";
             this.removePassButton.Size = new System.Drawing.Size(200, 106);
             this.removePassButton.TabIndex = 4;
+            this.removePassButton.TabStop = false;
             this.removePassButton.Text = " Remove Password";
             this.removePassButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.removePassButton.UseVisualStyleBackColor = false;
@@ -153,6 +155,7 @@
             this.addPassButton.Name = "addPassButton";
             this.addPassButton.Size = new System.Drawing.Size(200, 106);
             this.addPassButton.TabIndex = 3;
+            this.addPassButton.TabStop = false;
             this.addPassButton.Text = "       Add New Password";
             this.addPassButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.addPassButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -176,6 +179,7 @@
             this.checkStrengthButton.Name = "checkStrengthButton";
             this.checkStrengthButton.Size = new System.Drawing.Size(200, 106);
             this.checkStrengthButton.TabIndex = 2;
+            this.checkStrengthButton.TabStop = false;
             this.checkStrengthButton.Text = "Check Password Strength";
             this.checkStrengthButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkStrengthButton.UseVisualStyleBackColor = false;
@@ -197,6 +201,7 @@
             this.currentPasswords.Name = "currentPasswords";
             this.currentPasswords.Size = new System.Drawing.Size(200, 106);
             this.currentPasswords.TabIndex = 1;
+            this.currentPasswords.TabStop = false;
             this.currentPasswords.Text = "Current Passwords";
             this.currentPasswords.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.currentPasswords.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

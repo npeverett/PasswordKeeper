@@ -98,6 +98,7 @@
             this.homepageButton.Name = "homepageButton";
             this.homepageButton.Size = new System.Drawing.Size(93, 91);
             this.homepageButton.TabIndex = 7;
+            this.homepageButton.TabStop = false;
             this.homepageButton.UseVisualStyleBackColor = true;
             this.homepageButton.Click += new System.EventHandler(this.homepageButton_Click);
             // 
@@ -136,6 +137,7 @@
             this.removePassButton.Name = "removePassButton";
             this.removePassButton.Size = new System.Drawing.Size(200, 106);
             this.removePassButton.TabIndex = 4;
+            this.removePassButton.TabStop = false;
             this.removePassButton.Text = " Remove Password";
             this.removePassButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.removePassButton.UseVisualStyleBackColor = false;
@@ -156,6 +158,7 @@
             this.addPassButton.Name = "addPassButton";
             this.addPassButton.Size = new System.Drawing.Size(200, 106);
             this.addPassButton.TabIndex = 3;
+            this.addPassButton.TabStop = false;
             this.addPassButton.Text = "       Add New Password";
             this.addPassButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.addPassButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -178,6 +181,7 @@
             this.checkStrengthButton.Name = "checkStrengthButton";
             this.checkStrengthButton.Size = new System.Drawing.Size(200, 106);
             this.checkStrengthButton.TabIndex = 2;
+            this.checkStrengthButton.TabStop = false;
             this.checkStrengthButton.Text = "Check Password Strength";
             this.checkStrengthButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkStrengthButton.UseVisualStyleBackColor = false;
@@ -200,6 +204,7 @@
             this.currentPasswords.Name = "currentPasswords";
             this.currentPasswords.Size = new System.Drawing.Size(200, 106);
             this.currentPasswords.TabIndex = 1;
+            this.currentPasswords.TabStop = false;
             this.currentPasswords.Text = "Current Passwords";
             this.currentPasswords.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.currentPasswords.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -253,7 +258,7 @@
             this.randomizeButton.Location = new System.Drawing.Point(896, 312);
             this.randomizeButton.Name = "randomizeButton";
             this.randomizeButton.Size = new System.Drawing.Size(97, 31);
-            this.randomizeButton.TabIndex = 5;
+            this.randomizeButton.TabIndex = 3;
             this.randomizeButton.Text = "Randomize";
             this.randomizeButton.UseVisualStyleBackColor = false;
             this.randomizeButton.Click += new System.EventHandler(this.randomizeButton_Click);
@@ -265,7 +270,7 @@
             this.savePassword.Location = new System.Drawing.Point(550, 601);
             this.savePassword.Name = "savePassword";
             this.savePassword.Size = new System.Drawing.Size(211, 59);
-            this.savePassword.TabIndex = 6;
+            this.savePassword.TabIndex = 5;
             this.savePassword.Text = "Save Password";
             this.savePassword.UseVisualStyleBackColor = false;
             this.savePassword.Click += new System.EventHandler(this.savePassword_Click);
@@ -305,7 +310,7 @@
             this.nameTextBox.Location = new System.Drawing.Point(341, 152);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(274, 29);
-            this.nameTextBox.TabIndex = 10;
+            this.nameTextBox.TabIndex = 0;
             // 
             // passwordTextBox
             // 
@@ -315,7 +320,7 @@
             this.passwordTextBox.Location = new System.Drawing.Point(341, 312);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(274, 29);
-            this.passwordTextBox.TabIndex = 11;
+            this.passwordTextBox.TabIndex = 2;
             // 
             // descriptionTextBox
             // 
@@ -325,7 +330,7 @@
             this.descriptionTextBox.Location = new System.Drawing.Point(341, 404);
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(274, 124);
-            this.descriptionTextBox.TabIndex = 12;
+            this.descriptionTextBox.TabIndex = 4;
             this.descriptionTextBox.Text = "";
             // 
             // analyzeLabel
@@ -354,7 +359,7 @@
             this.usernameTextBox.Location = new System.Drawing.Point(341, 227);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(274, 29);
-            this.usernameTextBox.TabIndex = 15;
+            this.usernameTextBox.TabIndex = 1;
             // 
             // label1
             // 

@@ -55,7 +55,6 @@
             this.twitchButton = new System.Windows.Forms.Button();
             this.currPSWBackgroundPanel = new System.Windows.Forms.Panel();
             this.amazonButton = new System.Windows.Forms.Button();
-            this.passwordBox = new Telerik.WinControls.UI.RadListControl();
             this.label1 = new System.Windows.Forms.Label();
             this.passwordLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,10 +63,10 @@
             this.descriptionTextBox = new System.Windows.Forms.RichTextBox();
             this.nameLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.passwordListBox = new System.Windows.Forms.ListBox();
             this.panelLEFT.SuspendLayout();
             this.logoPanel.SuspendLayout();
             this.currPSWBackgroundPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.passwordBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,6 +108,7 @@
             this.homepageButton.Name = "homepageButton";
             this.homepageButton.Size = new System.Drawing.Size(93, 91);
             this.homepageButton.TabIndex = 7;
+            this.homepageButton.TabStop = false;
             this.homepageButton.UseVisualStyleBackColor = true;
             this.homepageButton.Click += new System.EventHandler(this.homepageButton_Click);
             // 
@@ -147,6 +147,7 @@
             this.removePassButton.Name = "removePassButton";
             this.removePassButton.Size = new System.Drawing.Size(200, 106);
             this.removePassButton.TabIndex = 4;
+            this.removePassButton.TabStop = false;
             this.removePassButton.Text = " Remove Password";
             this.removePassButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.removePassButton.UseVisualStyleBackColor = false;
@@ -167,6 +168,7 @@
             this.addPassButton.Name = "addPassButton";
             this.addPassButton.Size = new System.Drawing.Size(200, 106);
             this.addPassButton.TabIndex = 3;
+            this.addPassButton.TabStop = false;
             this.addPassButton.Text = "       Add New Password";
             this.addPassButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.addPassButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -190,6 +192,7 @@
             this.checkStrengthButton.Name = "checkStrengthButton";
             this.checkStrengthButton.Size = new System.Drawing.Size(200, 106);
             this.checkStrengthButton.TabIndex = 2;
+            this.checkStrengthButton.TabStop = false;
             this.checkStrengthButton.Text = "Check Password Strength";
             this.checkStrengthButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkStrengthButton.UseVisualStyleBackColor = false;
@@ -211,6 +214,7 @@
             this.currentPasswords.Name = "currentPasswords";
             this.currentPasswords.Size = new System.Drawing.Size(200, 106);
             this.currentPasswords.TabIndex = 1;
+            this.currentPasswords.TabStop = false;
             this.currentPasswords.Text = "Current Passwords";
             this.currentPasswords.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.currentPasswords.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -278,7 +282,8 @@
             this.chromeButton.Location = new System.Drawing.Point(65, 51);
             this.chromeButton.Name = "chromeButton";
             this.chromeButton.Size = new System.Drawing.Size(48, 50);
-            this.chromeButton.TabIndex = 23;
+            this.chromeButton.TabIndex = 22;
+            this.chromeButton.TabStop = false;
             this.chromeButton.UseVisualStyleBackColor = false;
             // 
             // gmailButton
@@ -292,7 +297,8 @@
             this.gmailButton.Location = new System.Drawing.Point(65, 116);
             this.gmailButton.Name = "gmailButton";
             this.gmailButton.Size = new System.Drawing.Size(50, 50);
-            this.gmailButton.TabIndex = 24;
+            this.gmailButton.TabIndex = 23;
+            this.gmailButton.TabStop = false;
             this.gmailButton.UseVisualStyleBackColor = true;
             // 
             // yahooButton
@@ -305,6 +311,7 @@
             this.yahooButton.Name = "yahooButton";
             this.yahooButton.Size = new System.Drawing.Size(51, 46);
             this.yahooButton.TabIndex = 25;
+            this.yahooButton.TabStop = false;
             this.yahooButton.UseVisualStyleBackColor = true;
             // 
             // googleDriveButton
@@ -316,7 +323,8 @@
             this.googleDriveButton.Location = new System.Drawing.Point(65, 172);
             this.googleDriveButton.Name = "googleDriveButton";
             this.googleDriveButton.Size = new System.Drawing.Size(52, 53);
-            this.googleDriveButton.TabIndex = 26;
+            this.googleDriveButton.TabIndex = 24;
+            this.googleDriveButton.TabStop = false;
             this.googleDriveButton.UseVisualStyleBackColor = true;
             // 
             // outlookButton
@@ -329,6 +337,7 @@
             this.outlookButton.Name = "outlookButton";
             this.outlookButton.Size = new System.Drawing.Size(54, 52);
             this.outlookButton.TabIndex = 27;
+            this.outlookButton.TabStop = false;
             this.outlookButton.UseVisualStyleBackColor = true;
             // 
             // facebookButton
@@ -341,6 +350,7 @@
             this.facebookButton.Name = "facebookButton";
             this.facebookButton.Size = new System.Drawing.Size(53, 51);
             this.facebookButton.TabIndex = 28;
+            this.facebookButton.TabStop = false;
             this.facebookButton.UseVisualStyleBackColor = true;
             // 
             // instagramButton
@@ -353,6 +363,7 @@
             this.instagramButton.Name = "instagramButton";
             this.instagramButton.Size = new System.Drawing.Size(51, 51);
             this.instagramButton.TabIndex = 29;
+            this.instagramButton.TabStop = false;
             this.instagramButton.UseVisualStyleBackColor = true;
             // 
             // snapchatButton
@@ -365,6 +376,7 @@
             this.snapchatButton.Name = "snapchatButton";
             this.snapchatButton.Size = new System.Drawing.Size(52, 51);
             this.snapchatButton.TabIndex = 30;
+            this.snapchatButton.TabStop = false;
             this.snapchatButton.UseVisualStyleBackColor = true;
             // 
             // twitchButton
@@ -377,12 +389,14 @@
             this.twitchButton.Name = "twitchButton";
             this.twitchButton.Size = new System.Drawing.Size(56, 53);
             this.twitchButton.TabIndex = 31;
+            this.twitchButton.TabStop = false;
             this.twitchButton.UseVisualStyleBackColor = true;
             // 
             // currPSWBackgroundPanel
             // 
             this.currPSWBackgroundPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.currPSWBackgroundPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.currPSWBackgroundPanel.Controls.Add(this.passwordListBox);
             this.currPSWBackgroundPanel.Controls.Add(this.label1);
             this.currPSWBackgroundPanel.Controls.Add(this.usernameTextBox);
             this.currPSWBackgroundPanel.Controls.Add(this.descriptionTextBox);
@@ -391,7 +405,6 @@
             this.currPSWBackgroundPanel.Controls.Add(this.label2);
             this.currPSWBackgroundPanel.Controls.Add(this.passwordLabel);
             this.currPSWBackgroundPanel.Controls.Add(this.nameLabel);
-            this.currPSWBackgroundPanel.Controls.Add(this.passwordBox);
             this.currPSWBackgroundPanel.Controls.Add(this.amazonButton);
             this.currPSWBackgroundPanel.Controls.Add(this.twitchButton);
             this.currPSWBackgroundPanel.Controls.Add(this.snapchatButton);
@@ -417,14 +430,8 @@
             this.amazonButton.Name = "amazonButton";
             this.amazonButton.Size = new System.Drawing.Size(54, 52);
             this.amazonButton.TabIndex = 35;
+            this.amazonButton.TabStop = false;
             this.amazonButton.UseVisualStyleBackColor = true;
-            // 
-            // passwordBox
-            // 
-            this.passwordBox.Location = new System.Drawing.Point(211, 51);
-            this.passwordBox.Name = "passwordBox";
-            this.passwordBox.Size = new System.Drawing.Size(349, 597);
-            this.passwordBox.TabIndex = 36;
             // 
             // label1
             // 
@@ -461,7 +468,7 @@
             this.nameTextBox.Location = new System.Drawing.Point(646, 153);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(274, 29);
-            this.nameTextBox.TabIndex = 40;
+            this.nameTextBox.TabIndex = 1;
             // 
             // passwordTextBox
             // 
@@ -471,7 +478,7 @@
             this.passwordTextBox.Location = new System.Drawing.Point(646, 313);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(274, 29);
-            this.passwordTextBox.TabIndex = 41;
+            this.passwordTextBox.TabIndex = 3;
             // 
             // descriptionTextBox
             // 
@@ -481,7 +488,7 @@
             this.descriptionTextBox.Location = new System.Drawing.Point(646, 405);
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(274, 124);
-            this.descriptionTextBox.TabIndex = 42;
+            this.descriptionTextBox.TabIndex = 4;
             this.descriptionTextBox.Text = "";
             // 
             // nameLabel
@@ -501,7 +508,15 @@
             this.usernameTextBox.Location = new System.Drawing.Point(646, 228);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(274, 29);
-            this.usernameTextBox.TabIndex = 44;
+            this.usernameTextBox.TabIndex = 2;
+            // 
+            // passwordListBox
+            // 
+            this.passwordListBox.FormattingEnabled = true;
+            this.passwordListBox.Location = new System.Drawing.Point(183, 51);
+            this.passwordListBox.Name = "passwordListBox";
+            this.passwordListBox.Size = new System.Drawing.Size(403, 576);
+            this.passwordListBox.TabIndex = 0;
             // 
             // CurrentPasswordForm
             // 
@@ -532,7 +547,6 @@
             this.logoPanel.PerformLayout();
             this.currPSWBackgroundPanel.ResumeLayout(false);
             this.currPSWBackgroundPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.passwordBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -566,7 +580,6 @@
         private System.Windows.Forms.Button homeButton;
         private System.Windows.Forms.Button homepageButton;
         private System.Windows.Forms.Button amazonButton;
-        private Telerik.WinControls.UI.RadListControl passwordBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.RichTextBox descriptionTextBox;
@@ -575,5 +588,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.ListBox passwordListBox;
     }
 }

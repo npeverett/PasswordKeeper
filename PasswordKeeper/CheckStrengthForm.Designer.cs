@@ -92,6 +92,7 @@
             this.homepageButton.Name = "homepageButton";
             this.homepageButton.Size = new System.Drawing.Size(93, 91);
             this.homepageButton.TabIndex = 7;
+            this.homepageButton.TabStop = false;
             this.homepageButton.UseVisualStyleBackColor = true;
             this.homepageButton.Click += new System.EventHandler(this.homepageButton_Click);
             // 
@@ -130,6 +131,7 @@
             this.removePassButton.Name = "removePassButton";
             this.removePassButton.Size = new System.Drawing.Size(200, 106);
             this.removePassButton.TabIndex = 4;
+            this.removePassButton.TabStop = false;
             this.removePassButton.Text = " Remove Password";
             this.removePassButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.removePassButton.UseVisualStyleBackColor = false;
@@ -150,6 +152,7 @@
             this.addPassButton.Name = "addPassButton";
             this.addPassButton.Size = new System.Drawing.Size(200, 106);
             this.addPassButton.TabIndex = 3;
+            this.addPassButton.TabStop = false;
             this.addPassButton.Text = "       Add New Password";
             this.addPassButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.addPassButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -173,6 +176,7 @@
             this.checkStrengthButton.Name = "checkStrengthButton";
             this.checkStrengthButton.Size = new System.Drawing.Size(200, 106);
             this.checkStrengthButton.TabIndex = 2;
+            this.checkStrengthButton.TabStop = false;
             this.checkStrengthButton.Text = "Check Password Strength";
             this.checkStrengthButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkStrengthButton.UseVisualStyleBackColor = false;
@@ -193,6 +197,7 @@
             this.currentPasswords.Name = "currentPasswords";
             this.currentPasswords.Size = new System.Drawing.Size(200, 106);
             this.currentPasswords.TabIndex = 1;
+            this.currentPasswords.TabStop = false;
             this.currentPasswords.Text = "Current Passwords";
             this.currentPasswords.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.currentPasswords.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -247,7 +252,7 @@
             this.passwordTextBox.Location = new System.Drawing.Point(442, 264);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(235, 29);
-            this.passwordTextBox.TabIndex = 5;
+            this.passwordTextBox.TabIndex = 0;
             // 
             // strengthTitle
             // 
@@ -263,7 +268,7 @@
             // 
             this.tipsLabel.AutoSize = true;
             this.tipsLabel.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.tipsLabel.Location = new System.Drawing.Point(837, 274);
+            this.tipsLabel.Location = new System.Drawing.Point(788, 273);
             this.tipsLabel.Name = "tipsLabel";
             this.tipsLabel.Size = new System.Drawing.Size(281, 196);
             this.tipsLabel.TabIndex = 9;
@@ -276,7 +281,7 @@
             this.tipsTitle.AutoSize = true;
             this.tipsTitle.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.tipsTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.tipsTitle.Location = new System.Drawing.Point(836, 228);
+            this.tipsTitle.Location = new System.Drawing.Point(787, 227);
             this.tipsTitle.Name = "tipsTitle";
             this.tipsTitle.Size = new System.Drawing.Size(278, 32);
             this.tipsTitle.TabIndex = 10;
@@ -290,7 +295,7 @@
             this.testButton.Location = new System.Drawing.Point(506, 320);
             this.testButton.Name = "testButton";
             this.testButton.Size = new System.Drawing.Size(108, 47);
-            this.testButton.TabIndex = 11;
+            this.testButton.TabIndex = 2;
             this.testButton.Text = "Test!";
             this.testButton.UseVisualStyleBackColor = false;
             // 
