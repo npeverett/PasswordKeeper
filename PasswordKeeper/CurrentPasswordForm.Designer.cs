@@ -285,6 +285,7 @@
             this.chromeButton.TabIndex = 22;
             this.chromeButton.TabStop = false;
             this.chromeButton.UseVisualStyleBackColor = false;
+            this.chromeButton.Click += new System.EventHandler(this.chromeButton_Click);
             // 
             // gmailButton
             // 
@@ -300,6 +301,7 @@
             this.gmailButton.TabIndex = 23;
             this.gmailButton.TabStop = false;
             this.gmailButton.UseVisualStyleBackColor = true;
+            this.gmailButton.Click += new System.EventHandler(this.gmailButton_Click);
             // 
             // yahooButton
             // 
@@ -313,6 +315,7 @@
             this.yahooButton.TabIndex = 25;
             this.yahooButton.TabStop = false;
             this.yahooButton.UseVisualStyleBackColor = true;
+            this.yahooButton.Click += new System.EventHandler(this.yahooButton_Click);
             // 
             // googleDriveButton
             // 
@@ -326,6 +329,7 @@
             this.googleDriveButton.TabIndex = 24;
             this.googleDriveButton.TabStop = false;
             this.googleDriveButton.UseVisualStyleBackColor = true;
+            this.googleDriveButton.Click += new System.EventHandler(this.googleDriveButton_Click);
             // 
             // outlookButton
             // 
@@ -339,6 +343,7 @@
             this.outlookButton.TabIndex = 27;
             this.outlookButton.TabStop = false;
             this.outlookButton.UseVisualStyleBackColor = true;
+            this.outlookButton.Click += new System.EventHandler(this.outlookButton_Click);
             // 
             // facebookButton
             // 
@@ -352,6 +357,7 @@
             this.facebookButton.TabIndex = 28;
             this.facebookButton.TabStop = false;
             this.facebookButton.UseVisualStyleBackColor = true;
+            this.facebookButton.Click += new System.EventHandler(this.facebookButton_Click);
             // 
             // instagramButton
             // 
@@ -365,6 +371,7 @@
             this.instagramButton.TabIndex = 29;
             this.instagramButton.TabStop = false;
             this.instagramButton.UseVisualStyleBackColor = true;
+            this.instagramButton.Click += new System.EventHandler(this.instagramButton_Click);
             // 
             // snapchatButton
             // 
@@ -378,6 +385,7 @@
             this.snapchatButton.TabIndex = 30;
             this.snapchatButton.TabStop = false;
             this.snapchatButton.UseVisualStyleBackColor = true;
+            this.snapchatButton.Click += new System.EventHandler(this.snapchatButton_Click);
             // 
             // twitchButton
             // 
@@ -391,6 +399,7 @@
             this.twitchButton.TabIndex = 31;
             this.twitchButton.TabStop = false;
             this.twitchButton.UseVisualStyleBackColor = true;
+            this.twitchButton.Click += new System.EventHandler(this.twitchButton_Click);
             // 
             // currPSWBackgroundPanel
             // 
@@ -518,6 +527,7 @@
             this.amazonButton.TabIndex = 35;
             this.amazonButton.TabStop = false;
             this.amazonButton.UseVisualStyleBackColor = true;
+            this.amazonButton.Click += new System.EventHandler(this.amazonButton_Click);
             // 
             // CurrentPasswordForm
             // 

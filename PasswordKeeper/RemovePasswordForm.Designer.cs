@@ -43,7 +43,7 @@
             this.panelCurrPass = new System.Windows.Forms.Panel();
             this.deleteButton = new System.Windows.Forms.Button();
             this.warningLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.amazonButton = new System.Windows.Forms.Button();
             this.twitchButton = new System.Windows.Forms.Button();
             this.snapchatButton = new System.Windows.Forms.Button();
             this.instagramButton = new System.Windows.Forms.Button();
@@ -253,18 +253,19 @@
             this.warningLabel.TabIndex = 20;
             this.warningLabel.Text = "Warning! This action can\'t be undone.\r\n";
             // 
-            // button1
+            // amazonButton
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(269, 348);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 52);
-            this.button1.TabIndex = 45;
-            this.button1.TabStop = false;
-            this.button1.UseVisualStyleBackColor = true;
+            this.amazonButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("amazonButton.BackgroundImage")));
+            this.amazonButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.amazonButton.FlatAppearance.BorderSize = 0;
+            this.amazonButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.amazonButton.Location = new System.Drawing.Point(269, 348);
+            this.amazonButton.Name = "amazonButton";
+            this.amazonButton.Size = new System.Drawing.Size(54, 52);
+            this.amazonButton.TabIndex = 45;
+            this.amazonButton.TabStop = false;
+            this.amazonButton.UseVisualStyleBackColor = true;
+            this.amazonButton.Click += new System.EventHandler(this.amazonButton_Click);
             // 
             // twitchButton
             // 
@@ -278,6 +279,7 @@
             this.twitchButton.TabIndex = 44;
             this.twitchButton.TabStop = false;
             this.twitchButton.UseVisualStyleBackColor = true;
+            this.twitchButton.Click += new System.EventHandler(this.twitchButton_Click);
             // 
             // snapchatButton
             // 
@@ -291,6 +293,7 @@
             this.snapchatButton.TabIndex = 43;
             this.snapchatButton.TabStop = false;
             this.snapchatButton.UseVisualStyleBackColor = true;
+            this.snapchatButton.Click += new System.EventHandler(this.snapchatButton_Click);
             // 
             // instagramButton
             // 
@@ -304,6 +307,7 @@
             this.instagramButton.TabIndex = 42;
             this.instagramButton.TabStop = false;
             this.instagramButton.UseVisualStyleBackColor = true;
+            this.instagramButton.Click += new System.EventHandler(this.instagramButton_Click);
             // 
             // facebookButton
             // 
@@ -317,6 +321,7 @@
             this.facebookButton.TabIndex = 41;
             this.facebookButton.TabStop = false;
             this.facebookButton.UseVisualStyleBackColor = true;
+            this.facebookButton.Click += new System.EventHandler(this.facebookButton_Click);
             // 
             // outlookButton
             // 
@@ -330,6 +335,7 @@
             this.outlookButton.TabIndex = 40;
             this.outlookButton.TabStop = false;
             this.outlookButton.UseVisualStyleBackColor = true;
+            this.outlookButton.Click += new System.EventHandler(this.outlookButton_Click);
             // 
             // googleDriveButton
             // 
@@ -343,6 +349,7 @@
             this.googleDriveButton.TabIndex = 39;
             this.googleDriveButton.TabStop = false;
             this.googleDriveButton.UseVisualStyleBackColor = true;
+            this.googleDriveButton.Click += new System.EventHandler(this.googleDriveButton_Click);
             // 
             // yahooButton
             // 
@@ -356,6 +363,7 @@
             this.yahooButton.TabIndex = 38;
             this.yahooButton.TabStop = false;
             this.yahooButton.UseVisualStyleBackColor = true;
+            this.yahooButton.Click += new System.EventHandler(this.yahooButton_Click);
             // 
             // gmailButton
             // 
@@ -371,6 +379,7 @@
             this.gmailButton.TabIndex = 37;
             this.gmailButton.TabStop = false;
             this.gmailButton.UseVisualStyleBackColor = true;
+            this.gmailButton.Click += new System.EventHandler(this.gmailButton_Click);
             // 
             // chromeButton
             // 
@@ -386,6 +395,7 @@
             this.chromeButton.TabIndex = 36;
             this.chromeButton.TabStop = false;
             this.chromeButton.UseVisualStyleBackColor = false;
+            this.chromeButton.Click += new System.EventHandler(this.chromeButton_Click);
             // 
             // label1
             // 
@@ -487,7 +497,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.nameLabel);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.amazonButton);
             this.Controls.Add(this.twitchButton);
             this.Controls.Add(this.snapchatButton);
             this.Controls.Add(this.instagramButton);
@@ -539,7 +549,7 @@
         private System.Windows.Forms.Button homepageButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Label warningLabel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button amazonButton;
         private System.Windows.Forms.Button twitchButton;
         private System.Windows.Forms.Button snapchatButton;
         private System.Windows.Forms.Button instagramButton;

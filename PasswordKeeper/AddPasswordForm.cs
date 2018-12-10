@@ -20,21 +20,6 @@ namespace PasswordKeeper
             InitializeComponent();
             //passwordList = variable.getPasswordList();
 
-            if(passwordTextBox.Text != "")
-            {
-                Methods methods = new Methods();
-
-                if(methods.analyzePassword(passwordTextBox.Text) == true)
-                {
-                    analyzeLabel.Text = "Strong";
-                    analyzeLabel.ForeColor = Color.ForestGreen;
-                }
-                else
-                {
-                    analyzeLabel.Text = "Weak";
-                    analyzeLabel.ForeColor = Color.Red;
-                }
-            }
         }
 
         private void homepageButton_Click(object sender, EventArgs e)
@@ -136,6 +121,61 @@ namespace PasswordKeeper
             this.Hide();
             RadForm1 rf = new RadForm1();
             rf.ShowDialog();
+        }
+
+        private void AddPasswordForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chromeButton_Click(object sender, EventArgs e)
+        {
+            nameTextBox.Text = "Google Chrome";
+        }
+
+        private void gmailButton_Click(object sender, EventArgs e)
+        {
+            nameTextBox.Text = "Gmail";
+        }
+
+        private void googleDriveButton_Click(object sender, EventArgs e)
+        {
+            nameTextBox.Text = "Google Drive";
+        }
+
+        private void yahooButton_Click(object sender, EventArgs e)
+        {
+            nameTextBox.Text = "Yahoo";
+        }
+
+        private void outlookButton_Click(object sender, EventArgs e)
+        {
+            nameTextBox.Text = "Outlook";
+        }
+
+        private void amazonButton_Click(object sender, EventArgs e)
+        {
+            nameTextBox.Text = "Amazon";
+        }
+
+        private void facebookButton_Click(object sender, EventArgs e)
+        {
+            nameTextBox.Text = "Facebook";
+        }
+
+        private void instagramButton_Click(object sender, EventArgs e)
+        {
+            nameTextBox.Text = "Instagram";
+        }
+
+        private void snapchatButton_Click(object sender, EventArgs e)
+        {
+            nameTextBox.Text = "Snapchat";
+        }
+
+        private void twitchButton_Click(object sender, EventArgs e)
+        {
+            nameTextBox.Text = "Twitch";
         }
     }
 }
