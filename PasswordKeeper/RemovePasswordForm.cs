@@ -163,25 +163,12 @@ namespace PasswordKeeper
 
         private void chromeButton_Click(object sender, EventArgs e)
         {
-            string fileName = "PasswordData.txt";
-            using (StreamReader reader = new StreamReader(fileName))
+
+            for(int i  = 0; i < passwordBox.Items.Count; i++)
             {
-                string line;
-
-                while ((line = reader.ReadLine()) != null)
+                if(methods.passwordList[i].getWebName().Equals("Google Chrome"))
                 {
-                    string[] tempArr = line.Split('|');
-                    string webName = tempArr[0];
-
-                    if (webName.Equals("Google Chrome"))
-                    {
-                        nameTextBox.Text = webName;
-                        usernameTextBox.Text = tempArr[1];
-                        passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
-                        descriptionTextBox.Text = tempArr[3];
-
-                        break;
-                    }
+                    passwordBox.SelectedIndex = i;
                 }
             }
 
@@ -189,25 +176,11 @@ namespace PasswordKeeper
 
         private void gmailButton_Click(object sender, EventArgs e)
         {
-            string fileName = "PasswordData.txt";
-            using (StreamReader reader = new StreamReader(fileName))
+            for (int i = 0; i < passwordBox.Items.Count; i++)
             {
-                string line;
-
-                while ((line = reader.ReadLine()) != null)
+                if (methods.passwordList[i].getWebName().Equals("Gmail"))
                 {
-                    string[] tempArr = line.Split('|');
-                    string webName = tempArr[0];
-
-                    if (webName.Equals("Gmail"))
-                    {
-                        nameTextBox.Text = webName;
-                        usernameTextBox.Text = tempArr[1];
-                        passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
-                        descriptionTextBox.Text = tempArr[3];
-
-                        break;
-                    }
+                    passwordBox.SelectedIndex = i;
                 }
             }
 
@@ -215,52 +188,23 @@ namespace PasswordKeeper
 
         private void googleDriveButton_Click(object sender, EventArgs e)
         {
-            string fileName = "PasswordData.txt";
-            using (StreamReader reader = new StreamReader(fileName))
+            for (int i = 0; i < passwordBox.Items.Count; i++)
             {
-                string line;
-
-                while ((line = reader.ReadLine()) != null)
+                if (methods.passwordList[i].getWebName().Equals("Google Drive"))
                 {
-                    string[] tempArr = line.Split('|');
-                    string webName = tempArr[0];
-
-                    if (webName.Equals("Google Drive"))
-                    {
-                        nameTextBox.Text = webName;
-                        usernameTextBox.Text = tempArr[1];
-                        passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
-                        descriptionTextBox.Text = tempArr[3];
-
-                        break;
-                    }
+                    passwordBox.SelectedIndex = i;
                 }
-
             }
 
         }
 
         private void yahooButton_Click(object sender, EventArgs e)
         {
-            string fileName = "PasswordData.txt";
-            using (StreamReader reader = new StreamReader(fileName))
+            for (int i = 0; i < passwordBox.Items.Count; i++)
             {
-                string line;
-
-                while ((line = reader.ReadLine()) != null)
+                if (methods.passwordList[i].getWebName().Equals("Yahoo"))
                 {
-                    string[] tempArr = line.Split('|');
-                    string webName = tempArr[0];
-
-                    if (webName.Equals("Yahoo"))
-                    {
-                        nameTextBox.Text = webName;
-                        usernameTextBox.Text = tempArr[1];
-                        passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
-                        descriptionTextBox.Text = tempArr[3];
-
-                        break;
-                    }
+                    passwordBox.SelectedIndex = i;
                 }
             }
 
@@ -268,25 +212,11 @@ namespace PasswordKeeper
 
         private void outlookButton_Click(object sender, EventArgs e)
         {
-            string fileName = "PasswordData.txt";
-            using (StreamReader reader = new StreamReader(fileName))
+            for (int i = 0; i < passwordBox.Items.Count; i++)
             {
-                string line;
-
-                while ((line = reader.ReadLine()) != null)
+                if (methods.passwordList[i].getWebName().Equals("Outlook"))
                 {
-                    string[] tempArr = line.Split('|');
-                    string webName = tempArr[0];
-
-                    if (webName.Equals("Outlook"))
-                    {
-                        nameTextBox.Text = webName;
-                        usernameTextBox.Text = tempArr[1];
-                        passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
-                        descriptionTextBox.Text = tempArr[3];
-
-                        break;
-                    }
+                    passwordBox.SelectedIndex = i;
                 }
             }
 
@@ -294,52 +224,22 @@ namespace PasswordKeeper
 
         private void amazonButton_Click(object sender, EventArgs e)
         {
-            string fileName = "PasswordData.txt";
-            using (StreamReader reader = new StreamReader(fileName))
+            for (int i = 0; i < passwordBox.Items.Count; i++)
             {
-                string line;
-
-                while ((line = reader.ReadLine()) != null)
+                if (methods.passwordList[i].getWebName().Equals("Amazon"))
                 {
-                    string[] tempArr = line.Split('|');
-                    string webName = tempArr[0];
-
-                    if (webName.Equals("Amazon"))
-                    {
-                        nameTextBox.Text = webName;
-                        usernameTextBox.Text = tempArr[1];
-                        passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
-                        descriptionTextBox.Text = tempArr[3];
-
-                        break;
-                    }
+                    passwordBox.SelectedIndex = i;
                 }
-
             }
-
         }
 
         private void facebookButton_Click(object sender, EventArgs e)
         {
-            string fileName = "PasswordData.txt";
-            using (StreamReader reader = new StreamReader(fileName))
+            for (int i = 0; i < passwordBox.Items.Count; i++)
             {
-                string line;
-
-                while ((line = reader.ReadLine()) != null)
+                if (methods.passwordList[i].getWebName().Equals("Facebook"))
                 {
-                    string[] tempArr = line.Split('|');
-                    string webName = tempArr[0];
-
-                    if (webName.Equals("Facebook"))
-                    {
-                        nameTextBox.Text = webName;
-                        usernameTextBox.Text = tempArr[1];
-                        passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
-                        descriptionTextBox.Text = tempArr[3];
-
-                        break;
-                    }
+                    passwordBox.SelectedIndex = i;
                 }
             }
 
@@ -347,25 +247,11 @@ namespace PasswordKeeper
 
         private void instagramButton_Click(object sender, EventArgs e)
         {
-            string fileName = "PasswordData.txt";
-            using (StreamReader reader = new StreamReader(fileName))
+            for (int i = 0; i < passwordBox.Items.Count; i++)
             {
-                string line;
-
-                while ((line = reader.ReadLine()) != null)
+                if (methods.passwordList[i].getWebName().Equals("Instagram"))
                 {
-                    string[] tempArr = line.Split('|');
-                    string webName = tempArr[0];
-
-                    if (webName.Equals("Instagram"))
-                    {
-                        nameTextBox.Text = webName;
-                        usernameTextBox.Text = tempArr[1];
-                        passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
-                        descriptionTextBox.Text = tempArr[3];
-
-                        break;
-                    }
+                    passwordBox.SelectedIndex = i;
                 }
             }
 
@@ -373,25 +259,11 @@ namespace PasswordKeeper
 
         private void snapchatButton_Click(object sender, EventArgs e)
         {
-            string fileName = "PasswordData.txt";
-            using (StreamReader reader = new StreamReader(fileName))
+            for (int i = 0; i < passwordBox.Items.Count; i++)
             {
-                string line;
-
-                while ((line = reader.ReadLine()) != null)
+                if (methods.passwordList[i].getWebName().Equals("Snapchat"))
                 {
-                    string[] tempArr = line.Split('|');
-                    string webName = tempArr[0];
-
-                    if (webName.Equals("Snapchat"))
-                    {
-                        nameTextBox.Text = webName;
-                        usernameTextBox.Text = tempArr[1];
-                        passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
-                        descriptionTextBox.Text = tempArr[3];
-
-                        break;
-                    }
+                    passwordBox.SelectedIndex = i;
                 }
             }
 
@@ -399,29 +271,13 @@ namespace PasswordKeeper
 
         private void twitchButton_Click(object sender, EventArgs e)
         {
-            string fileName = "PasswordData.txt";
-            using (StreamReader reader = new StreamReader(fileName))
+            for (int i = 0; i < passwordBox.Items.Count; i++)
             {
-                string line;
-
-                while ((line = reader.ReadLine()) != null)
+                if (methods.passwordList[i].getWebName().Equals("Twitch"))
                 {
-                    string[] tempArr = line.Split('|');
-                    string webName = tempArr[0];
-
-                    if (webName.Equals("Twitch"))
-                    {
-                        nameTextBox.Text = webName;
-                        usernameTextBox.Text = tempArr[1];
-                        passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
-                        descriptionTextBox.Text = tempArr[3];
-
-                        break;
-                    }
+                    passwordBox.SelectedIndex = i;
                 }
-
             }
-
         }
     }
 }

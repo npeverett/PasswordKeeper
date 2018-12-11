@@ -224,6 +224,9 @@ namespace PasswordKeeper
 
                     passwordList.Add(tempPassword);
                 }
+
+                reader.Close();
+                reader.Dispose();
             }
 
         }
