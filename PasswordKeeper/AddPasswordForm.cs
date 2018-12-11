@@ -56,6 +56,7 @@ namespace PasswordKeeper
             writer.WriteLine(tempLine);
 
             writer.Close();
+            writer.Dispose();
 
             nameTextBox.Text = "";
             usernameTextBox.Text = "";

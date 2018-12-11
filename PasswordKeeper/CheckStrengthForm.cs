@@ -92,6 +92,11 @@ namespace PasswordKeeper
                 strengthLabel.Text = "Strong";
                 strengthLabel.ForeColor = Color.ForestGreen;
             }
+            else if(testPassword.Length > 8 && methods.checkUpperCase(testPassword) == true && methods.checkNumbers(testPassword) == true)
+            {
+                strengthLabel.Text = "Moderate";
+                strengthLabel.ForeColor = Color.Yellow;
+            }
             else
             {
                 strengthLabel.Text = "Weak";

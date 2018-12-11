@@ -111,260 +111,263 @@ namespace PasswordKeeper
         private void chromeButton_Click(object sender, EventArgs e)
         {
             string fileName = "PasswordData.txt";
-            StreamReader reader = new StreamReader(fileName);
-            string line;
 
-            while((line = reader.ReadLine()) != null)
+            using (StreamReader reader = new StreamReader(fileName))
             {
-                string[] tempArr = line.Split('|');
-                string webName = tempArr[0];
+                string line;
 
-                if(webName.Equals("Google Chrome"))
+                while ((line = reader.ReadLine()) != null)
                 {
-                    nameTextBox.Text = webName;
-                    usernameTextBox.Text = tempArr[1];
-                    passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
-                    descriptionTextBox.Text = tempArr[3];
+                    string[] tempArr = line.Split('|');
+                    string webName = tempArr[0];
 
-                    break;
+                    if (webName.Equals("Google Chrome"))
+                    {
+                        nameTextBox.Text = webName;
+                        usernameTextBox.Text = tempArr[1];
+                        passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
+                        descriptionTextBox.Text = tempArr[3];
+
+                        break;
+                    }
                 }
             }
-
-            reader.Close();
 
         }
 
         private void gmailButton_Click(object sender, EventArgs e)
         {
             string fileName = "PasswordData.txt";
-            StreamReader reader = new StreamReader(fileName);
-            string line;
-
-            while ((line = reader.ReadLine()) != null)
+            using (StreamReader reader = new StreamReader(fileName))
             {
-                string[] tempArr = line.Split('|');
-                string webName = tempArr[0];
+                string line;
 
-                if (webName.Equals("Gmail"))
+                while ((line = reader.ReadLine()) != null)
                 {
-                    nameTextBox.Text = webName;
-                    usernameTextBox.Text = tempArr[1];
-                    passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
-                    descriptionTextBox.Text = tempArr[3];
+                    string[] tempArr = line.Split('|');
+                    string webName = tempArr[0];
 
-                    break;
+                    if (webName.Equals("Gmail"))
+                    {
+                        nameTextBox.Text = webName;
+                        usernameTextBox.Text = tempArr[1];
+                        passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
+                        descriptionTextBox.Text = tempArr[3];
+
+                        break;
+                    }
                 }
             }
 
-            reader.Close();
 
         }
 
         private void googleDriveButton_Click(object sender, EventArgs e)
         {
             string fileName = "PasswordData.txt";
-            StreamReader reader = new StreamReader(fileName);
-            string line;
-
-            while ((line = reader.ReadLine()) != null)
+            using (StreamReader reader = new StreamReader(fileName))
             {
-                string[] tempArr = line.Split('|');
-                string webName = tempArr[0];
+                string line;
 
-                if (webName.Equals("Google Drive"))
+                while ((line = reader.ReadLine()) != null)
                 {
-                    nameTextBox.Text = webName;
-                    usernameTextBox.Text = tempArr[1];
-                    passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
-                    descriptionTextBox.Text = tempArr[3];
+                    string[] tempArr = line.Split('|');
+                    string webName = tempArr[0];
 
-                    break;
+                    if (webName.Equals("Google Drive"))
+                    {
+                        nameTextBox.Text = webName;
+                        usernameTextBox.Text = tempArr[1];
+                        passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
+                        descriptionTextBox.Text = tempArr[3];
+
+                        break;
+                    }
                 }
-            }
 
-            reader.Close();
+            }
 
         }
 
         private void yahooButton_Click(object sender, EventArgs e)
         {
             string fileName = "PasswordData.txt";
-            StreamReader reader = new StreamReader(fileName);
-            string line;
-
-            while ((line = reader.ReadLine()) != null)
+            using (StreamReader reader = new StreamReader(fileName))
             {
-                string[] tempArr = line.Split('|');
-                string webName = tempArr[0];
+                string line;
 
-                if (webName.Equals("Yahoo"))
+                while ((line = reader.ReadLine()) != null)
                 {
-                    nameTextBox.Text = webName;
-                    usernameTextBox.Text = tempArr[1];
-                    passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
-                    descriptionTextBox.Text = tempArr[3];
+                    string[] tempArr = line.Split('|');
+                    string webName = tempArr[0];
 
-                    break;
+                    if (webName.Equals("Yahoo"))
+                    {
+                        nameTextBox.Text = webName;
+                        usernameTextBox.Text = tempArr[1];
+                        passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
+                        descriptionTextBox.Text = tempArr[3];
+
+                        break;
+                    }
                 }
             }
-
-            reader.Close();
 
         }
 
         private void outlookButton_Click(object sender, EventArgs e)
         {
             string fileName = "PasswordData.txt";
-            StreamReader reader = new StreamReader(fileName);
-            string line;
-
-            while ((line = reader.ReadLine()) != null)
+            using (StreamReader reader = new StreamReader(fileName))
             {
-                string[] tempArr = line.Split('|');
-                string webName = tempArr[0];
+                string line;
 
-                if (webName.Equals("Outlook"))
+                while ((line = reader.ReadLine()) != null)
                 {
-                    nameTextBox.Text = webName;
-                    usernameTextBox.Text = tempArr[1];
-                    passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
-                    descriptionTextBox.Text = tempArr[3];
+                    string[] tempArr = line.Split('|');
+                    string webName = tempArr[0];
 
-                    break;
+                    if (webName.Equals("Outlook"))
+                    {
+                        nameTextBox.Text = webName;
+                        usernameTextBox.Text = tempArr[1];
+                        passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
+                        descriptionTextBox.Text = tempArr[3];
+
+                        break;
+                    }
                 }
             }
-
-            reader.Close();
 
         }
 
         private void amazonButton_Click(object sender, EventArgs e)
         {
             string fileName = "PasswordData.txt";
-            StreamReader reader = new StreamReader(fileName);
-            string line;
-
-            while ((line = reader.ReadLine()) != null)
+            using (StreamReader reader = new StreamReader(fileName))
             {
-                string[] tempArr = line.Split('|');
-                string webName = tempArr[0];
+                string line;
 
-                if (webName.Equals("Amazon"))
+                while ((line = reader.ReadLine()) != null)
                 {
-                    nameTextBox.Text = webName;
-                    usernameTextBox.Text = tempArr[1];
-                    passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
-                    descriptionTextBox.Text = tempArr[3];
+                    string[] tempArr = line.Split('|');
+                    string webName = tempArr[0];
 
-                    break;
+                    if (webName.Equals("Amazon"))
+                    {
+                        nameTextBox.Text = webName;
+                        usernameTextBox.Text = tempArr[1];
+                        passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
+                        descriptionTextBox.Text = tempArr[3];
+
+                        break;
+                    }
                 }
             }
-
-            reader.Close();
 
         }
 
         private void facebookButton_Click(object sender, EventArgs e)
         {
             string fileName = "PasswordData.txt";
-            StreamReader reader = new StreamReader(fileName);
-            string line;
-
-            while ((line = reader.ReadLine()) != null)
+            using (StreamReader reader = new StreamReader(fileName))
             {
-                string[] tempArr = line.Split('|');
-                string webName = tempArr[0];
+                string line;
 
-                if (webName.Equals("Facebook"))
+                while ((line = reader.ReadLine()) != null)
                 {
-                    nameTextBox.Text = webName;
-                    usernameTextBox.Text = tempArr[1];
-                    passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
-                    descriptionTextBox.Text = tempArr[3];
+                    string[] tempArr = line.Split('|');
+                    string webName = tempArr[0];
 
-                    break;
+                    if (webName.Equals("Facebook"))
+                    {
+                        nameTextBox.Text = webName;
+                        usernameTextBox.Text = tempArr[1];
+                        passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
+                        descriptionTextBox.Text = tempArr[3];
+
+                        break;
+                    }
                 }
             }
-
-            reader.Close();
 
         }
 
         private void instagramButton_Click(object sender, EventArgs e)
         {
             string fileName = "PasswordData.txt";
-            StreamReader reader = new StreamReader(fileName);
-            string line;
-
-            while ((line = reader.ReadLine()) != null)
+            using (StreamReader reader = new StreamReader(fileName))
             {
-                string[] tempArr = line.Split('|');
-                string webName = tempArr[0];
+                string line;
 
-                if (webName.Equals("Instagram"))
+                while ((line = reader.ReadLine()) != null)
                 {
-                    nameTextBox.Text = webName;
-                    usernameTextBox.Text = tempArr[1];
-                    passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
-                    descriptionTextBox.Text = tempArr[3];
+                    string[] tempArr = line.Split('|');
+                    string webName = tempArr[0];
 
-                    break;
+                    if (webName.Equals("Instagram"))
+                    {
+                        nameTextBox.Text = webName;
+                        usernameTextBox.Text = tempArr[1];
+                        passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
+                        descriptionTextBox.Text = tempArr[3];
+
+                        break;
+                    }
                 }
             }
-
-            reader.Close();
 
         }
 
         private void snapchatButton_Click(object sender, EventArgs e)
         {
             string fileName = "PasswordData.txt";
-            StreamReader reader = new StreamReader(fileName);
-            string line;
-
-            while ((line = reader.ReadLine()) != null)
+            using (StreamReader reader = new StreamReader(fileName))
             {
-                string[] tempArr = line.Split('|');
-                string webName = tempArr[0];
+                string line;
 
-                if (webName.Equals("Snapchat"))
+                while ((line = reader.ReadLine()) != null)
                 {
-                    nameTextBox.Text = webName;
-                    usernameTextBox.Text = tempArr[1];
-                    passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
-                    descriptionTextBox.Text = tempArr[3];
+                    string[] tempArr = line.Split('|');
+                    string webName = tempArr[0];
 
-                    break;
+                    if (webName.Equals("Snapchat"))
+                    {
+                        nameTextBox.Text = webName;
+                        usernameTextBox.Text = tempArr[1];
+                        passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
+                        descriptionTextBox.Text = tempArr[3];
+
+                        break;
+                    }
                 }
             }
-
-            reader.Close();
 
         }
 
         private void twitchButton_Click(object sender, EventArgs e)
         {
             string fileName = "PasswordData.txt";
-            StreamReader reader = new StreamReader(fileName);
-            string line;
-
-            while ((line = reader.ReadLine()) != null)
+            using (StreamReader reader = new StreamReader(fileName))
             {
-                string[] tempArr = line.Split('|');
-                string webName = tempArr[0];
+                string line;
 
-                if (webName.Equals("Twitch"))
+                while ((line = reader.ReadLine()) != null)
                 {
-                    nameTextBox.Text = webName;
-                    usernameTextBox.Text = tempArr[1];
-                    passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
-                    descriptionTextBox.Text = tempArr[3];
+                    string[] tempArr = line.Split('|');
+                    string webName = tempArr[0];
 
-                    break;
+                    if (webName.Equals("Twitch"))
+                    {
+                        nameTextBox.Text = webName;
+                        usernameTextBox.Text = tempArr[1];
+                        passwordTextBox.Text = methods.decrypt(tempArr[2], methods.getPassPhrase());
+                        descriptionTextBox.Text = tempArr[3];
+
+                        break;
+                    }
                 }
             }
-
-            reader.Close();
 
         }
     }
