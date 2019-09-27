@@ -431,10 +431,12 @@
             // 
             // passwordBox
             // 
+            this.passwordBox.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.passwordBox.FormattingEnabled = true;
+            this.passwordBox.ItemHeight = 25;
             this.passwordBox.Location = new System.Drawing.Point(183, 51);
             this.passwordBox.Name = "passwordBox";
-            this.passwordBox.Size = new System.Drawing.Size(403, 576);
+            this.passwordBox.Size = new System.Drawing.Size(403, 554);
             this.passwordBox.TabIndex = 0;
             this.passwordBox.SelectedIndexChanged += new System.EventHandler(this.passwordBox_SelectedIndexChanged);
             // 
